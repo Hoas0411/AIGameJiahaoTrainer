@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#071724"/>
+<style>text{font-family:'Microsoft YaHei',sans-serif;fill:#dbe9ee}.t{font-size:37px;font-weight:700}.h{font-size:25px;font-weight:700;fill:#62d4e5}.b{font-size:20px}.s{font-size:17px;fill:#a9bdc7}.dim{font-size:20px;fill:#73d8e8}.line{stroke:#8fe8f0;stroke-width:2;fill:none}</style>
+<text x="55" y="67" class="t">唱片台 R3 · 明确梯形 + 参考图材质落地</text><text x="55" y="104" class="s">以获认可的银灰唱片机参考图为基准；外形数值先于材质制作，所有尺寸 mm</text>
+<rect x="40" y="145" width="900" height="700" rx="14" fill="#102a3d" stroke="#30546a"/>
+<text x="70" y="187" class="h">正立面 · 玩家操作侧</text>
+<rect x="190" y="753" width="600" height="47" rx="5" fill="#303b43" stroke="#8b9ca2" stroke-width="3"/>
+<polygon points="253,750 727,750 650,290 330,290" fill="#252f36" stroke="#9aaeb9" stroke-width="4"/>
+<polygon points="328,663 654,663 615,378 367,378" fill="#46545d" stroke="#9caeb6" stroke-width="3"/>
+<polygon points="345,651 637,651 603,390 379,390" fill="#202b33" stroke="#667f88" stroke-width="2"/>
+<rect x="230" y="250" width="520" height="45" rx="4" fill="#89949a" stroke="#d7e4e9" stroke-width="3"/>
+<rect x="305" y="205" width="370" height="42" rx="4" fill="#575f65" stroke="#b0c2c8" stroke-width="3"/>
+<rect x="370" y="218" width="220" height="12" rx="2" fill="#101820"/>
+<rect x="431" y="450" width="119" height="27" rx="4" fill="#0a303c" stroke="#44bfda" stroke-width="2"/>
+<path d="M253 747 L253 814 M727 747 L727 814 M253 815 L727 815" class="line"/><text x="432" y="836" class="dim">底框 820</text>
+<path d="M330 285 L330 213 M650 285 L650 213 M330 211 L650 211" class="line"/><text x="441" y="198" class="dim">顶框 560</text>
+<text x="380" y="713" class="dim">侧边每侧收进 130</text>
+<text x="76" y="876" class="s">底脚 1040 × 780；顶托盘 900 × 700；主体高度 706；顶托盘高度 850（均沿用平台布置）</text>
+<rect x="970" y="145" width="590" height="700" rx="14" fill="#102a3d" stroke="#30546a"/>
+<text x="1000" y="187" class="h">材质层级 · 参考图对照</text>
+<rect x="1005" y="220" width="96" height="80" rx="6" fill="#969fa4"/><text x="1125" y="250" class="b">银灰拉丝铝 / 唱片机面板</text><text x="1125" y="280" class="s">细方向纹 + 金属反射 + 中等粗糙度</text>
+<rect x="1005" y="328" width="96" height="80" rx="6" fill="#202a30"/><text x="1125" y="358" class="b">枪灰喷涂钢 / 梯形主体</text><text x="1125" y="388" class="s">平整大面；微细粗糙纹，不生几何鼓包</text>
+<rect x="1005" y="436" width="96" height="80" rx="6" fill="#0d1115"/><text x="1125" y="466" class="b">黑胶 + 石墨护角</text><text x="1125" y="496" class="s">唱片真黑；同心槽真实几何，非灰盘</text>
+<rect x="1005" y="544" width="96" height="80" rx="6" fill="#164454" stroke="#52d5e8"/><text x="1125" y="574" class="b">烟青工业玻璃 / 状态窗</text><text x="1125" y="604" class="s">4 mm 玻璃、黑胶条、独立压边</text>
+<rect x="1005" y="652" width="96" height="80" rx="6" fill="#b8c8ce"/><text x="1125" y="682" class="b">精车钢 / 唱臂与盘缘</text><text x="1125" y="712" class="s">高光边界清晰；合适倒角</text>
+<text x="1002" y="786" class="s">游戏 GLB 必须携带可见 PBR 图像纹理：</text><text x="1002" y="816" class="s">Base Color / Roughness / Normal；Blender 同源保存</text>
+</svg>

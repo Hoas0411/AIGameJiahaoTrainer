@@ -1,0 +1,1526 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_F2.glb" id="TY_F2"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_LINE_31.glb" id="TY_LINE_31"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_W4_45.glb" id="TY_W4_45"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_W4_60.glb" id="TY_W4_60"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_C_51.glb" id="TY_C_51"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_C_66.glb" id="TY_C_66"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_BAY.glb" id="TY_BAY"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_PF_0_15.glb" id="TY_PF_0_15"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_PF_1.glb" id="TY_PF_1"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_PF_2.glb" id="TY_PF_2"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_PF_3.glb" id="TY_PF_3"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_PF_4.glb" id="TY_PF_4"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_MAST_12.glb" id="TY_MAST_12"]
+[ext_resource type="PackedScene" path="res://assets/models/training_yard_kit_20261009/TY_CANOPY.glb" id="TY_CANOPY"]
+
+[node name="Yard_Elevation" type="Node3D"]
+metadata/kit = "training_yard_kit_20261009"
+
+[node name="Floor" type="Node3D" parent="."]
+
+[node name="Lines" type="Node3D" parent="."]
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="Columns" type="Node3D" parent="."]
+
+[node name="Features" type="Node3D" parent="."]
+
+[node name="floor_0_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -35)
+
+[node name="floor_0_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -33)
+
+[node name="floor_0_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -31)
+
+[node name="floor_0_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -29)
+
+[node name="floor_0_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -27)
+
+[node name="floor_0_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -25)
+
+[node name="floor_0_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -23)
+
+[node name="floor_0_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -21)
+
+[node name="floor_0_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -19)
+
+[node name="floor_0_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -17)
+
+[node name="floor_0_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -15)
+
+[node name="floor_0_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -13)
+
+[node name="floor_0_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -11)
+
+[node name="floor_0_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -9)
+
+[node name="floor_0_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -7)
+
+[node name="floor_0_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -5)
+
+[node name="floor_0_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -3)
+
+[node name="floor_0_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, -1)
+
+[node name="floor_0_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, 1)
+
+[node name="floor_0_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, 3)
+
+[node name="floor_0_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, 5)
+
+[node name="floor_0_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, 7)
+
+[node name="floor_0_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, 9)
+
+[node name="floor_0_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-15, 0, 11)
+
+[node name="floor_1_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -35)
+
+[node name="floor_1_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -33)
+
+[node name="floor_1_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -31)
+
+[node name="floor_1_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -29)
+
+[node name="floor_1_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -27)
+
+[node name="floor_1_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -25)
+
+[node name="floor_1_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -23)
+
+[node name="floor_1_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -21)
+
+[node name="floor_1_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -19)
+
+[node name="floor_1_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -17)
+
+[node name="floor_1_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -15)
+
+[node name="floor_1_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -13)
+
+[node name="floor_1_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -11)
+
+[node name="floor_1_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -9)
+
+[node name="floor_1_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -7)
+
+[node name="floor_1_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -5)
+
+[node name="floor_1_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -3)
+
+[node name="floor_1_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, -1)
+
+[node name="floor_1_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, 1)
+
+[node name="floor_1_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, 3)
+
+[node name="floor_1_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, 5)
+
+[node name="floor_1_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, 7)
+
+[node name="floor_1_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, 9)
+
+[node name="floor_1_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-13, 0, 11)
+
+[node name="floor_2_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -35)
+
+[node name="floor_2_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -33)
+
+[node name="floor_2_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -31)
+
+[node name="floor_2_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -29)
+
+[node name="floor_2_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -27)
+
+[node name="floor_2_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -25)
+
+[node name="floor_2_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -23)
+
+[node name="floor_2_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -21)
+
+[node name="floor_2_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -19)
+
+[node name="floor_2_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -17)
+
+[node name="floor_2_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -15)
+
+[node name="floor_2_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -13)
+
+[node name="floor_2_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -11)
+
+[node name="floor_2_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -9)
+
+[node name="floor_2_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -7)
+
+[node name="floor_2_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -5)
+
+[node name="floor_2_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -3)
+
+[node name="floor_2_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, -1)
+
+[node name="floor_2_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, 1)
+
+[node name="floor_2_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, 3)
+
+[node name="floor_2_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, 5)
+
+[node name="floor_2_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, 7)
+
+[node name="floor_2_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, 9)
+
+[node name="floor_2_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-11, 0, 11)
+
+[node name="floor_3_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -35)
+
+[node name="floor_3_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -33)
+
+[node name="floor_3_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -31)
+
+[node name="floor_3_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -29)
+
+[node name="floor_3_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -27)
+
+[node name="floor_3_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -25)
+
+[node name="floor_3_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -23)
+
+[node name="floor_3_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -21)
+
+[node name="floor_3_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -19)
+
+[node name="floor_3_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -17)
+
+[node name="floor_3_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -15)
+
+[node name="floor_3_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -13)
+
+[node name="floor_3_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -11)
+
+[node name="floor_3_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -9)
+
+[node name="floor_3_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -7)
+
+[node name="floor_3_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -5)
+
+[node name="floor_3_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -3)
+
+[node name="floor_3_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, -1)
+
+[node name="floor_3_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, 1)
+
+[node name="floor_3_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, 3)
+
+[node name="floor_3_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, 5)
+
+[node name="floor_3_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, 7)
+
+[node name="floor_3_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, 9)
+
+[node name="floor_3_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-9, 0, 11)
+
+[node name="floor_4_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -35)
+
+[node name="floor_4_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -33)
+
+[node name="floor_4_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -31)
+
+[node name="floor_4_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -29)
+
+[node name="floor_4_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -27)
+
+[node name="floor_4_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -25)
+
+[node name="floor_4_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -23)
+
+[node name="floor_4_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -21)
+
+[node name="floor_4_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -19)
+
+[node name="floor_4_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -17)
+
+[node name="floor_4_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -15)
+
+[node name="floor_4_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -13)
+
+[node name="floor_4_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -11)
+
+[node name="floor_4_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -9)
+
+[node name="floor_4_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -7)
+
+[node name="floor_4_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -5)
+
+[node name="floor_4_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -3)
+
+[node name="floor_4_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, -1)
+
+[node name="floor_4_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, 1)
+
+[node name="floor_4_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, 3)
+
+[node name="floor_4_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, 5)
+
+[node name="floor_4_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, 7)
+
+[node name="floor_4_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, 9)
+
+[node name="floor_4_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-7, 0, 11)
+
+[node name="floor_5_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -35)
+
+[node name="floor_5_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -33)
+
+[node name="floor_5_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -31)
+
+[node name="floor_5_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -29)
+
+[node name="floor_5_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -27)
+
+[node name="floor_5_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -25)
+
+[node name="floor_5_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -23)
+
+[node name="floor_5_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -21)
+
+[node name="floor_5_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -19)
+
+[node name="floor_5_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -17)
+
+[node name="floor_5_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -15)
+
+[node name="floor_5_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -13)
+
+[node name="floor_5_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -11)
+
+[node name="floor_5_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -9)
+
+[node name="floor_5_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -7)
+
+[node name="floor_5_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -5)
+
+[node name="floor_5_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -3)
+
+[node name="floor_5_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, -1)
+
+[node name="floor_5_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, 1)
+
+[node name="floor_5_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, 3)
+
+[node name="floor_5_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, 5)
+
+[node name="floor_5_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, 7)
+
+[node name="floor_5_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, 9)
+
+[node name="floor_5_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-5, 0, 11)
+
+[node name="floor_6_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -35)
+
+[node name="floor_6_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -33)
+
+[node name="floor_6_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -31)
+
+[node name="floor_6_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -29)
+
+[node name="floor_6_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -27)
+
+[node name="floor_6_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -25)
+
+[node name="floor_6_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -23)
+
+[node name="floor_6_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -21)
+
+[node name="floor_6_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -19)
+
+[node name="floor_6_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -17)
+
+[node name="floor_6_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -15)
+
+[node name="floor_6_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -13)
+
+[node name="floor_6_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -11)
+
+[node name="floor_6_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -9)
+
+[node name="floor_6_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -7)
+
+[node name="floor_6_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -5)
+
+[node name="floor_6_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -3)
+
+[node name="floor_6_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, -1)
+
+[node name="floor_6_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, 1)
+
+[node name="floor_6_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, 3)
+
+[node name="floor_6_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, 5)
+
+[node name="floor_6_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, 7)
+
+[node name="floor_6_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, 9)
+
+[node name="floor_6_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-3, 0, 11)
+
+[node name="floor_7_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -35)
+
+[node name="floor_7_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -33)
+
+[node name="floor_7_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -31)
+
+[node name="floor_7_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -29)
+
+[node name="floor_7_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -27)
+
+[node name="floor_7_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -25)
+
+[node name="floor_7_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -23)
+
+[node name="floor_7_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -21)
+
+[node name="floor_7_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -19)
+
+[node name="floor_7_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -17)
+
+[node name="floor_7_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -15)
+
+[node name="floor_7_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -13)
+
+[node name="floor_7_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -11)
+
+[node name="floor_7_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -9)
+
+[node name="floor_7_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -7)
+
+[node name="floor_7_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -5)
+
+[node name="floor_7_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -3)
+
+[node name="floor_7_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, -1)
+
+[node name="floor_7_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, 1)
+
+[node name="floor_7_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, 3)
+
+[node name="floor_7_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, 5)
+
+[node name="floor_7_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, 7)
+
+[node name="floor_7_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, 9)
+
+[node name="floor_7_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(-1, 0, 11)
+
+[node name="floor_8_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -35)
+
+[node name="floor_8_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -33)
+
+[node name="floor_8_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -31)
+
+[node name="floor_8_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -29)
+
+[node name="floor_8_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -27)
+
+[node name="floor_8_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -25)
+
+[node name="floor_8_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -23)
+
+[node name="floor_8_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -21)
+
+[node name="floor_8_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -19)
+
+[node name="floor_8_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -17)
+
+[node name="floor_8_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -15)
+
+[node name="floor_8_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -13)
+
+[node name="floor_8_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -11)
+
+[node name="floor_8_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -9)
+
+[node name="floor_8_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -7)
+
+[node name="floor_8_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -5)
+
+[node name="floor_8_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -3)
+
+[node name="floor_8_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, -1)
+
+[node name="floor_8_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, 1)
+
+[node name="floor_8_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, 3)
+
+[node name="floor_8_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, 5)
+
+[node name="floor_8_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, 7)
+
+[node name="floor_8_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, 9)
+
+[node name="floor_8_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(1, 0, 11)
+
+[node name="floor_9_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -35)
+
+[node name="floor_9_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -33)
+
+[node name="floor_9_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -31)
+
+[node name="floor_9_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -29)
+
+[node name="floor_9_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -27)
+
+[node name="floor_9_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -25)
+
+[node name="floor_9_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -23)
+
+[node name="floor_9_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -21)
+
+[node name="floor_9_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -19)
+
+[node name="floor_9_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -17)
+
+[node name="floor_9_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -15)
+
+[node name="floor_9_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -13)
+
+[node name="floor_9_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -11)
+
+[node name="floor_9_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -9)
+
+[node name="floor_9_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -7)
+
+[node name="floor_9_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -5)
+
+[node name="floor_9_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -3)
+
+[node name="floor_9_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, -1)
+
+[node name="floor_9_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, 1)
+
+[node name="floor_9_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, 3)
+
+[node name="floor_9_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, 5)
+
+[node name="floor_9_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, 7)
+
+[node name="floor_9_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, 9)
+
+[node name="floor_9_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(3, 0, 11)
+
+[node name="floor_10_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -35)
+
+[node name="floor_10_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -33)
+
+[node name="floor_10_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -31)
+
+[node name="floor_10_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -29)
+
+[node name="floor_10_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -27)
+
+[node name="floor_10_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -25)
+
+[node name="floor_10_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -23)
+
+[node name="floor_10_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -21)
+
+[node name="floor_10_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -19)
+
+[node name="floor_10_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -17)
+
+[node name="floor_10_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -15)
+
+[node name="floor_10_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -13)
+
+[node name="floor_10_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -11)
+
+[node name="floor_10_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -9)
+
+[node name="floor_10_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -7)
+
+[node name="floor_10_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -5)
+
+[node name="floor_10_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -3)
+
+[node name="floor_10_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, -1)
+
+[node name="floor_10_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, 1)
+
+[node name="floor_10_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, 3)
+
+[node name="floor_10_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, 5)
+
+[node name="floor_10_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, 7)
+
+[node name="floor_10_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, 9)
+
+[node name="floor_10_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(5, 0, 11)
+
+[node name="floor_11_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -35)
+
+[node name="floor_11_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -33)
+
+[node name="floor_11_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -31)
+
+[node name="floor_11_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -29)
+
+[node name="floor_11_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -27)
+
+[node name="floor_11_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -25)
+
+[node name="floor_11_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -23)
+
+[node name="floor_11_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -21)
+
+[node name="floor_11_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -19)
+
+[node name="floor_11_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -17)
+
+[node name="floor_11_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -15)
+
+[node name="floor_11_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -13)
+
+[node name="floor_11_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -11)
+
+[node name="floor_11_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -9)
+
+[node name="floor_11_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -7)
+
+[node name="floor_11_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -5)
+
+[node name="floor_11_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -3)
+
+[node name="floor_11_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, -1)
+
+[node name="floor_11_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, 1)
+
+[node name="floor_11_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, 3)
+
+[node name="floor_11_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, 5)
+
+[node name="floor_11_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, 7)
+
+[node name="floor_11_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, 9)
+
+[node name="floor_11_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(7, 0, 11)
+
+[node name="floor_12_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -35)
+
+[node name="floor_12_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -33)
+
+[node name="floor_12_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -31)
+
+[node name="floor_12_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -29)
+
+[node name="floor_12_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -27)
+
+[node name="floor_12_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -25)
+
+[node name="floor_12_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -23)
+
+[node name="floor_12_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -21)
+
+[node name="floor_12_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -19)
+
+[node name="floor_12_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -17)
+
+[node name="floor_12_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -15)
+
+[node name="floor_12_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -13)
+
+[node name="floor_12_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -11)
+
+[node name="floor_12_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -9)
+
+[node name="floor_12_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -7)
+
+[node name="floor_12_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -5)
+
+[node name="floor_12_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -3)
+
+[node name="floor_12_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, -1)
+
+[node name="floor_12_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, 1)
+
+[node name="floor_12_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, 3)
+
+[node name="floor_12_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, 5)
+
+[node name="floor_12_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, 7)
+
+[node name="floor_12_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, 9)
+
+[node name="floor_12_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(9, 0, 11)
+
+[node name="floor_13_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -35)
+
+[node name="floor_13_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -33)
+
+[node name="floor_13_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -31)
+
+[node name="floor_13_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -29)
+
+[node name="floor_13_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -27)
+
+[node name="floor_13_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -25)
+
+[node name="floor_13_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -23)
+
+[node name="floor_13_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -21)
+
+[node name="floor_13_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -19)
+
+[node name="floor_13_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -17)
+
+[node name="floor_13_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -15)
+
+[node name="floor_13_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -13)
+
+[node name="floor_13_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -11)
+
+[node name="floor_13_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -9)
+
+[node name="floor_13_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -7)
+
+[node name="floor_13_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -5)
+
+[node name="floor_13_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -3)
+
+[node name="floor_13_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, -1)
+
+[node name="floor_13_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, 1)
+
+[node name="floor_13_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, 3)
+
+[node name="floor_13_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, 5)
+
+[node name="floor_13_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, 7)
+
+[node name="floor_13_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, 9)
+
+[node name="floor_13_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(11, 0, 11)
+
+[node name="floor_14_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -35)
+
+[node name="floor_14_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -33)
+
+[node name="floor_14_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -31)
+
+[node name="floor_14_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -29)
+
+[node name="floor_14_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -27)
+
+[node name="floor_14_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -25)
+
+[node name="floor_14_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -23)
+
+[node name="floor_14_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -21)
+
+[node name="floor_14_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -19)
+
+[node name="floor_14_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -17)
+
+[node name="floor_14_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -15)
+
+[node name="floor_14_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -13)
+
+[node name="floor_14_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -11)
+
+[node name="floor_14_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -9)
+
+[node name="floor_14_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -7)
+
+[node name="floor_14_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -5)
+
+[node name="floor_14_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -3)
+
+[node name="floor_14_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, -1)
+
+[node name="floor_14_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, 1)
+
+[node name="floor_14_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, 3)
+
+[node name="floor_14_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, 5)
+
+[node name="floor_14_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, 7)
+
+[node name="floor_14_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, 9)
+
+[node name="floor_14_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(13, 0, 11)
+
+[node name="floor_15_0" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -35)
+
+[node name="floor_15_1" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -33)
+
+[node name="floor_15_2" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -31)
+
+[node name="floor_15_3" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -29)
+
+[node name="floor_15_4" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -27)
+
+[node name="floor_15_5" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -25)
+
+[node name="floor_15_6" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -23)
+
+[node name="floor_15_7" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -21)
+
+[node name="floor_15_8" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -19)
+
+[node name="floor_15_9" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -17)
+
+[node name="floor_15_10" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -15)
+
+[node name="floor_15_11" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -13)
+
+[node name="floor_15_12" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -11)
+
+[node name="floor_15_13" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -9)
+
+[node name="floor_15_14" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -7)
+
+[node name="floor_15_15" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -5)
+
+[node name="floor_15_16" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -3)
+
+[node name="floor_15_17" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, -1)
+
+[node name="floor_15_18" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, 1)
+
+[node name="floor_15_19" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, 3)
+
+[node name="floor_15_20" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, 5)
+
+[node name="floor_15_21" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, 7)
+
+[node name="floor_15_22" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, 9)
+
+[node name="floor_15_23" parent="Floor" instance=ExtResource("TY_F2")]
+position = Vector3(15, 0, 11)
+
+[node name="line_z-32" parent="Lines" instance=ExtResource("TY_LINE_31")]
+position = Vector3(0, 0, -32)
+
+[node name="line_z-24" parent="Lines" instance=ExtResource("TY_LINE_31")]
+position = Vector3(0, 0, -24)
+
+[node name="line_z-16" parent="Lines" instance=ExtResource("TY_LINE_31")]
+position = Vector3(0, 0, -16)
+
+[node name="line_z-8" parent="Lines" instance=ExtResource("TY_LINE_31")]
+position = Vector3(0, 0, -8)
+
+[node name="line_z0" parent="Lines" instance=ExtResource("TY_LINE_31")]
+position = Vector3(0, 0, 0)
+
+[node name="line_z8" parent="Lines" instance=ExtResource("TY_LINE_31")]
+position = Vector3(0, 0, 8)
+
+[node name="back_0" parent="Walls" instance=ExtResource("TY_W4_60")]
+position = Vector3(-14, 0, -36)
+
+[node name="front_0" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-14, 0, 12)
+rotation = Vector3(0, 3.141592654, 0)
+
+[node name="back_1" parent="Walls" instance=ExtResource("TY_W4_60")]
+position = Vector3(-10, 0, -36)
+
+[node name="front_1" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-10, 0, 12)
+rotation = Vector3(0, 3.141592654, 0)
+
+[node name="back_2" parent="Walls" instance=ExtResource("TY_W4_60")]
+position = Vector3(-6, 0, -36)
+
+[node name="front_2" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-6, 0, 12)
+rotation = Vector3(0, 3.141592654, 0)
+
+[node name="back_3" parent="Walls" instance=ExtResource("TY_W4_60")]
+position = Vector3(-2, 0, -36)
+
+[node name="front_3" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-2, 0, 12)
+rotation = Vector3(0, 3.141592654, 0)
+
+[node name="back_4" parent="Walls" instance=ExtResource("TY_W4_60")]
+position = Vector3(2, 0, -36)
+
+[node name="front_4" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(2, 0, 12)
+rotation = Vector3(0, 3.141592654, 0)
+
+[node name="back_5" parent="Walls" instance=ExtResource("TY_W4_60")]
+position = Vector3(6, 0, -36)
+
+[node name="front_5" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(6, 0, 12)
+rotation = Vector3(0, 3.141592654, 0)
+
+[node name="back_6" parent="Walls" instance=ExtResource("TY_W4_60")]
+position = Vector3(10, 0, -36)
+
+[node name="front_6" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(10, 0, 12)
+rotation = Vector3(0, 3.141592654, 0)
+
+[node name="back_7" parent="Walls" instance=ExtResource("TY_W4_60")]
+position = Vector3(14, 0, -36)
+
+[node name="front_7" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(14, 0, 12)
+rotation = Vector3(0, 3.141592654, 0)
+
+[node name="left_0" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, -34)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_0" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, -34)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_1" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, -30)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_1" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, -30)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_2" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, -26)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_2" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, -26)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_3" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, -22)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_3" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, -22)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_4" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, -18)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_4" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, -18)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_5" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, -14)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_5" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, -14)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_6" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, -10)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_6" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, -10)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_7" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, -6)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_7" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, -6)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_8" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, -2)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_8" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, -2)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_9" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, 2)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_9" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, 2)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_10" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, 6)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_10" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, 6)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="left_11" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(-16, 0, 10)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_11" parent="Walls" instance=ExtResource("TY_W4_45")]
+position = Vector3(16, 0, 10)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="back_c0" parent="Columns" instance=ExtResource("TY_C_66")]
+position = Vector3(-16, 0, -36)
+
+[node name="front_c0" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, 12)
+
+[node name="back_c1" parent="Columns" instance=ExtResource("TY_C_66")]
+position = Vector3(-12, 0, -36)
+
+[node name="front_c1" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-12, 0, 12)
+
+[node name="back_c2" parent="Columns" instance=ExtResource("TY_C_66")]
+position = Vector3(-8, 0, -36)
+
+[node name="front_c2" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-8, 0, 12)
+
+[node name="back_c3" parent="Columns" instance=ExtResource("TY_C_66")]
+position = Vector3(-4, 0, -36)
+
+[node name="front_c3" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-4, 0, 12)
+
+[node name="back_c4" parent="Columns" instance=ExtResource("TY_C_66")]
+position = Vector3(0, 0, -36)
+
+[node name="front_c4" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(0, 0, 12)
+
+[node name="back_c5" parent="Columns" instance=ExtResource("TY_C_66")]
+position = Vector3(4, 0, -36)
+
+[node name="front_c5" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(4, 0, 12)
+
+[node name="back_c6" parent="Columns" instance=ExtResource("TY_C_66")]
+position = Vector3(8, 0, -36)
+
+[node name="front_c6" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(8, 0, 12)
+
+[node name="back_c7" parent="Columns" instance=ExtResource("TY_C_66")]
+position = Vector3(12, 0, -36)
+
+[node name="front_c7" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(12, 0, 12)
+
+[node name="back_c8" parent="Columns" instance=ExtResource("TY_C_66")]
+position = Vector3(16, 0, -36)
+
+[node name="front_c8" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, 12)
+
+[node name="left_c1" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, -32)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c1" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, -32)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="left_c2" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, -28)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c2" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, -28)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="left_c3" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, -24)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c3" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, -24)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="left_c4" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, -20)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c4" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, -20)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="left_c5" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, -16)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c5" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, -16)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="left_c6" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, -12)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c6" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, -12)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="left_c7" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, -8)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c7" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, -8)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="left_c8" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, -4)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c8" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, -4)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="left_c9" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, 0)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c9" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, 0)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="left_c10" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, 4)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c10" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, 4)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="left_c11" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(-16, 0, 8)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="right_c11" parent="Columns" instance=ExtResource("TY_C_51")]
+position = Vector3(16, 0, 8)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="mast_0" parent="Features" instance=ExtResource("TY_MAST_12")]
+position = Vector3(-15, 0, -38)
+
+[node name="mast_1" parent="Features" instance=ExtResource("TY_MAST_12")]
+position = Vector3(15, 0, -38)
+
+[node name="mast_2" parent="Features" instance=ExtResource("TY_MAST_12")]
+position = Vector3(-18, 0, -14)
+rotation = Vector3(0, 1.570796327, 0)
+
+[node name="mast_3" parent="Features" instance=ExtResource("TY_MAST_12")]
+position = Vector3(18, 0, -14)
+rotation = Vector3(0, -1.570796327, 0)
+
+[node name="canopy" parent="Features" instance=ExtResource("TY_CANOPY")]
+position = Vector3(0, 0, 12)
+
+[node name="platform_0" parent="Features" instance=ExtResource("TY_PF_0_15")]
+position = Vector3(-10, -0.075, -8)
+
+[node name="platform_1" parent="Features" instance=ExtResource("TY_PF_2")]
+position = Vector3(-5, 0, -16)
+
+[node name="platform_2" parent="Features" instance=ExtResource("TY_PF_4")]
+position = Vector3(0, 0, -24)
+
+[node name="platform_3" parent="Features" instance=ExtResource("TY_PF_1")]
+position = Vector3(5, 0, -12)
+
+[node name="platform_4" parent="Features" instance=ExtResource("TY_PF_3")]
+position = Vector3(10, 0, -20)
+

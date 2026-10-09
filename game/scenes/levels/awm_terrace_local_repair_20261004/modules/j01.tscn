@@ -1,0 +1,23 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://assets/models/awm_terrace_local_repair_20261004/J01.glb" id="model"]
+[sub_resource type="BoxShape3D" id="shape"]
+size = Vector3(10.742080981461045, 10.0, 11.651369657539668)
+[node name="J01" type="Node3D"]
+metadata/source_blend = "source_art/awm_terrace_local_repair_20261004/parts/J01/J01_local_repair.blend"
+metadata/part_id = "J01"
+metadata/support_restriction = false
+[node name="Model" parent="." instance=ExtResource("model")]
+[node name="Body" type="StaticBody3D" parent="."]
+collision_layer = 1
+collision_mask = 0
+[node name="Collision" type="CollisionShape3D" parent="Body"]
+position = Vector3(0, 5.0, 0)
+shape = SubResource("shape")
+[node name="SnapLeft" type="Marker3D" parent="."]
+position = Vector3(-5.371040490730523,0,0)
+[node name="SnapRight" type="Marker3D" parent="."]
+position = Vector3(5.371040490730523,0,0)
+[node name="SnapFront" type="Marker3D" parent="."]
+position = Vector3(0,0,5.825684828769834)
+[node name="SnapRear" type="Marker3D" parent="."]
+position = Vector3(0,0,-5.825684828769834)

@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/impact.gd" id="script"]
+
+[ext_resource type="PackedScene" path="res://scenes/presentation/impact_particles.tscn" id="particles"]
+
+[sub_resource type="StandardMaterial3D" id="hot"]
+shading_mode = 0
+transparency = 1
+albedo_color = Color(1, 0.93, 0.82, 0.95)
+emission_enabled = true
+emission = Color(1, 0.32, 0.08, 1)
+emission_energy_multiplier = 5.5
+
+[sub_resource type="StandardMaterial3D" id="red"]
+shading_mode = 0
+transparency = 1
+albedo_color = Color(1, 0.08, 0.035, 0.82)
+emission_enabled = true
+emission = Color(1, 0.015, 0.004, 1)
+emission_energy_multiplier = 4.0
+
+[sub_resource type="SphereMesh" id="core_mesh"]
+radius = 0.032
+height = 0.064
+radial_segments = 12
+rings = 6
+material = SubResource("hot")
+
+[sub_resource type="TorusMesh" id="ring_mesh"]
+inner_radius = 0.105
+outer_radius = 0.132
+rings = 20
+ring_segments = 6
+material = SubResource("red")
+
+[sub_resource type="BoxMesh" id="ray_mesh"]
+size = Vector3(0.012, 0.12, 0.012)
+material = SubResource("hot")
+
+[node name="Impact" type="Node3D"]
+script = ExtResource("script")
+
+[node name="Core" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("core_mesh")
+cast_shadow = 0
+
+[node name="Ring" type="MeshInstance3D" parent="."]
+visible = false
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("ring_mesh")
+cast_shadow = 0
+
+[node name="Rays" type="Node3D" parent="."]
+visible = false
+
+[node name="Ray0" type="MeshInstance3D" parent="Rays"]
+position = Vector3(0, 0.10, 0)
+mesh = SubResource("ray_mesh")
+cast_shadow = 0
+
+[node name="Ray1" type="MeshInstance3D" parent="Rays"]
+position = Vector3(0.10, 0, 0)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("ray_mesh")
+cast_shadow = 0
+
+[node name="Ray2" type="MeshInstance3D" parent="Rays"]
+position = Vector3(0, -0.10, 0)
+mesh = SubResource("ray_mesh")
+cast_shadow = 0
+
+[node name="Ray3" type="MeshInstance3D" parent="Rays"]
+position = Vector3(-0.10, 0, 0)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("ray_mesh")
+cast_shadow = 0
+
+[node name="Light" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.12, 0.035, 1)
+light_energy = 0.22
+omni_range = 0.3
+shadow_enabled = false
+
+[node name="ImpactParticles" parent="." instance=ExtResource("particles")]

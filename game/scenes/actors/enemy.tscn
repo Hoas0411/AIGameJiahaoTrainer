@@ -1,0 +1,121 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="e1"]
+
+[ext_resource type="PackedScene" path="res://scenes/actors/training_dummy_visual.tscn" id="e2"]
+
+[ext_resource type="AudioStream" path="res://assets/audio/npc_shot.wav" id="e3"]
+
+[sub_resource type="CapsuleShape3D" id="s1"]
+radius = 0.29
+height = 1.65
+
+[sub_resource type="BoxShape3D" id="s2"]
+size = Vector3(0.40, 0.38, 0.38)
+
+[sub_resource type="BoxShape3D" id="s3"]
+size = Vector3(0.60, 0.53, 0.40)
+
+[sub_resource type="BoxShape3D" id="s4"]
+size = Vector3(0.66, 0.77, 0.38)
+
+[sub_resource type="BoxShape3D" id="abdomen_shape"]
+size = Vector3(0.46, 0.26, 0.34)
+
+[sub_resource type="CapsuleShape3D" id="arm_shape"]
+resource_local_to_scene = true
+radius = 0.095
+height = 0.32
+
+[node name="Enemy" type="CharacterBody3D"]
+script = ExtResource("e1")
+collision_layer = 0
+collision_mask = 1
+floor_snap_length = 0.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0,0.83,0)
+shape = SubResource("s1")
+
+[node name="Doll" parent="." instance=ExtResource("e2")]
+
+
+[node name="Hitboxes" type="Node3D" parent="."]
+
+
+[node name="Head" type="Area3D" parent="Hitboxes"]
+position = Vector3(0, 1.65, 0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "head"
+
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/Head"]
+shape = SubResource("s2")
+
+[node name="Body" type="Area3D" parent="Hitboxes"]
+position = Vector3(0, 1.28, 0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "body"
+
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/Body"]
+shape = SubResource("s3")
+
+[node name="Legs" type="Area3D" parent="Hitboxes"]
+position = Vector3(0, 0.43, 0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "limb"
+
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/Legs"]
+shape = SubResource("s4")
+
+[node name="Shot" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("e3")
+volume_db = -6.0
+max_distance = 70.0
+
+[node name="Abdomen" type="Area3D" parent="Hitboxes"]
+position = Vector3(0,0.91,0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "abdomen"
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/Abdomen"]
+shape = SubResource("abdomen_shape")
+
+[node name="ArmL" type="Area3D" parent="Hitboxes"]
+position = Vector3(-0.43, 1.40, 0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "arm"
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/ArmL"]
+shape = SubResource("arm_shape")
+[node name="ArmR" type="Area3D" parent="Hitboxes"]
+position = Vector3(0.43, 1.40, 0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "arm"
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/ArmR"]
+shape = SubResource("arm_shape")
+[node name="ForearmL" type="Area3D" parent="Hitboxes"]
+position = Vector3(-0.49, 1.03, 0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "arm"
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/ForearmL"]
+shape = SubResource("arm_shape")
+[node name="ForearmR" type="Area3D" parent="Hitboxes"]
+position = Vector3(0.49, 1.03, 0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "arm"
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/ForearmR"]
+shape = SubResource("arm_shape")

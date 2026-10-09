@@ -1,0 +1,556 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://assets/models/range_honor_R37/D02_joint_vents.glb" id="details"]
+
+[ext_resource type="Script" path="res://scenes/levels/range_honor_R37/honor.gd" id="script"]
+
+[ext_resource type="PackedScene" path="res://assets/models/range_honor_R36/C01_cabinet.glb" id="C01_cabinet"]
+
+[ext_resource type="PackedScene" path="res://assets/models/range_honor_R36/C01_helpers.glb" id="C01_helpers"]
+
+[ext_resource type="PackedScene" path="res://assets/models/range_honor_R36/silver.glb" id="silver"]
+
+[ext_resource type="PackedScene" path="res://assets/models/range_honor_R36/crystal.glb" id="crystal"]
+
+[ext_resource type="PackedScene" path="res://assets/models/range_honor_R35/AG.glb" id="AG"]
+
+[ext_resource type="PackedScene" path="res://assets/models/range_honor_R35/WBG.glb" id="WBG"]
+
+[ext_resource type="PackedScene" path="res://assets/models/range_honor_R35/LGD.glb" id="LGD"]
+
+[ext_resource type="PackedScene" path="res://assets/models/range_honor_R35/NOVA.glb" id="NOVA"]
+
+[ext_resource type="PackedScene" path="res://assets/models/range_honor_R36/D01_entrance.glb" id="D01_entrance"]
+
+[sub_resource type="BoxShape3D" id="side"]
+
+size = Vector3(11.9330336824, 12.65, 0.4)
+
+[sub_resource type="BoxShape3D" id="upper"]
+
+size = Vector3(3.2, 8.05, 0.4)
+
+[sub_resource type="BoxShape3D" id="floor"]
+
+size = Vector3(3.44, 0.2, 3.8)
+
+[sub_resource type="BoxShape3D" id="corridor_side"]
+
+size = Vector3(0.24, 4.6, 3.8)
+
+[sub_resource type="BoxShape3D" id="terminal"]
+
+size = Vector3(3.2, 4.6, 0.2)
+
+[sub_resource type="BoxShape3D" id="cabinet"]
+
+size = Vector3(2.134193480014801, 2.475, 1.218669)
+
+
+
+[node name="Honor" type="Node3D"]
+
+script = ExtResource("script")
+
+[node name="Entrance" parent="." instance=ExtResource("D01_entrance")]
+
+position = Vector3(0, 0, 0)
+
+scale = Vector3(1, 1, 1)
+
+rotation = Vector3(0, 0, 0)
+
+[node name="Cabinet_-1_0" parent="." instance=ExtResource("C01_cabinet")]
+
+position = Vector3(-10.601290220022202, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Cabinet_helpers_-1_0" parent="." instance=ExtResource("C01_helpers")]
+
+position = Vector3(-10.601290220022202, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Trophy_-1_0" parent="." instance=ExtResource("silver")]
+
+position = Vector3(-10.601290220022202, 0.5449999999999999, 7.285)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="CabinetCollision_-1_0" type="StaticBody3D" parent="."]
+
+position = Vector3(-10.601290220022202, 1.3175000000000001, 7.45)
+
+[node name="Shape" type="CollisionShape3D" parent="CabinetCollision_-1_0"]
+
+shape = SubResource("cabinet")
+
+[node name="CabinetLight_-1_0" type="OmniLight3D" parent="."]
+
+position = Vector3(-10.601290220022202, 2.195, 7.0600000000000005)
+
+light_color = Color(1,0.78,0.48,1)
+
+light_energy = 0.42
+
+omni_range = 1.0
+
+shadow_enabled = false
+
+light_specular = 0.8
+
+[node name="Cabinet_-1_1" parent="." instance=ExtResource("C01_cabinet")]
+
+position = Vector3(-8.4670967400074, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Cabinet_helpers_-1_1" parent="." instance=ExtResource("C01_helpers")]
+
+position = Vector3(-8.4670967400074, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Trophy_-1_1" parent="." instance=ExtResource("crystal")]
+
+position = Vector3(-8.4670967400074, 0.5449999999999999, 7.285)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="CabinetCollision_-1_1" type="StaticBody3D" parent="."]
+
+position = Vector3(-8.4670967400074, 1.3175000000000001, 7.45)
+
+[node name="Shape" type="CollisionShape3D" parent="CabinetCollision_-1_1"]
+
+shape = SubResource("cabinet")
+
+[node name="CabinetLight_-1_1" type="OmniLight3D" parent="."]
+
+position = Vector3(-8.4670967400074, 2.195, 7.0600000000000005)
+
+light_color = Color(1,0.78,0.48,1)
+
+light_energy = 0.42
+
+omni_range = 1.0
+
+shadow_enabled = false
+
+light_specular = 0.8
+
+[node name="Cabinet_-1_2" parent="." instance=ExtResource("C01_cabinet")]
+
+position = Vector3(-6.3329032599926, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Cabinet_helpers_-1_2" parent="." instance=ExtResource("C01_helpers")]
+
+position = Vector3(-6.3329032599926, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Trophy_-1_2" parent="." instance=ExtResource("silver")]
+
+position = Vector3(-6.3329032599926, 0.5449999999999999, 7.285)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="CabinetCollision_-1_2" type="StaticBody3D" parent="."]
+
+position = Vector3(-6.3329032599926, 1.3175000000000001, 7.45)
+
+[node name="Shape" type="CollisionShape3D" parent="CabinetCollision_-1_2"]
+
+shape = SubResource("cabinet")
+
+[node name="CabinetLight_-1_2" type="OmniLight3D" parent="."]
+
+position = Vector3(-6.3329032599926, 2.195, 7.0600000000000005)
+
+light_color = Color(1,0.78,0.48,1)
+
+light_energy = 0.42
+
+omni_range = 1.0
+
+shadow_enabled = false
+
+light_specular = 0.8
+
+[node name="Cabinet_-1_3" parent="." instance=ExtResource("C01_cabinet")]
+
+position = Vector3(-4.198709779977799, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Cabinet_helpers_-1_3" parent="." instance=ExtResource("C01_helpers")]
+
+position = Vector3(-4.198709779977799, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Trophy_-1_3" parent="." instance=ExtResource("crystal")]
+
+position = Vector3(-4.198709779977799, 0.5449999999999999, 7.285)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="CabinetCollision_-1_3" type="StaticBody3D" parent="."]
+
+position = Vector3(-4.198709779977799, 1.3175000000000001, 7.45)
+
+[node name="Shape" type="CollisionShape3D" parent="CabinetCollision_-1_3"]
+
+shape = SubResource("cabinet")
+
+[node name="CabinetLight_-1_3" type="OmniLight3D" parent="."]
+
+position = Vector3(-4.198709779977799, 2.195, 7.0600000000000005)
+
+light_color = Color(1,0.78,0.48,1)
+
+light_energy = 0.42
+
+omni_range = 1.0
+
+shadow_enabled = false
+
+light_specular = 0.8
+
+[node name="Cabinet_1_0" parent="." instance=ExtResource("C01_cabinet")]
+
+position = Vector3(4.198709779977799, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Cabinet_helpers_1_0" parent="." instance=ExtResource("C01_helpers")]
+
+position = Vector3(4.198709779977799, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Trophy_1_0" parent="." instance=ExtResource("silver")]
+
+position = Vector3(4.198709779977799, 0.5449999999999999, 7.285)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="CabinetCollision_1_0" type="StaticBody3D" parent="."]
+
+position = Vector3(4.198709779977799, 1.3175000000000001, 7.45)
+
+[node name="Shape" type="CollisionShape3D" parent="CabinetCollision_1_0"]
+
+shape = SubResource("cabinet")
+
+[node name="CabinetLight_1_0" type="OmniLight3D" parent="."]
+
+position = Vector3(4.198709779977799, 2.195, 7.0600000000000005)
+
+light_color = Color(1,0.78,0.48,1)
+
+light_energy = 0.42
+
+omni_range = 1.0
+
+shadow_enabled = false
+
+light_specular = 0.8
+
+[node name="Cabinet_1_1" parent="." instance=ExtResource("C01_cabinet")]
+
+position = Vector3(6.3329032599926, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Cabinet_helpers_1_1" parent="." instance=ExtResource("C01_helpers")]
+
+position = Vector3(6.3329032599926, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Trophy_1_1" parent="." instance=ExtResource("crystal")]
+
+position = Vector3(6.3329032599926, 0.5449999999999999, 7.285)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="CabinetCollision_1_1" type="StaticBody3D" parent="."]
+
+position = Vector3(6.3329032599926, 1.3175000000000001, 7.45)
+
+[node name="Shape" type="CollisionShape3D" parent="CabinetCollision_1_1"]
+
+shape = SubResource("cabinet")
+
+[node name="CabinetLight_1_1" type="OmniLight3D" parent="."]
+
+position = Vector3(6.3329032599926, 2.195, 7.0600000000000005)
+
+light_color = Color(1,0.78,0.48,1)
+
+light_energy = 0.42
+
+omni_range = 1.0
+
+shadow_enabled = false
+
+light_specular = 0.8
+
+[node name="Cabinet_1_2" parent="." instance=ExtResource("C01_cabinet")]
+
+position = Vector3(8.4670967400074, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Cabinet_helpers_1_2" parent="." instance=ExtResource("C01_helpers")]
+
+position = Vector3(8.4670967400074, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Trophy_1_2" parent="." instance=ExtResource("silver")]
+
+position = Vector3(8.4670967400074, 0.5449999999999999, 7.285)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="CabinetCollision_1_2" type="StaticBody3D" parent="."]
+
+position = Vector3(8.4670967400074, 1.3175000000000001, 7.45)
+
+[node name="Shape" type="CollisionShape3D" parent="CabinetCollision_1_2"]
+
+shape = SubResource("cabinet")
+
+[node name="CabinetLight_1_2" type="OmniLight3D" parent="."]
+
+position = Vector3(8.4670967400074, 2.195, 7.0600000000000005)
+
+light_color = Color(1,0.78,0.48,1)
+
+light_energy = 0.42
+
+omni_range = 1.0
+
+shadow_enabled = false
+
+light_specular = 0.8
+
+[node name="Cabinet_1_3" parent="." instance=ExtResource("C01_cabinet")]
+
+position = Vector3(10.601290220022202, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Cabinet_helpers_1_3" parent="." instance=ExtResource("C01_helpers")]
+
+position = Vector3(10.601290220022202, 0.08, 7.45)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Trophy_1_3" parent="." instance=ExtResource("crystal")]
+
+position = Vector3(10.601290220022202, 0.5449999999999999, 7.285)
+
+scale = Vector3(2.25, 2.25, 2.25)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="CabinetCollision_1_3" type="StaticBody3D" parent="."]
+
+position = Vector3(10.601290220022202, 1.3175000000000001, 7.45)
+
+[node name="Shape" type="CollisionShape3D" parent="CabinetCollision_1_3"]
+
+shape = SubResource("cabinet")
+
+[node name="CabinetLight_1_3" type="OmniLight3D" parent="."]
+
+position = Vector3(10.601290220022202, 2.195, 7.0600000000000005)
+
+light_color = Color(1,0.78,0.48,1)
+
+light_energy = 0.42
+
+omni_range = 1.0
+
+shadow_enabled = false
+
+light_specular = 0.8
+
+[node name="Flag_AG" parent="." instance=ExtResource("AG")]
+
+position = Vector3(9.7, 2.15, 7.65)
+
+scale = Vector3(3.35, 3.35, 3.35)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Flag_WBG" parent="." instance=ExtResource("WBG")]
+
+position = Vector3(4.9, 2.15, 7.65)
+
+scale = Vector3(3.35, 3.35, 3.35)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Flag_LGD" parent="." instance=ExtResource("LGD")]
+
+position = Vector3(-4.9, 2.15, 7.65)
+
+scale = Vector3(3.35, 3.35, 3.35)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="Flag_NOVA" parent="." instance=ExtResource("NOVA")]
+
+position = Vector3(-9.7, 2.15, 7.65)
+
+scale = Vector3(3.35, 3.35, 3.35)
+
+rotation = Vector3(0, 3.141592653589793, 0)
+
+[node name="RearWall-1" type="StaticBody3D" parent="."]
+
+position = Vector3(-7.5665168412, 6.325, 7.88)
+
+[node name="Shape" type="CollisionShape3D" parent="RearWall-1"]
+
+shape = SubResource("side")
+
+[node name="CorridorWall-1" type="StaticBody3D" parent="."]
+
+position = Vector3(-1.72, 2.3, 9.9)
+
+[node name="Shape" type="CollisionShape3D" parent="CorridorWall-1"]
+
+shape = SubResource("corridor_side")
+
+[node name="RearWall1" type="StaticBody3D" parent="."]
+
+position = Vector3(7.5665168412, 6.325, 7.88)
+
+[node name="Shape" type="CollisionShape3D" parent="RearWall1"]
+
+shape = SubResource("side")
+
+[node name="CorridorWall1" type="StaticBody3D" parent="."]
+
+position = Vector3(1.72, 2.3, 9.9)
+
+[node name="Shape" type="CollisionShape3D" parent="CorridorWall1"]
+
+shape = SubResource("corridor_side")
+
+[node name="RearUpper" type="StaticBody3D" parent="."]
+
+position = Vector3(0, 8.625, 7.88)
+
+[node name="Shape" type="CollisionShape3D" parent="RearUpper"]
+
+shape = SubResource("upper")
+
+[node name="CorridorFloor" type="StaticBody3D" parent="."]
+
+position = Vector3(0, -0.1, 9.9)
+
+[node name="Shape" type="CollisionShape3D" parent="CorridorFloor"]
+
+shape = SubResource("floor")
+
+[node name="ClosedDoor" type="StaticBody3D" parent="."]
+
+position = Vector3(0, 2.3, 11.72)
+
+[node name="Shape" type="CollisionShape3D" parent="ClosedDoor"]
+
+shape = SubResource("terminal")
+
+[node name="DoorWarmLight0" type="OmniLight3D" parent="."]
+
+position = Vector3(0,3.4,8.5)
+
+light_color = Color(1,0.80,0.56,1)
+
+light_energy = 0.25
+
+omni_range = 2.3
+
+shadow_enabled = false
+
+[node name="DoorWarmLight1" type="OmniLight3D" parent="."]
+
+position = Vector3(0,3.4,9.6)
+
+light_color = Color(1,0.80,0.56,1)
+
+light_energy = 0.25
+
+omni_range = 2.3
+
+shadow_enabled = false
+
+[node name="DoorWarmLight2" type="OmniLight3D" parent="."]
+
+position = Vector3(0,3.4,10.7)
+
+light_color = Color(1,0.80,0.56,1)
+
+light_energy = 0.25
+
+omni_range = 2.3
+
+shadow_enabled = false
+
+[node name="JointAndVentDetails" parent="." instance=ExtResource("details")]
+
+

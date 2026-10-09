@@ -1,0 +1,815 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="Script" path="res://scripts/motion_settings.gd" id="script"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Medium.ttf" id="font"]
+[sub_resource type="StyleBoxFlat" id="panel"]
+bg_color = Color(0.025,0.065,0.085,0.94)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_left = 18
+corner_radius_bottom_right = 18
+border_width_left = 3
+border_color = Color(0.18,0.8,0.7,1)
+[sub_resource type="Theme" id="theme"]
+default_font = ExtResource("font")
+default_font_size = 17
+Panel/styles/panel = SubResource("panel")
+
+[node name="MotionSettings" type="CanvasLayer"]
+layer = 21
+process_mode = 3
+script = ExtResource("script")
+[node name="Root" type="Control" parent="."]
+mouse_filter = 2
+theme = SubResource("theme")
+
+[node name="Panel" type="Panel" parent="Root"]
+offset_left = 300.0
+offset_top = 60.0
+offset_right = 1300.0
+offset_bottom = 840.0
+
+visible = false
+
+[node name="Title" type="Label" parent="Root/Panel"]
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 970.0
+offset_bottom = 60.0
+text = "运动与技能校准 / 国服 PC · 烽火地带"
+theme_override_font_sizes/font_size = 28
+
+[node name="Note" type="Label" parent="Root/Panel"]
+offset_left = 30.0
+offset_top = 67.0
+offset_right = 970.0
+offset_bottom = 122.0
+text = "这些是训练基线，当前国服精确值仍待实测。\n调整后在运动校准场核对实际位移；自动补给是训练规则。"
+
+
+[node name="Scroll" type="ScrollContainer" parent="Root/Panel"]
+offset_left = 30.0
+offset_top = 132.0
+offset_right = 970.0
+offset_bottom = 672.0
+
+
+
+[node name="Rows" type="VBoxContainer" parent="Root/Panel/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="walk_speed" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/walk_speed"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "步行速度 m/s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/walk_speed"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 15
+step = 0.001
+value = 5.0
+
+[node name="sprint_speed" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/sprint_speed"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "冲刺速度 m/s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/sprint_speed"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 15
+step = 0.001
+value = 7.0
+
+[node name="crouch_speed" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/crouch_speed"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "蹲行速度 m/s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/crouch_speed"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 15
+step = 0.001
+value = 2.1
+
+[node name="ads_speed_multiplier" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/ads_speed_multiplier"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "瞄准移动倍率"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/ads_speed_multiplier"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 3
+step = 0.001
+value = 0.65
+
+[node name="equipment_speed_multiplier" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/equipment_speed_multiplier"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "装备 / 负重速度倍率"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/equipment_speed_multiplier"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 3
+step = 0.001
+value = 1.0
+
+[node name="acceleration" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/acceleration"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "地面加速度 m/s²"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/acceleration"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 30.0
+
+[node name="braking" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/braking"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "急停减速度 m/s²"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/braking"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 30.0
+
+[node name="air_acceleration" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/air_acceleration"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "空中加速度 m/s²"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/air_acceleration"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 8.0
+
+[node name="jump_height" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/jump_height"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "跳跃高度 m"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/jump_height"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.2
+max_value = 4
+step = 0.001
+value = 0.934444
+
+[node name="jump_apex_seconds" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/jump_apex_seconds"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "到最高点时间 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/jump_apex_seconds"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.1
+max_value = 2
+step = 0.001
+value = 0.322222
+
+[node name="stand_height" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/stand_height"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "站姿碰撞高度 m"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/stand_height"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.2
+max_value = 4
+step = 0.001
+value = 1.85
+
+[node name="crouch_height" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/crouch_height"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "蹲姿碰撞高度 m"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/crouch_height"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.2
+max_value = 4
+step = 0.001
+value = 1.15
+
+[node name="stand_eye" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/stand_eye"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "站姿视点高度 m"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/stand_eye"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.2
+max_value = 4
+step = 0.001
+value = 1.7
+
+[node name="crouch_eye" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/crouch_eye"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "蹲姿视点高度 m"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/crouch_eye"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.2
+max_value = 4
+step = 0.001
+value = 1.03
+
+[node name="dash_distance" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/dash_distance"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "喷气距离 m"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/dash_distance"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 5.12
+
+[node name="dash_seconds" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/dash_seconds"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "喷气持续 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/dash_seconds"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.1
+max_value = 2
+step = 0.001
+value = 0.32
+
+[node name="lateral_dash_multiplier" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/lateral_dash_multiplier"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "侧向 / 斜向喷气倍率"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/lateral_dash_multiplier"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 3
+step = 0.001
+value = 1.0
+
+[node name="dash_cooldown" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/dash_cooldown"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "喷气基础冷却 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/dash_cooldown"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 20.0
+
+[node name="operator_refund" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/operator_refund"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "击倒干员返还比例"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/operator_refund"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0
+max_value = 1
+step = 0.001
+value = 0.9
+
+[node name="soldier_refund" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/soldier_refund"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "击倒士兵返还比例"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/soldier_refund"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0
+max_value = 1
+step = 0.001
+value = 0.52
+
+[node name="passive_speed_multiplier" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/passive_speed_multiplier"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "动能辅助加速倍率"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/passive_speed_multiplier"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 3
+step = 0.001
+value = 1.15
+
+[node name="passive_seconds" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/passive_seconds"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "动能辅助持续 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/passive_seconds"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 2.0
+
+[node name="passive_cooldown" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/passive_cooldown"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "动能辅助冷却 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/passive_cooldown"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 8.0
+
+[node name="passive_fall_threshold" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/passive_fall_threshold"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "高处落下触发高度 m"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/passive_fall_threshold"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 3.0
+
+[node name="fall_damage_reduction" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/fall_damage_reduction"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "坠落伤害减免比例"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/fall_damage_reduction"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0
+max_value = 1
+step = 0.001
+value = 0.5
+
+[node name="fall_damage_threshold" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/fall_damage_threshold"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "坠落伤害起始高度 m"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/fall_damage_threshold"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 4.0
+
+[node name="fall_damage_per_metre" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/fall_damage_per_metre"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "每米坠落伤害"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/fall_damage_per_metre"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 15.0
+
+[node name="charge_capacity" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/charge_capacity"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C4 携带数量"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/charge_capacity"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 1
+max_value = 6
+step = 1
+value = 2
+
+[node name="charge_replenish" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/charge_replenish"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "训练 C4 自动补给 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/charge_replenish"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 25.0
+
+[node name="charge_throw_speed" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/charge_throw_speed"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C4 投掷速度 m/s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/charge_throw_speed"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 16.0
+
+[node name="charge_windup" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/charge_windup"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C4 施放前摇 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/charge_windup"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 0.75
+
+[node name="charge_fuse" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/charge_fuse"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C4 引信 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/charge_fuse"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 3.0
+
+[node name="charge_radius" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/charge_radius"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C4 爆炸半径 m"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/charge_radius"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 5.0
+
+[node name="charge_damage" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/charge_damage"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C4 最大伤害"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/charge_damage"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 110.0
+
+[node name="thumper_cooldown" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/thumper_cooldown"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "虎蹲炮冷却 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/thumper_cooldown"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 35.0
+
+[node name="thumper_throw_speed" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/thumper_throw_speed"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "虎蹲炮弹速 m/s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/thumper_throw_speed"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 32.0
+
+[node name="thumper_windup" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/thumper_windup"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "虎蹲炮前摇 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/thumper_windup"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 0.65
+
+[node name="thumper_fuse" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/thumper_fuse"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "虎蹲炮引信 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/thumper_fuse"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 3.0
+
+[node name="thumper_radius" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/thumper_radius"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "虎蹲炮半径 m"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/thumper_radius"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 6.0
+
+[node name="thumper_stun" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/thumper_stun"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "虎蹲炮控制时间 s"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/thumper_stun"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 4.0
+
+[node name="projectile_gravity" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/projectile_gravity"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "投掷物重力 m/s²"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/projectile_gravity"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0.01
+max_value = 300
+step = 0.001
+value = 12.0
+
+[node name="throw_inheritance" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/throw_inheritance"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "投掷继承移动速度比例"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/throw_inheritance"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0
+max_value = 1
+step = 0.001
+value = 0.65
+
+[node name="restitution" type="HBoxContainer" parent="Root/Panel/Scroll/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(890, 36)
+
+[node name="Label" type="Label" parent="Root/Panel/Scroll/Rows/restitution"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "虎蹲弹反弹系数"
+
+[node name="Value" type="SpinBox" parent="Root/Panel/Scroll/Rows/restitution"]
+layout_mode = 2
+custom_minimum_size = Vector2(190, 36)
+min_value = 0
+max_value = 1
+step = 0.001
+value = 0.38
+
+[node name="Save" type="Button" parent="Root/Panel"]
+offset_left = 30.0
+offset_top = 707.0
+offset_right = 330.0
+offset_bottom = 750.0
+text = "应用并保存个人参数"
+
+
+[node name="Reset" type="Button" parent="Root/Panel"]
+offset_left = 350.0
+offset_top = 707.0
+offset_right = 650.0
+offset_bottom = 750.0
+text = "恢复训练基线（待应用）"
+
+
+[node name="Close" type="Button" parent="Root/Panel"]
+offset_left = 680.0
+offset_top = 707.0
+offset_right = 970.0
+offset_bottom = 750.0
+text = "返回 / F8"
+

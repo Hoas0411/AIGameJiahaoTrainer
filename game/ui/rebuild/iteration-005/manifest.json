@@ -1,0 +1,86 @@
+{
+  "iteration": "005",
+  "date": "2026-09-14",
+  "status": "active-trial",
+  "owned_files": [
+    {
+      "path": "ui/rebuild/iteration-005/author_resources.py",
+      "sha256": "a95f9e167fb952b4a8e3e09369b0df2f6a5c30d972cc1b73ae35f9ad6e6218e2",
+      "bytes": 3383
+    },
+    {
+      "path": "ui/rebuild/iteration-005/companion.tscn",
+      "sha256": "30d1bf6e89ed500842b494ed04e665ffcc7ec11029a0bd5c4b8a8a65947a7f91",
+      "bytes": 11679
+    },
+    {
+      "path": "ui/rebuild/iteration-005/dialogue-frame.svg",
+      "sha256": "ca0fd471d171402d9b908aaa4b990c23c27848b4ea2c3f48af8f223096e4aa57",
+      "bytes": 645
+    },
+    {
+      "path": "ui/rebuild/iteration-005/hub-graphic.svg",
+      "sha256": "2917e255464e64d1ad9a074d455661bf68d40950bac1ecaf41d646f138b950a7",
+      "bytes": 1417
+    },
+    {
+      "path": "ui/rebuild/iteration-005/hub.tscn",
+      "sha256": "50746958f184f263a8c3f0fd6723c6b4a895e58cbd77b5d0bb103d2df4fdce2e",
+      "bytes": 23113
+    },
+    {
+      "path": "ui/rebuild/iteration-005/menu_focus.gd",
+      "sha256": "24ecab9cdc53510deac71b80e445d42377e4099e75b578b276bebfb71b566506",
+      "bytes": 1014
+    },
+    {
+      "path": "ui/rebuild/iteration-005/mouse-ink.png",
+      "sha256": "1e6edb16caf0592ca36c1b69741aa4a52f5659333d30281ab296d9f0ecc7e21e",
+      "bytes": 1630649
+    },
+    {
+      "path": "ui/rebuild/iteration-005/mouse-monochrome.gdshader",
+      "sha256": "02d06fc27cb7d4fb7489ca9f9d34d312ebe4eb292a837a80d4a1c6f31bebd8e0",
+      "bytes": 364
+    },
+    {
+      "path": "ui/rebuild/iteration-005/nameplate.svg",
+      "sha256": "f914679b1b8e673e46ed283e591c2349048de9cee4a50f324ca113d69ada527e",
+      "bytes": 183
+    },
+    {
+      "path": "ui/rebuild/iteration-005/offline_capture.gd",
+      "sha256": "f83af37a12cd30ee4e5654a27006993d5eda7d30199891939dbb5839fed78383",
+      "bytes": 732
+    },
+    {
+      "path": "ui/rebuild/iteration-005/theme.tres",
+      "sha256": "ca39a5fc15003b98953d6fb523c238a5a34069754262fb5fa683111258a7e69e",
+      "bytes": 3503
+    },
+    {
+      "path": "ui/rebuild/iteration-005/tools-graphic.svg",
+      "sha256": "e695c487b0cd818509f874df065fc88b05bd59589c74e5f1d548cb81f8a47840",
+      "bytes": 601
+    },
+    {
+      "path": "ui/rebuild/iteration-005/tools.tscn",
+      "sha256": "a245113043cd2180f47dcbd43af05b39fd402bb5d42cc5864a199d345a79edf3",
+      "bytes": 7578
+    }
+  ],
+  "evidence_directory": "evidence/ui-rebuild-20260914/iteration-005",
+  "shared_dependencies": [
+    "ui/rebuild/shared/message_flow.gd",
+    "ui/rebuild/shared/overhead_frame.gd",
+    "ui/rebuild/shared/course_row.gd",
+    "ui/rebuild/shared/lounge-art.png",
+    "assets/fonts/NotoSansSC-Medium.ttf",
+    "scripts/ui_appearance.gd",
+    "scripts/hub_ui.gd",
+    "scripts/companion_ui.gd",
+    "scripts/bubble_ui.gd",
+    "scripts/ui_tool_workspace.gd"
+  ],
+  "removal_boundary": "This iteration folder and matching evidence/documents only; shared files are not owned by this iteration. Active 003/005 must be removed from UIAppearance RESOURCE_ROOTS before removal. No deletion has been performed by this manifest."
+}

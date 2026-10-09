@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="WeaponProfile" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/weapon_profile.gd" id="1"]
+[resource]
+script = ExtResource("1")
+display_name = "AWM / 0.338"
+calibration_note = "2026-09-22 用户截图配装：肉伤100/190/90/40，后坐26，操控31，稳定85，腰射15。枪声800m、35RPM、初速750m/s及射程200m补自GTI数据库；非本配装官方实测。动作与声音另按用户录像校核。"
+damage = 100.0
+head_multiplier = 1.9
+abdomen_multiplier = 0.9
+limb_multiplier = 0.4
+rpm = 35.0
+magazine_size = 5
+muzzle_velocity = 750.0
+effective_range = 200.0
+reload_seconds = 2.9
+empty_reload_seconds = 4.3
+recoil_control = 26
+handling = 31
+stability = 85
+hip_accuracy = 15
+recoil_scale = 0.89
+firing_weapon_stability = 0.95
+firing_camera_stability = 0.23
+moving_stability = 0.44
+sway_degrees = 0.09
+breath_seconds = 64.67
+breath_recoil_scale = 0.69
+flinch_scale = 0.8
+hip_spread_degrees = 5.76
+hip_max_spread_degrees = 11.52
+ads_seconds = 0.526
+sprint_to_fire_seconds = 0.362
+stow_seconds = 0.6
+draw_seconds = 0.4
+walk_move_scale = 0.616
+sprint_move_scale = 0.842857143
+ads_move_scale = 0.393846154
+gunshot_audible_distance = 800.0
+sight_switch_seconds = 0.28
+scope_fov = 20.0
+scope_zoom = 3.0
+alternate_zoom = 7.0

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/jiahao_operator.glb" id="e1"]
+
+[ext_resource type="Script" path="res://scripts/doll.gd" id="e2"]
+
+[ext_resource type="Material" path="res://resources/materials/gold.tres" id="e3"]
+
+[ext_resource type="PackedScene" path="res://assets/models/rifle.glb" id="e4"]
+
+[sub_resource type="SphereMesh" id="s1"]
+radius = 0.06
+height = 0.12
+radial_segments = 32
+rings = 16
+material = ExtResource("e3")
+
+[node name="Doll" type="Node3D"]
+script = ExtResource("e2")
+
+[node name="Model" parent="." instance=ExtResource("e1")]
+
+
+[node name="HeldWeapon" type="Node3D" parent="."]
+scale = Vector3(0.66,0.66,0.66)
+
+[node name="Rifle" parent="HeldWeapon" instance=ExtResource("e4")]
+
+
+[node name="ShotFlash" type="MeshInstance3D" parent="."]
+position = Vector3(0.25, 1.15, 0.6)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("s1")
+visible = false

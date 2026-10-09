@@ -1,0 +1,1825 @@
+[gd_scene format=3]
+[ext_resource type="Material" path="res://assets/models/segmented_cover_gridshot_v2_20261005/floor_world.tres" id="grid_floor"]
+[ext_resource type="Material" path="res://assets/models/segmented_cover_gray_v3_20261005/wall_world.tres" id="grid_wall"]
+[ext_resource type="Material" path="res://assets/models/segmented_cover_gridshot_v2_20261005/white_grid.tres" id="grid_white"]
+[ext_resource type="Material" path="res://assets/models/segmented_cover_gridshot_v2_20261005/blue_grid.tres" id="grid_blue"]
+[ext_resource type="Material" path="res://assets/models/segmented_cover_gridshot_v2_20261005/dark_grid.tres" id="grid_dark"]
+[ext_resource type="Material" path="res://assets/models/segmented_cover_gridshot_v2_20261005/enemy_cyan.tres" id="grid_enemy"]
+[ext_resource type="Script" path="res://scripts/levels/segmented_cover_20261005/drill.gd" id="drill"]
+[ext_resource type="Script" path="res://scripts/levels/segmented_cover_20261005/cover_enemy.gd" id="enemy_script"]
+[ext_resource type="PackedScene" path="res://scenes/actors/enemy.tscn" id="enemy"]
+[ext_resource type="PackedScene" path="res://assets/models/segmented_cover_set_20261009/SC_COVER_TALL.glb" id="white"]
+[ext_resource type="PackedScene" path="res://assets/models/segmented_cover_set_20261009/SC_COVER_LOW.glb" id="blue"]
+[ext_resource type="PackedScene" path="res://assets/models/segmented_cover_set_20261009/SC_STEP.glb" id="dark"]
+[ext_resource type="PackedScene" path="res://assets/models/segmented_cover_gridshot_v2_20261005/floor.glb" id="floor"]
+[ext_resource type="PackedScene" path="res://assets/models/segmented_cover_gray_v3_20261005/wall.glb" id="wall"]
+[ext_resource type="PackedScene" path="res://assets/models/segmented_cover_gray_v3_20261005/doorway.glb" id="doorway"]
+[sub_resource type="ProceduralSkyMaterial" id="sky_mat"]
+sky_top_color = Color(0.38,0.56,0.73,1)
+sky_horizon_color = Color(0.78,0.82,0.84,1)
+ground_horizon_color = Color(0.7,0.73,0.75,1)
+[sub_resource type="Sky" id="sky"]
+sky_material = SubResource("sky_mat")
+[sub_resource type="Environment" id="env"]
+background_mode = 2
+sky = SubResource("sky")
+ambient_light_source = 3
+ambient_light_sky_contribution = 1.0
+ambient_light_energy = 0.5
+reflected_light_source = 2
+tonemap_mode = 4
+tonemap_exposure = 1.0
+ssao_enabled = true
+ssao_radius = 0.7
+ssao_intensity = 1.5
+ssao_power = 1.3
+ssao_light_affect = 0.15
+ssil_enabled = true
+ssil_radius = 2.0
+ssil_intensity = 0.45
+adjustment_enabled = true
+adjustment_contrast = 1.06
+[sub_resource type="BoxShape3D" id="shape_1"]
+size = Vector3(2.60798978805542,1.90761864185333,2.14852809906006)
+[sub_resource type="BoxShape3D" id="shape_2"]
+size = Vector3(2.60798978805542,1.90761864185333,2.14852809906006)
+[sub_resource type="BoxShape3D" id="shape_3"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_4"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_5"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_6"]
+size = Vector3(2.60798978805542,1.90761864185333,2.14852809906006)
+[sub_resource type="BoxShape3D" id="shape_7"]
+size = Vector3(2.60798978805542,1.90761864185333,2.14852809906006)
+[sub_resource type="BoxShape3D" id="shape_8"]
+size = Vector3(2.60798978805542,1.90761864185333,2.14852809906006)
+[sub_resource type="BoxShape3D" id="shape_9"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_10"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_11"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_12"]
+size = Vector3(0.706713914871216,0.607481598854065,1.10129737854004)
+[sub_resource type="BoxShape3D" id="shape_13"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_14"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_15"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_16"]
+size = Vector3(0.706713914871216,0.607481598854065,1.10129737854004)
+[sub_resource type="BoxShape3D" id="shape_17"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_18"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_19"]
+size = Vector3(1.24918675422668,1.25393271446228,1.02324950695038)
+[sub_resource type="BoxShape3D" id="shape_20"]
+size = Vector3(0.706713914871216,0.607481598854065,1.10129737854004)
+[sub_resource type="BoxShape3D" id="shape_21"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_22"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_23"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_24"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_25"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_26"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_27"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_28"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_29"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_30"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_31"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_32"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_33"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_34"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_35"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_36"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_37"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_38"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_39"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_40"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_41"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_42"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_43"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_44"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_45"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_46"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_47"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_48"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_49"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_50"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_51"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_52"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_53"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_54"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_55"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_56"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_57"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_58"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_59"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_60"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_61"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_62"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_63"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_64"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_65"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_66"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_67"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_68"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_69"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_70"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_71"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_72"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_73"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_74"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_75"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_76"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_77"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_78"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_79"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_80"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_81"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_82"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_83"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_84"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_85"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_86"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_87"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_88"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_89"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_90"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_91"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_92"]
+size = Vector3(3.0,0.159999996423721,3.0)
+[sub_resource type="BoxShape3D" id="shape_93"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_94"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_95"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_96"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_97"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_98"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_99"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_100"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_101"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_102"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_103"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_104"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_105"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_106"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_107"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_108"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_109"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_110"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_111"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_112"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_113"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_114"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_115"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_116"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_117"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_118"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_119"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_120"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_121"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_122"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_123"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_124"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_125"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_126"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_127"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_128"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_129"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_130"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_131"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_132"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_133"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_134"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_135"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_136"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_137"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_138"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_139"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_140"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_141"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_142"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_143"]
+size = Vector3(0.900000035762787,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_144"]
+size = Vector3(0.900000035762787,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_145"]
+size = Vector3(1.20000004768372,0.800000190734863,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_146"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_147"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_148"]
+size = Vector3(0.900000035762787,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_149"]
+size = Vector3(0.900000035762787,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_150"]
+size = Vector3(1.20000004768372,0.800000190734863,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_151"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_152"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_153"]
+size = Vector3(0.900000035762787,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_154"]
+size = Vector3(0.900000035762787,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_155"]
+size = Vector3(1.20000004768372,0.800000190734863,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_156"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[sub_resource type="BoxShape3D" id="shape_157"]
+size = Vector3(3.0,3.0,0.180000066757202)
+[node name="SegmentedCover" type="Node3D"]
+script = ExtResource("drill")
+metadata/preserve_authored_visuals = true
+metadata/art_materials = [ExtResource("grid_floor"), ExtResource("grid_wall"), ExtResource("grid_white"), ExtResource("grid_blue"), ExtResource("grid_dark"), ExtResource("grid_enemy")]
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+position = Vector3(3,0,-6)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("env")
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-52,-28,0)
+light_color = Color(1,0.94,0.84,1)
+light_energy = 1.3
+light_angular_distance = 0.5
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 1.0
+shadow_blur = 1.3
+directional_shadow_mode = 2
+directional_shadow_max_distance = 40.0
+[node name="Architecture" type="Node3D" parent="."]
+[node name="A-P1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(2.65,0,-8)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/A-P1" instance=ExtResource("white")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/A-P1"]
+position = Vector3(0.000556826591491699,0.951743423938751,-0.0011821985244751)
+shape = SubResource("shape_1")
+[node name="A-P2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(5.35,0,-8)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/A-P2" instance=ExtResource("white")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/A-P2"]
+position = Vector3(0.000556826591491699,0.951743423938751,-0.0011821985244751)
+shape = SubResource("shape_2")
+[node name="B-P1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.751797411727113,0,-8)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/B-P1" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/B-P1"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_3")
+[node name="B-P2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(12,0,-8)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/B-P2" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/B-P2"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_4")
+[node name="B-P3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.248202588272887,0,-8)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/B-P3" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/B-P3"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_5")
+[node name="C-P1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(17.6,0,-7)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/C-P1" instance=ExtResource("white")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/C-P1"]
+position = Vector3(0.000556826591491699,0.951743423938751,-0.0011821985244751)
+shape = SubResource("shape_6")
+[node name="C-P2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22,0,-10)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/C-P2" instance=ExtResource("white")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/C-P2"]
+position = Vector3(0.000556826591491699,0.951743423938751,-0.0011821985244751)
+shape = SubResource("shape_7")
+[node name="C-P3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(17.6,0,-13)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/C-P3" instance=ExtResource("white")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/C-P3"]
+position = Vector3(0.000556826591491699,0.951743423938751,-0.0011821985244751)
+shape = SubResource("shape_8")
+[node name="A-E1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(2.7517974117271127,0,-18)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/A-E1" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/A-E1"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_9")
+[node name="A-E2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4,0,-18)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/A-E2" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/A-E2"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_10")
+[node name="A-E3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(5.248202588272887,0,-18)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/A-E3" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/A-E3"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_11")
+[node name="A-S" type="StaticBody3D" parent="Architecture"]
+position = Vector3(6,0,-2)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/A-S" instance=ExtResource("dark")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/A-S"]
+position = Vector3(-5.12897968292236e-05,0.302875369787216,-0.000625312328338623)
+shape = SubResource("shape_12")
+[node name="B-E1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.751797411727113,0,-18)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/B-E1" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/B-E1"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_13")
+[node name="B-E2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(12,0,-18)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/B-E2" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/B-E2"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_14")
+[node name="B-E3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.248202588272887,0,-18)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/B-E3" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/B-E3"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_15")
+[node name="B-S" type="StaticBody3D" parent="Architecture"]
+position = Vector3(14,0,-2)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/B-S" instance=ExtResource("dark")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/B-S"]
+position = Vector3(-5.12897968292236e-05,0.302875369787216,-0.000625312328338623)
+shape = SubResource("shape_16")
+[node name="C-E1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(18.751797411727114,0,-23)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/C-E1" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/C-E1"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_17")
+[node name="C-E2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(20,0,-23)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/C-E2" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/C-E2"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_18")
+[node name="C-E3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(21.248202588272886,0,-23)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/C-E3" instance=ExtResource("blue")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/C-E3"]
+position = Vector3(-0.000510811805725098,0.626519322395325,-9.89437103271484e-05)
+shape = SubResource("shape_19")
+[node name="C-S" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22,0,-2)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/C-S" instance=ExtResource("dark")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/C-S"]
+position = Vector3(-5.12897968292236e-05,0.302875369787216,-0.000625312328338623)
+shape = SubResource("shape_20")
+[node name="F_0_0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,-0.1599999964237213,-1.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_0_0" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_0_0"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_21")
+[node name="F_0_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,-0.1599999964237213,-4.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_0_1" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_0_1"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_22")
+[node name="F_0_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,-0.1599999964237213,-7.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_0_2" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_0_2"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_23")
+[node name="F_0_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,-0.1599999964237213,-10.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_0_3" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_0_3"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_24")
+[node name="F_0_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,-0.1599999964237213,-13.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_0_4" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_0_4"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_25")
+[node name="F_0_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,-0.1599999964237213,-16.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_0_5" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_0_5"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_26")
+[node name="F_0_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,-0.1599999964237213,-19.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_0_6" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_0_6"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_27")
+[node name="F_0_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,-0.1599999964237213,-22.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_0_7" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_0_7"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_28")
+[node name="F_0_8" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,-0.1599999964237213,-25.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_0_8" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_0_8"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_29")
+[node name="F_1_0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,-0.1599999964237213,-1.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_1_0" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_1_0"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_30")
+[node name="F_1_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,-0.1599999964237213,-4.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_1_1" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_1_1"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_31")
+[node name="F_1_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,-0.1599999964237213,-7.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_1_2" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_1_2"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_32")
+[node name="F_1_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,-0.1599999964237213,-10.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_1_3" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_1_3"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_33")
+[node name="F_1_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,-0.1599999964237213,-13.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_1_4" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_1_4"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_34")
+[node name="F_1_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,-0.1599999964237213,-16.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_1_5" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_1_5"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_35")
+[node name="F_1_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,-0.1599999964237213,-19.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_1_6" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_1_6"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_36")
+[node name="F_1_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,-0.1599999964237213,-22.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_1_7" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_1_7"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_37")
+[node name="F_1_8" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,-0.1599999964237213,-25.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_1_8" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_1_8"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_38")
+[node name="F_2_0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,-0.1599999964237213,-1.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_2_0" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_2_0"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_39")
+[node name="F_2_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,-0.1599999964237213,-4.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_2_1" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_2_1"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_40")
+[node name="F_2_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,-0.1599999964237213,-7.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_2_2" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_2_2"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_41")
+[node name="F_2_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,-0.1599999964237213,-10.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_2_3" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_2_3"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_42")
+[node name="F_2_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,-0.1599999964237213,-13.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_2_4" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_2_4"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_43")
+[node name="F_2_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,-0.1599999964237213,-16.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_2_5" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_2_5"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_44")
+[node name="F_2_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,-0.1599999964237213,-19.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_2_6" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_2_6"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_45")
+[node name="F_2_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,-0.1599999964237213,-22.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_2_7" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_2_7"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_46")
+[node name="F_2_8" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,-0.1599999964237213,-25.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_2_8" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_2_8"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_47")
+[node name="F_3_0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,-0.1599999964237213,-1.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_3_0" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_3_0"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_48")
+[node name="F_3_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,-0.1599999964237213,-4.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_3_1" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_3_1"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_49")
+[node name="F_3_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,-0.1599999964237213,-7.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_3_2" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_3_2"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_50")
+[node name="F_3_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,-0.1599999964237213,-10.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_3_3" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_3_3"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_51")
+[node name="F_3_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,-0.1599999964237213,-13.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_3_4" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_3_4"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_52")
+[node name="F_3_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,-0.1599999964237213,-16.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_3_5" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_3_5"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_53")
+[node name="F_3_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,-0.1599999964237213,-19.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_3_6" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_3_6"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_54")
+[node name="F_3_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,-0.1599999964237213,-22.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_3_7" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_3_7"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_55")
+[node name="F_3_8" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,-0.1599999964237213,-25.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_3_8" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_3_8"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_56")
+[node name="F_4_0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,-0.1599999964237213,-1.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_4_0" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_4_0"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_57")
+[node name="F_4_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,-0.1599999964237213,-4.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_4_1" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_4_1"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_58")
+[node name="F_4_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,-0.1599999964237213,-7.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_4_2" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_4_2"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_59")
+[node name="F_4_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,-0.1599999964237213,-10.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_4_3" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_4_3"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_60")
+[node name="F_4_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,-0.1599999964237213,-13.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_4_4" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_4_4"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_61")
+[node name="F_4_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,-0.1599999964237213,-16.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_4_5" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_4_5"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_62")
+[node name="F_4_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,-0.1599999964237213,-19.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_4_6" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_4_6"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_63")
+[node name="F_4_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,-0.1599999964237213,-22.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_4_7" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_4_7"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_64")
+[node name="F_4_8" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,-0.1599999964237213,-25.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_4_8" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_4_8"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_65")
+[node name="F_5_0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,-0.1599999964237213,-1.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_5_0" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_5_0"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_66")
+[node name="F_5_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,-0.1599999964237213,-4.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_5_1" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_5_1"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_67")
+[node name="F_5_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,-0.1599999964237213,-7.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_5_2" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_5_2"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_68")
+[node name="F_5_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,-0.1599999964237213,-10.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_5_3" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_5_3"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_69")
+[node name="F_5_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,-0.1599999964237213,-13.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_5_4" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_5_4"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_70")
+[node name="F_5_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,-0.1599999964237213,-16.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_5_5" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_5_5"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_71")
+[node name="F_5_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,-0.1599999964237213,-19.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_5_6" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_5_6"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_72")
+[node name="F_5_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,-0.1599999964237213,-22.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_5_7" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_5_7"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_73")
+[node name="F_5_8" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,-0.1599999964237213,-25.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_5_8" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_5_8"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_74")
+[node name="F_6_0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,-0.1599999964237213,-1.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_6_0" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_6_0"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_75")
+[node name="F_6_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,-0.1599999964237213,-4.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_6_1" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_6_1"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_76")
+[node name="F_6_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,-0.1599999964237213,-7.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_6_2" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_6_2"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_77")
+[node name="F_6_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,-0.1599999964237213,-10.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_6_3" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_6_3"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_78")
+[node name="F_6_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,-0.1599999964237213,-13.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_6_4" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_6_4"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_79")
+[node name="F_6_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,-0.1599999964237213,-16.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_6_5" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_6_5"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_80")
+[node name="F_6_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,-0.1599999964237213,-19.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_6_6" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_6_6"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_81")
+[node name="F_6_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,-0.1599999964237213,-22.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_6_7" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_6_7"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_82")
+[node name="F_6_8" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,-0.1599999964237213,-25.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_6_8" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_6_8"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_83")
+[node name="F_7_0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,-0.1599999964237213,-1.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_7_0" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_7_0"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_84")
+[node name="F_7_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,-0.1599999964237213,-4.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_7_1" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_7_1"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_85")
+[node name="F_7_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,-0.1599999964237213,-7.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_7_2" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_7_2"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_86")
+[node name="F_7_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,-0.1599999964237213,-10.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_7_3" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_7_3"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_87")
+[node name="F_7_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,-0.1599999964237213,-13.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_7_4" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_7_4"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_88")
+[node name="F_7_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,-0.1599999964237213,-16.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_7_5" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_7_5"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_89")
+[node name="F_7_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,-0.1599999964237213,-19.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_7_6" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_7_6"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_90")
+[node name="F_7_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,-0.1599999964237213,-22.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_7_7" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_7_7"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_91")
+[node name="F_7_8" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,-0.1599999964237213,-25.5)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/F_7_8" instance=ExtResource("floor")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/F_7_8"]
+position = Vector3(0.0,0.0799999982118607,-0.0)
+shape = SubResource("shape_92")
+[node name="S_1_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,0,0)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/S_1_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/S_1_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_93")
+[node name="N_1_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,0,-27)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/N_1_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/N_1_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_94")
+[node name="S_4_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,0,0)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/S_4_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/S_4_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_95")
+[node name="N_4_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.5,0,-27)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/N_4_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/N_4_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_96")
+[node name="S_7_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,0,0)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/S_7_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/S_7_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_97")
+[node name="N_7_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(7.5,0,-27)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/N_7_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/N_7_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_98")
+[node name="S_10_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,0,0)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/S_10_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/S_10_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_99")
+[node name="N_10_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(10.5,0,-27)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/N_10_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/N_10_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_100")
+[node name="S_13_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,0,0)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/S_13_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/S_13_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_101")
+[node name="N_13_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(13.5,0,-27)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/N_13_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/N_13_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_102")
+[node name="S_16_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,0,0)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/S_16_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/S_16_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_103")
+[node name="N_16_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16.5,0,-27)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/N_16_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/N_16_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_104")
+[node name="S_19_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,0,0)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/S_19_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/S_19_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_105")
+[node name="N_19_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(19.5,0,-27)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/N_19_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/N_19_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_106")
+[node name="S_22_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,0,0)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/S_22_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/S_22_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_107")
+[node name="N_22_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,0,-27)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/N_22_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/N_22_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_108")
+[node name="W_1_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,0,-1.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/W_1_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/W_1_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_109")
+[node name="E_1_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(24,0,-1.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/E_1_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/E_1_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_110")
+[node name="W_4_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,0,-4.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/W_4_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/W_4_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_111")
+[node name="E_4_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(24,0,-4.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/E_4_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/E_4_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_112")
+[node name="W_7_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,0,-7.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/W_7_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/W_7_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_113")
+[node name="E_7_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(24,0,-7.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/E_7_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/E_7_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_114")
+[node name="W_10_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,0,-10.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/W_10_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/W_10_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_115")
+[node name="E_10_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(24,0,-10.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/E_10_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/E_10_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_116")
+[node name="W_13_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,0,-13.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/W_13_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/W_13_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_117")
+[node name="E_13_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(24,0,-13.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/E_13_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/E_13_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_118")
+[node name="W_16_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,0,-16.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/W_16_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/W_16_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_119")
+[node name="E_16_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(24,0,-16.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/E_16_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/E_16_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_120")
+[node name="W_19_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,0,-19.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/W_19_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/W_19_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_121")
+[node name="E_19_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(24,0,-19.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/E_19_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/E_19_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_122")
+[node name="W_22_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,0,-22.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/W_22_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/W_22_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_123")
+[node name="E_22_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(24,0,-22.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/E_22_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/E_22_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_124")
+[node name="W_25_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,0,-25.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/W_25_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/W_25_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_125")
+[node name="E_25_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(24,0,-25.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/E_25_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/E_25_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_126")
+[node name="D_8_0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(8,0,-5.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_8_0" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_8_0"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_127")
+[node name="D_8_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(8,0,-8.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_8_1" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_8_1"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_128")
+[node name="D_8_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(8,0,-11.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_8_2" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_8_2"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_129")
+[node name="D_8_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(8,0,-14.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_8_3" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_8_3"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_130")
+[node name="D_8_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(8,0,-17.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_8_4" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_8_4"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_131")
+[node name="D_8_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(8,0,-20.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_8_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_8_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_132")
+[node name="D_8_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(8,0,-23.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_8_6" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_8_6"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_133")
+[node name="D_8_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(8,0,-26.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_8_7" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_8_7"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_134")
+[node name="D_16_0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16,0,-5.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_16_0" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_16_0"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_135")
+[node name="D_16_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16,0,-8.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_16_1" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_16_1"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_136")
+[node name="D_16_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16,0,-11.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_16_2" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_16_2"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_137")
+[node name="D_16_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16,0,-14.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_16_3" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_16_3"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_138")
+[node name="D_16_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16,0,-17.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_16_4" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_16_4"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_139")
+[node name="D_16_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16,0,-20.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_16_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_16_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_140")
+[node name="D_16_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16,0,-23.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_16_6" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_16_6"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_141")
+[node name="D_16_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(16,0,-26.5)
+rotation_degrees = Vector3(0,90,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/D_16_7" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/D_16_7"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_142")
+[node name="Entry_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4,0,-4)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/Entry_4" instance=ExtResource("doorway")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/Entry_4"]
+position = Vector3(-1.04999995231628,1.5,-0.0)
+shape = SubResource("shape_143")
+[node name="Collision1" type="CollisionShape3D" parent="Architecture/Entry_4"]
+position = Vector3(1.04999995231628,1.5,-0.0)
+shape = SubResource("shape_144")
+[node name="Collision2" type="CollisionShape3D" parent="Architecture/Entry_4"]
+position = Vector3(0.0,2.59999990463257,-0.0)
+shape = SubResource("shape_145")
+[node name="EntrySide_4_-2_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.5,0,-4.24)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/EntrySide_4_-2_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/EntrySide_4_-2_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_146")
+[node name="EntrySide_4_2_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(6.5,0,-4.24)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/EntrySide_4_2_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/EntrySide_4_2_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_147")
+[node name="Entry_12" type="StaticBody3D" parent="Architecture"]
+position = Vector3(12,0,-4)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/Entry_12" instance=ExtResource("doorway")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/Entry_12"]
+position = Vector3(-1.04999995231628,1.5,-0.0)
+shape = SubResource("shape_148")
+[node name="Collision1" type="CollisionShape3D" parent="Architecture/Entry_12"]
+position = Vector3(1.04999995231628,1.5,-0.0)
+shape = SubResource("shape_149")
+[node name="Collision2" type="CollisionShape3D" parent="Architecture/Entry_12"]
+position = Vector3(0.0,2.59999990463257,-0.0)
+shape = SubResource("shape_150")
+[node name="EntrySide_12_-2_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(9.5,0,-4.24)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/EntrySide_12_-2_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/EntrySide_12_-2_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_151")
+[node name="EntrySide_12_2_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(14.5,0,-4.24)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/EntrySide_12_2_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/EntrySide_12_2_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_152")
+[node name="Entry_20" type="StaticBody3D" parent="Architecture"]
+position = Vector3(20,0,-4)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/Entry_20" instance=ExtResource("doorway")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/Entry_20"]
+position = Vector3(-1.04999995231628,1.5,-0.0)
+shape = SubResource("shape_153")
+[node name="Collision1" type="CollisionShape3D" parent="Architecture/Entry_20"]
+position = Vector3(1.04999995231628,1.5,-0.0)
+shape = SubResource("shape_154")
+[node name="Collision2" type="CollisionShape3D" parent="Architecture/Entry_20"]
+position = Vector3(0.0,2.59999990463257,-0.0)
+shape = SubResource("shape_155")
+[node name="EntrySide_20_-2_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(17.5,0,-4.24)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/EntrySide_20_-2_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/EntrySide_20_-2_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_156")
+[node name="EntrySide_20_2_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(22.5,0,-4.24)
+rotation_degrees = Vector3(0,0,0)
+collision_layer = 1
+collision_mask = 0
+[node name="Model" parent="Architecture/EntrySide_20_2_5" instance=ExtResource("wall")]
+[node name="Collision0" type="CollisionShape3D" parent="Architecture/EntrySide_20_2_5"]
+position = Vector3(0.0,1.5,-0.0)
+shape = SubResource("shape_157")
+[node name="Enemies" type="Node3D" parent="."]
+[node name="Enemy0_0" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(3,0,-19.2)
+script = ExtResource("enemy_script")
+bay = 0
+lane_center = 3.35
+lane_half_width = 0.55
+start_delay = 0.0
+shooting_enabled = false
+[node name="Enemy0_1" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(5,0,-19.2)
+script = ExtResource("enemy_script")
+bay = 0
+lane_center = 4.65
+lane_half_width = 0.55
+start_delay = 0.3
+shooting_enabled = false
+[node name="Enemy1_0" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(11,0,-19.2)
+script = ExtResource("enemy_script")
+bay = 1
+lane_center = 11.35
+lane_half_width = 0.55
+start_delay = 0.0
+shooting_enabled = false
+[node name="Enemy1_1" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(13,0,-19.2)
+script = ExtResource("enemy_script")
+bay = 1
+lane_center = 12.65
+lane_half_width = 0.55
+start_delay = 0.3
+shooting_enabled = false
+[node name="Enemy2_0" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(19,0,-24.2)
+script = ExtResource("enemy_script")
+bay = 2
+lane_center = 19.35
+lane_half_width = 0.55
+start_delay = 0.0
+shooting_enabled = false
+[node name="Enemy2_1" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(21,0,-24.2)
+script = ExtResource("enemy_script")
+bay = 2
+lane_center = 20.65
+lane_half_width = 0.55
+start_delay = 0.3
+shooting_enabled = false
+[node name="Bird" type="Camera3D" parent="."]
+position = Vector3(34, 38, 10)
+rotation_degrees = Vector3(-55, 145, 0)
+projection = 1
+size = 46
+far = 150.0
+[node name="Ortho" type="Camera3D" parent="."]
+position = Vector3(36, 29, 16)
+rotation_degrees = Vector3(-38, 140, 0)
+projection = 1
+size = 47
+far = 150.0
+[node name="Top" type="Camera3D" parent="."]
+position = Vector3(12, 50, -13.5)
+rotation_degrees = Vector3(-90, 0, 0)
+projection = 1
+size = 50
+far = 150.0
+[node name="Reverse" type="Camera3D" parent="."]
+position = Vector3(35, 28, -42)
+rotation_degrees = Vector3(-40, 35, 0)
+projection = 1
+size = 46
+far = 150.0

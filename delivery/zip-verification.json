@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "packages": [
+    {
+      "archive": "2026-10-08-精简工程交接-v2.zip",
+      "bytes": 994847415,
+      "sha256": "d41ae1fe32ffb5df0f8c1fbe694652aeb65d8059c1a90790593389134f1a9539",
+      "crc_all_entries": true,
+      "content_files": 2062,
+      "content_bytes": 1625622398
+    },
+    {
+      "archive": "嘉豪训练器-当前模型源.zip",
+      "bytes": 775592011,
+      "sha256": "900ec7b45b784cf405821eaefb67def451330efc70e12df454ba8923c4600b4f",
+      "crc_all_entries": true,
+      "content_files": 149,
+      "content_bytes": 788145603
+    }
+  ]
+}

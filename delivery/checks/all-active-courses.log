@@ -1,0 +1,20 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+VISUAL_QUALITY level=CircularLobby renderer=forward_plus own_sun=true
+HANDOFF_COURSE_PASS 0 res://scenes/levels/awm_endwall_symmetry_20261005/runtime.tscn
+VISUAL_QUALITY level=07_range renderer=forward_plus own_sun=true
+HANDOFF_COURSE_PASS 6 res://scenes/levels/07_range.tscn
+VISUAL_QUALITY level=08_reaction renderer=forward_plus own_sun=false
+HANDOFF_COURSE_PASS 7 res://scenes/levels/08_reaction.tscn
+VISUAL_QUALITY level=09_elevation renderer=forward_plus own_sun=false
+HANDOFF_COURSE_PASS 8 res://scenes/levels/09_elevation.tscn
+VISUAL_QUALITY level=CircularLobby renderer=forward_plus own_sun=true
+HANDOFF_COURSE_PASS 12 res://scenes/levels/circular_lobby_fit/circular_lobby.tscn
+VISUAL_QUALITY level=14_smooth_tracking renderer=forward_plus own_sun=false
+HANDOFF_COURSE_PASS 13 res://scenes/levels/training/14_smooth_tracking.tscn
+HANDOFF_COURSE_PASS 15 res://scenes/levels/training/16_mid_doors.tscn
+VISUAL_QUALITY level=Gridshot renderer=forward_plus own_sun=false
+HANDOFF_COURSE_PASS 19 res://scenes/levels/training/20_gridshot.tscn
+HANDOFF_COURSE_PASS 20 res://scenes/levels/segmented_cover_20261005/runtime.tscn
+HANDOFF_SMOKE_PASS nine active courses; initialization only

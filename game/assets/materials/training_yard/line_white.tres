@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/training_yard/coated_normal.png" id="normal"]
+
+[resource]
+resource_name = "TY_line_white"
+albedo_color = Color(0.851,0.863,0.867, 1)
+metallic = 0.0
+metallic_specular = 0.4
+roughness = 0.6
+normal_enabled = true
+normal_scale = 0.2
+normal_texture = ExtResource("normal")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5

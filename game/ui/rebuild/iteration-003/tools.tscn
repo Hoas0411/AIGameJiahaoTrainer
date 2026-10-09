@@ -1,0 +1,274 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Theme" path="res://ui/rebuild/iteration-003/theme.tres" id="1_theme"]
+[ext_resource type="Texture2D" path="res://ui/rebuild/iteration-003/course-cover.svg" id="2_cover"]
+
+[ext_resource type="Texture2D" path="res://ui/rebuild/iteration-003/workspace-gradient.svg" id="3_bg"]
+[ext_resource type="Script" path="res://ui/rebuild/shared/course_row.gd" id="4_row"]
+
+[node name="Root" type="Control"]
+offset_right = 1600.0
+offset_bottom = 900.0
+theme = ExtResource("1_theme")
+[node name="ReferenceAtmosphere" type="TextureRect" parent="."]
+offset_right = 1600.0
+offset_bottom = 900.0
+texture = ExtResource("3_bg")
+mouse_filter = 2
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1600.0
+offset_bottom = 900.0
+color = Color(0.045, 0.088, 0.105, 1)
+visible = false
+
+[node name="Top" type="ColorRect" parent="."]
+offset_left = 38.0
+offset_top = 10.0
+offset_right = 1405.0
+offset_bottom = 54.0
+color = Color(0.012, 0.016, 0.022, 1)
+[node name="PlaySlice" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(110, 10, 255, 10, 240, 54, 110, 54)
+color = Color(0.27, 0.80, 0.81, 1)
+[node name="Play" type="Label" parent="."]
+offset_left = 110.0
+offset_top = 10.0
+offset_right = 240.0
+offset_bottom = 54.0
+text = "PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.02, 0.10, 0.12, 1)
+theme_override_font_sizes/font_size = 20
+[node name="Brand" type="Label" parent="."]
+offset_left = 280.0
+offset_top = 20.0
+offset_right = 750.0
+offset_bottom = 48.0
+text = "嘉豪训练器    /    训练路线"
+theme_override_font_sizes/font_size = 18
+[node name="Close" type="Button" parent="."]
+offset_left = 1450.0
+offset_top = 15.0
+offset_right = 1570.0
+offset_bottom = 55.0
+text = "关闭"
+[node name="LeftRail" type="ColorRect" parent="."]
+offset_top = 68.0
+offset_right = 224.0
+offset_bottom = 900.0
+color = Color(0.055, 0.06, 0.067, 1)
+[node name="LeftTitle" type="Label" parent="LeftRail"]
+offset_left = 24.0
+offset_top = 32.0
+offset_right = 200.0
+offset_bottom = 60.0
+text = "训练参数"
+theme_override_font_sizes/font_size = 20
+[node name="FocusLabel" type="Label" parent="LeftRail"]
+offset_left = 24.0
+offset_top = 95.0
+offset_right = 180.0
+offset_bottom = 120.0
+text = "训练重点"
+[node name="Focus" type="OptionButton" parent="."]
+offset_left = 24.0
+offset_top = 170.0
+offset_right = 200.0
+offset_bottom = 214.0
+[node name="DurationLabel" type="Label" parent="LeftRail"]
+offset_left = 24.0
+offset_top = 240.0
+offset_right = 180.0
+offset_bottom = 266.0
+text = "时长（分钟）"
+[node name="Duration" type="SpinBox" parent="."]
+offset_left = 24.0
+offset_top = 340.0
+offset_right = 200.0
+offset_bottom = 384.0
+min_value = 5.0
+max_value = 60.0
+value = 20.0
+[node name="Generate" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 408.0
+offset_right = 200.0
+offset_bottom = 454.0
+text = "生成候选"
+theme_type_variation = &"PrimaryButton"
+[node name="BackChat" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 790.0
+offset_right = 200.0
+offset_bottom = 836.0
+text = "← 回到对话"
+
+[node name="Search" type="LineEdit" parent="."]
+offset_left = 245.0
+offset_top = 92.0
+offset_right = 980.0
+offset_bottom = 142.0
+text = "按偏好筛选训练路线"
+[node name="ResultTitle" type="Label" parent="."]
+offset_left = 245.0
+offset_top = 168.0
+offset_right = 980.0
+offset_bottom = 204.0
+text = "候选路线"
+theme_override_font_sizes/font_size = 25
+[node name="Route0" type="Button" parent="."]
+offset_left = 245.0
+offset_top = 226.0
+offset_right = 980.0
+offset_bottom = 290.0
+text = "01  热身定位 · 20 分钟"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+flat = false
+script = ExtResource("4_row")
+
+[node name="Route0Meta" type="Label" parent="."]
+offset_left = 275.0
+offset_top = 263.0
+offset_right = 880.0
+offset_bottom = 284.0
+text = "三段练习，先稳住首发，再提高切换速度"
+theme_override_colors/font_color = Color(0.60, 0.66, 0.69, 1)
+visible = false
+[node name="Route1" type="Button" parent="."]
+offset_left = 245.0
+offset_top = 306.0
+offset_right = 980.0
+offset_bottom = 370.0
+text = "02  跟枪节奏 · 20 分钟"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+flat = false
+script = ExtResource("4_row")
+
+[node name="Route1Meta" type="Label" parent="."]
+offset_left = 275.0
+offset_top = 343.0
+offset_right = 880.0
+offset_bottom = 364.0
+text = "连续跟踪与急停切换，适合保持手感"
+theme_override_colors/font_color = Color(0.60, 0.66, 0.69, 1)
+visible = false
+[node name="Route2" type="Button" parent="."]
+offset_left = 245.0
+offset_top = 386.0
+offset_right = 980.0
+offset_bottom = 450.0
+text = "03  综合复盘 · 20 分钟"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+flat = false
+script = ExtResource("4_row")
+
+[node name="Route2Meta" type="Label" parent="."]
+offset_left = 275.0
+offset_top = 423.0
+offset_right = 880.0
+offset_bottom = 444.0
+text = "不合并成评分，只提供下一轮的步骤"
+theme_override_colors/font_color = Color(0.60, 0.66, 0.69, 1)
+visible = false
+[node name="RecordsTitle" type="Label" parent="."]
+offset_left = 245.0
+offset_top = 500.0
+offset_right = 640.0
+offset_bottom = 530.0
+text = "真实记录"
+theme_override_font_sizes/font_size = 20
+[node name="Records" type="RichTextLabel" parent="."]
+offset_left = 245.0
+offset_top = 540.0
+offset_right = 980.0
+offset_bottom = 760.0
+bbcode_enabled = false
+
+[node name="Detail" type="Control" parent="."]
+offset_left = 1018.0
+offset_top = 92.0
+offset_right = 1550.0
+offset_bottom = 766.0
+[node name="Cover" type="TextureRect" parent="."]
+offset_left = 1018.0
+offset_top = 138.0
+offset_right = 1198.0
+offset_bottom = 320.0
+texture = ExtResource("2_cover")
+expand_mode = 1
+stretch_mode = 6
+[node name="PlanTitle" type="Label" parent="."]
+offset_left = 1018.0
+offset_top = 88.0
+offset_right = 1550.0
+offset_bottom = 125.0
+text = "热身定位"
+theme_override_font_sizes/font_size = 25
+[node name="PlanReason" type="Label" parent="."]
+offset_left = 1215.0
+offset_top = 138.0
+offset_right = 1530.0
+offset_bottom = 324.0
+text = "根据当前偏好安排的候选路线。"
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.67, 0.72, 0.75, 1)
+theme_override_font_sizes/font_size = 17
+
+[node name="Steps" type="RichTextLabel" parent="."]
+offset_left = 1042.0
+offset_top = 360.0
+offset_right = 1526.0
+offset_bottom = 550.0
+bbcode_enabled = false
+[node name="State" type="Label" parent="."]
+offset_left = 1042.0
+offset_top = 572.0
+offset_right = 1526.0
+offset_bottom = 622.0
+text = "尚未开始路线。"
+autowrap_mode = 3
+[node name="ToolTrace" type="RichTextLabel" parent="."]
+offset_left = 1042.0
+offset_top = 640.0
+offset_right = 1526.0
+offset_bottom = 746.0
+bbcode_enabled = false
+[node name="Start" type="Button" parent="."]
+offset_left = 1018.0
+offset_top = 776.0
+offset_right = 1300.0
+offset_bottom = 830.0
+text = "开始路线"
+theme_type_variation = &"PrimaryButton"
+[node name="Pause" type="Button" parent="."]
+offset_left = 1310.0
+offset_top = 776.0
+offset_right = 1390.0
+offset_bottom = 830.0
+text = "暂停"
+[node name="Stop" type="Button" parent="."]
+offset_left = 1400.0
+offset_top = 776.0
+offset_right = 1470.0
+offset_bottom = 830.0
+text = "结束"
+[node name="Next" type="Button" parent="."]
+offset_left = 1480.0
+offset_top = 776.0
+offset_right = 1550.0
+offset_bottom = 830.0
+[node name="BottomBar" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_top = 846.0
+offset_right = 1600.0
+offset_bottom = 900.0
+color = Color(0.012, 0.016, 0.022, 1)
+text = "下一段"

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponProfile" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/weapon_profile.gd" id="1"]
+[resource]
+script = ExtResource("1")
+scope_zoom = 1.5
+alternate_zoom = 1.5
+display_name = "训练步枪 / 5.56"
+calibration_note = "第二关原型训练步枪，未对应或宣称等效于三角洲具体枪械。"
+damage = 34.0
+head_multiplier = 2.0
+rpm = 700.0
+magazine_size = 30
+reload_seconds = 2.2
+muzzle_velocity = 800.0
+recoil_degrees = 0.42
+hip_spread_degrees = 1.3
+laser_spread_degrees = 0.15
+ads_spread_degrees = 0.05
+scope_fov = 55.0
+automatic = true

@@ -1,0 +1,23 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://assets/models/awm_front_material_match_20261005/R01_front_interface.glb" id="model"]
+[sub_resource type="BoxShape3D" id="shape"]
+size = Vector3(14.700047166445113, 10.0, 2.0119106121547254)
+[node name="R01" type="Node3D"]
+metadata/source_blend = "source_art/awm_front_material_match_20261005/R01_front_interface.blend"
+metadata/part_id = "R01"
+metadata/support_restriction = false
+[node name="Model" parent="." instance=ExtResource("model")]
+[node name="Body" type="StaticBody3D" parent="."]
+collision_layer = 1
+collision_mask = 0
+[node name="Collision" type="CollisionShape3D" parent="Body"]
+position = Vector3(0, 5.0, 0)
+shape = SubResource("shape")
+[node name="SnapLeft" type="Marker3D" parent="."]
+position = Vector3(-7.350023583222557,0,0)
+[node name="SnapRight" type="Marker3D" parent="."]
+position = Vector3(7.350023583222557,0,0)
+[node name="SnapFront" type="Marker3D" parent="."]
+position = Vector3(0,0,1.0059553060773627)
+[node name="SnapRear" type="Marker3D" parent="."]
+position = Vector3(0,0,-1.0059553060773627)

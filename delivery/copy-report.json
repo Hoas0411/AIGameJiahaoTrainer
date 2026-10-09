@@ -1,0 +1,23 @@
+{
+  "snapshot_date": "2026-10-08",
+  "mode": "lean-current-dependencies",
+  "runtime_files": 601,
+  "authored_blend_files": 71,
+  "gameplay_code_changes": false,
+  "excluded": [
+    "historical candidates",
+    "duplicate assemblies",
+    "old renders/captures",
+    "legacy author scripts",
+    "personal config/data",
+    "cache/backup",
+    "independent centrifuge",
+    "historical diagnostic output folders; resource-directory comments not treated as runtime dependencies"
+  ],
+  "portable_changes": [
+    "current resource closure preset",
+    "current Blender owners only",
+    "shared relative Blender textures",
+    "portable launch/verify/export/workbench copied from validated v1"
+  ]
+}

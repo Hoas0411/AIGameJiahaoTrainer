@@ -1,0 +1,540 @@
+[
+  {
+    "path": "game/source_art/awm_delta_optic_20261005/awm_delta_optic.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-ab5140637b7f6192e92fac40.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_endwall_symmetry_20261005/J01_mirrored.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_endwall_symmetry_20261005/R01_mirrored.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_endwall_symmetry_20261005/W01_mirrored.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_endwall_symmetry_20261005/W01rear_mirrored.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_front_material_match_20261005/R01_front_interface.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_modular/Blender源文件/r3_cover_optimized.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_rear_seam_local_20261004/W01_rear_interface.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_terrace_local_repair_20261004/parts/F01/F01_local_repair.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_terrace_local_repair_20261004/parts/G01/G01_local_repair.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_terrace_local_repair_20261004/parts/J01/J01_local_repair.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_terrace_local_repair_20261004/parts/R01/R01_local_repair.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/awm_terrace_local_repair_20261004/parts/W01/W01_local_repair.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/banner_trophy_20261005/FourFlags_Blender.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-04e7fc3499de4005959c768d.png",
+      "game/blender-dependencies/shared-a0f2c718bd1e884dede0c6b6.png",
+      "game/blender-dependencies/shared-abfc9cb57ddb188c5371df1f.png",
+      "game/blender-dependencies/shared-dc1771024582cbaa90b8ec80.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/B1.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/B2.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/C0.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/C1.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/C2.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/C3.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/D1.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/E1_20.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/F1_45.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/F2_45.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/F3_45.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/P0_80.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/T1_40.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/T2.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/W1.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/companions/expressions_20260930/mouse_angry.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-2660cb8f05790eaaaa9a20cd.png",
+      "game/blender-dependencies/shared-38ce1eb01a8e9d15ac9a9db3.png",
+      "game/blender-dependencies/shared-a556e99a27dc2365627c0bb5.png",
+      "game/blender-dependencies/shared-cb68944a462c7a7ba7a8afbd.png",
+      "game/blender-dependencies/shared-eb301fcf1afb001d6f627b05.png",
+      "game/blender-dependencies/shared-f7ab245e93d0944707c7e7d0.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/companions/expressions_20260930/mouse_excited.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-2660cb8f05790eaaaa9a20cd.png",
+      "game/blender-dependencies/shared-2de8e8be831256643d5a498e.png",
+      "game/blender-dependencies/shared-38ce1eb01a8e9d15ac9a9db3.png",
+      "game/blender-dependencies/shared-a556e99a27dc2365627c0bb5.png",
+      "game/blender-dependencies/shared-f3c2c98019f4318bc107f1ca.png",
+      "game/blender-dependencies/shared-f7ab245e93d0944707c7e7d0.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/companions/expressions_20260930/mouse_happy.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-2660cb8f05790eaaaa9a20cd.png",
+      "game/blender-dependencies/shared-38ce1eb01a8e9d15ac9a9db3.png",
+      "game/blender-dependencies/shared-4fd664c97f4ad2245f018250.png",
+      "game/blender-dependencies/shared-a556e99a27dc2365627c0bb5.png",
+      "game/blender-dependencies/shared-aa059ceea18a481b111bd1f2.png",
+      "game/blender-dependencies/shared-f7ab245e93d0944707c7e7d0.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/companions/expressions_20260930/mouse_scared.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-2660cb8f05790eaaaa9a20cd.png",
+      "game/blender-dependencies/shared-38ce1eb01a8e9d15ac9a9db3.png",
+      "game/blender-dependencies/shared-a556e99a27dc2365627c0bb5.png",
+      "game/blender-dependencies/shared-c674d771765a7380e8f3eea6.png",
+      "game/blender-dependencies/shared-c75f3b06cd269997ef29c78a.png",
+      "game/blender-dependencies/shared-f7ab245e93d0944707c7e7d0.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/companions/expressions_20260930/mouse_smug.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-2660cb8f05790eaaaa9a20cd.png",
+      "game/blender-dependencies/shared-38ce1eb01a8e9d15ac9a9db3.png",
+      "game/blender-dependencies/shared-45fa2dd1edf4190dcb40c1ce.png",
+      "game/blender-dependencies/shared-9cae8a975407bd4b421401e2.png",
+      "game/blender-dependencies/shared-a556e99a27dc2365627c0bb5.png",
+      "game/blender-dependencies/shared-f7ab245e93d0944707c7e7d0.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/companions/hug_precision_20260930/hug_interaction.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-2660cb8f05790eaaaa9a20cd.png",
+      "game/blender-dependencies/shared-38ce1eb01a8e9d15ac9a9db3.png",
+      "game/blender-dependencies/shared-4fd664c97f4ad2245f018250.png",
+      "game/blender-dependencies/shared-a556e99a27dc2365627c0bb5.png",
+      "game/blender-dependencies/shared-aa059ceea18a481b111bd1f2.png",
+      "game/blender-dependencies/shared-f7ab245e93d0944707c7e7d0.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/companions/hug_precision_20260930/mouse_hug.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-2660cb8f05790eaaaa9a20cd.png",
+      "game/blender-dependencies/shared-38ce1eb01a8e9d15ac9a9db3.png",
+      "game/blender-dependencies/shared-4fd664c97f4ad2245f018250.png",
+      "game/blender-dependencies/shared-a556e99a27dc2365627c0bb5.png",
+      "game/blender-dependencies/shared-aa059ceea18a481b111bd1f2.png",
+      "game/blender-dependencies/shared-f7ab245e93d0944707c7e7d0.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/companions/hug_rework_20260930/operator_hug_rig.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/companions/mouse-cry-overlay.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-2660cb8f05790eaaaa9a20cd.png",
+      "game/blender-dependencies/shared-38ce1eb01a8e9d15ac9a9db3.png",
+      "game/blender-dependencies/shared-73f7dc8b4e448dc161e5e9f5.png",
+      "game/blender-dependencies/shared-a556e99a27dc2365627c0bb5.png",
+      "game/blender-dependencies/shared-f7ab245e93d0944707c7e7d0.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/companions/three_spots_20261002/mouse_repaired.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-03d9fdcbbaa340c9c76efa2d.png",
+      "game/blender-dependencies/shared-06afc2d7e123bd8e1712c74e.png",
+      "game/blender-dependencies/shared-2660cb8f05790eaaaa9a20cd.png",
+      "game/blender-dependencies/shared-38ce1eb01a8e9d15ac9a9db3.png",
+      "game/blender-dependencies/shared-4fd664c97f4ad2245f018250.png",
+      "game/blender-dependencies/shared-74a33df2a5175afb1ef4182f.png",
+      "game/blender-dependencies/shared-a556e99a27dc2365627c0bb5.png",
+      "game/blender-dependencies/shared-aa059ceea18a481b111bd1f2.png",
+      "game/blender-dependencies/shared-f7ab245e93d0944707c7e7d0.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/enemies/training_dummy.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/jiahao_operator.blend",
+    "missing": [],
+    "dependencies": [
+      "game/assets/textures/face_albedo.png",
+      "game/blender-dependencies/shared-218f53d6d452c730fb34005b.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/lobby_metal_glass_20261005/blend/C1G.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/lobby_metal_glass_20261005/blend/C2G.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/lobby_metal_glass_20261005/blend/C3G.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/lobby_metal_glass_20261005/blend/G1M.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/m7_20260924/rebuild_v3/m7_rebuilt_optic_v3.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/magnetic_charge.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/架门缝_门柱加宽_v8.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-0da4c01da2c95ff7ffed92d2.png",
+      "game/blender-dependencies/shared-21a60143d36160f3fdd7f486.png",
+      "game/blender-dependencies/shared-64e405828b428857d3e44515.png",
+      "game/blender-dependencies/shared-ca4b2abf2240db67870b65f9.png",
+      "game/blender-dependencies/shared-ec0c34e531361340ae550d61.png",
+      "game/blender-dependencies/shared-fdd41d079ee268e488d8498c.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/phonograph_precision_20261001/phonograph_precision.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-073599e68ebfc399f3b8fdde.png",
+      "game/blender-dependencies/shared-47a88949e7aadf62e30e8e22.png",
+      "game/blender-dependencies/shared-4f289bd696662b5da07969d9.png",
+      "game/blender-dependencies/shared-6102c6a2a98cb3154e14769c.png",
+      "game/blender-dependencies/shared-6608c16d1286fd9cf746caac.png",
+      "game/blender-dependencies/shared-7b01c3cfb985ae9498ae7ee2.png",
+      "game/blender-dependencies/shared-970fb74e48b1fbaca16feb8b.png",
+      "game/blender-dependencies/shared-a4030d15d5a393420d9bb8ac.png",
+      "game/blender-dependencies/shared-aa3559193f49f7a8753edb61.png",
+      "game/blender-dependencies/shared-bcd995f896a0d063dda6576c.png",
+      "game/blender-dependencies/shared-eb81b583400ed52b7cc8b598.png",
+      "game/blender-dependencies/shared-fdb2a477df0ffde68cee92c1.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/player_skin/winter_operator_character_arms_v2.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/player_skin/winter_operator_game.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/range_honor_R36/C01_helpers.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/range_honor_R36/C01_material_master.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/range_honor_R36/crystal_material_master.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/range_honor_R36/D01_entrance.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/range_honor_R36/silver_material_master.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/range_honor_R37/R37后墙等比扩展.blend",
+    "missing": [],
+    "dependencies": [
+      "game/blender-dependencies/shared-04e7fc3499de4005959c768d.png",
+      "game/blender-dependencies/shared-a0f2c718bd1e884dede0c6b6.png",
+      "game/blender-dependencies/shared-abfc9cb57ddb188c5371df1f.png",
+      "game/blender-dependencies/shared-dc1771024582cbaa90b8ec80.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/range_hyper_20261003/game_R25/M01窗口局部修复.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/range_hyper_20261003/game_R25/获批方案实际搭建.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/rifle.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/segmented_cover_gray_v3_20261005/doorway_game.blend",
+    "missing": [],
+    "dependencies": [
+      "game/assets/models/segmented_cover_gridshot_v2_20261005/Light_02.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/segmented_cover_gray_v3_20261005/wall_game.blend",
+    "missing": [],
+    "dependencies": [
+      "game/assets/models/segmented_cover_gridshot_v2_20261005/Light_02.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/segmented_cover_gridshot_v2_20261005/blue_game.blend",
+    "missing": [],
+    "dependencies": [
+      "game/assets/models/segmented_cover_gridshot_v2_20261005/Light_02.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/segmented_cover_gridshot_v2_20261005/dark_game.blend",
+    "missing": [],
+    "dependencies": [
+      "game/assets/models/segmented_cover_gridshot_v2_20261005/Dark_07.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/segmented_cover_gridshot_v2_20261005/floor_game.blend",
+    "missing": [],
+    "dependencies": [
+      "game/assets/models/segmented_cover_gridshot_v2_20261005/checker_light_grid.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/segmented_cover_gridshot_v2_20261005/white_game.blend",
+    "missing": [],
+    "dependencies": [
+      "game/assets/models/segmented_cover_gridshot_v2_20261005/Light_07.png"
+    ],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/thumper_launcher.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/thumper_shell.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/training/gridshot_tool.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/training/sentinel.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  },
+  {
+    "path": "game/source_art/training/training_hall.blend",
+    "missing": [],
+    "dependencies": [],
+    "opened_final_saved_source": true
+  }
+]

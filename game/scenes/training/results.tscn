@@ -1,0 +1,174 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://scripts/training/training_results.gd" id="script"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Medium.ttf" id="font"]
+[sub_resource type="StyleBoxFlat" id="panel"]
+bg_color = Color(0.025,0.045,0.055,0.995)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_left = 18
+corner_radius_bottom_right = 18
+[sub_resource type="StyleBoxFlat" id="card"]
+bg_color = Color(0.05,0.095,0.12,1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_left = 10
+corner_radius_bottom_right = 10
+[sub_resource type="Theme" id="theme"]
+default_font = ExtResource("font")
+default_font_size = 23
+Panel/styles/panel = SubResource("panel")
+[node name="TrainingResults" type="CanvasLayer"]
+layer = 16
+process_mode = 3
+script = ExtResource("script")
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_right = 1280.0
+offset_bottom = 740.0
+theme = SubResource("theme")
+[node name="Title" type="Label" parent="Panel"]
+offset_left = 46.0
+offset_top = 34.0
+theme_override_font_sizes/font_size = 36
+[node name="Subtitle" type="Label" parent="Panel"]
+offset_left = 46.0
+offset_top = 93.0
+theme_override_colors/font_color = Color(0.55,0.72,0.76,1)
+[node name="Notes" type="Label" parent="Panel"]
+offset_left = 46.0
+offset_top = 500.0
+offset_right = 1234.0
+offset_bottom = 600.0
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 21
+
+[node name="Comparison" type="Label" parent="Panel"]
+offset_left = 46.0
+offset_top = 610.0
+offset_right = 1234.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.57,0.8,0.77,1)
+
+[node name="Card0" type="Panel" parent="Panel"]
+offset_left = 46.0
+offset_top = 158.0
+offset_right = 428.0
+offset_bottom = 302.0
+theme_override_styles/panel = SubResource("card")
+[node name="Label" type="Label" parent="Panel/Card0"]
+offset_left = 22.0
+offset_top = 18.0
+theme_override_font_sizes/font_size = 21
+theme_override_colors/font_color = Color(0.55,0.74,0.78,1)
+[node name="Value" type="Label" parent="Panel/Card0"]
+offset_left = 22.0
+offset_top = 65.0
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.38,0.93,0.80,1)
+
+[node name="Card1" type="Panel" parent="Panel"]
+offset_left = 446.0
+offset_top = 158.0
+offset_right = 828.0
+offset_bottom = 302.0
+theme_override_styles/panel = SubResource("card")
+[node name="Label" type="Label" parent="Panel/Card1"]
+offset_left = 22.0
+offset_top = 18.0
+theme_override_font_sizes/font_size = 21
+theme_override_colors/font_color = Color(0.55,0.74,0.78,1)
+[node name="Value" type="Label" parent="Panel/Card1"]
+offset_left = 22.0
+offset_top = 65.0
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.38,0.93,0.80,1)
+
+[node name="Card2" type="Panel" parent="Panel"]
+offset_left = 846.0
+offset_top = 158.0
+offset_right = 1228.0
+offset_bottom = 302.0
+theme_override_styles/panel = SubResource("card")
+[node name="Label" type="Label" parent="Panel/Card2"]
+offset_left = 22.0
+offset_top = 18.0
+theme_override_font_sizes/font_size = 21
+theme_override_colors/font_color = Color(0.55,0.74,0.78,1)
+[node name="Value" type="Label" parent="Panel/Card2"]
+offset_left = 22.0
+offset_top = 65.0
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.38,0.93,0.80,1)
+
+[node name="Card3" type="Panel" parent="Panel"]
+offset_left = 46.0
+offset_top = 321.0
+offset_right = 428.0
+offset_bottom = 465.0
+theme_override_styles/panel = SubResource("card")
+[node name="Label" type="Label" parent="Panel/Card3"]
+offset_left = 22.0
+offset_top = 18.0
+theme_override_font_sizes/font_size = 21
+theme_override_colors/font_color = Color(0.55,0.74,0.78,1)
+[node name="Value" type="Label" parent="Panel/Card3"]
+offset_left = 22.0
+offset_top = 65.0
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.38,0.93,0.80,1)
+
+[node name="Card4" type="Panel" parent="Panel"]
+offset_left = 446.0
+offset_top = 321.0
+offset_right = 828.0
+offset_bottom = 465.0
+theme_override_styles/panel = SubResource("card")
+[node name="Label" type="Label" parent="Panel/Card4"]
+offset_left = 22.0
+offset_top = 18.0
+theme_override_font_sizes/font_size = 21
+theme_override_colors/font_color = Color(0.55,0.74,0.78,1)
+[node name="Value" type="Label" parent="Panel/Card4"]
+offset_left = 22.0
+offset_top = 65.0
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.38,0.93,0.80,1)
+
+[node name="Card5" type="Panel" parent="Panel"]
+offset_left = 846.0
+offset_top = 321.0
+offset_right = 1228.0
+offset_bottom = 465.0
+theme_override_styles/panel = SubResource("card")
+[node name="Label" type="Label" parent="Panel/Card5"]
+offset_left = 22.0
+offset_top = 18.0
+theme_override_font_sizes/font_size = 21
+theme_override_colors/font_color = Color(0.55,0.74,0.78,1)
+[node name="Value" type="Label" parent="Panel/Card5"]
+offset_left = 22.0
+offset_top = 65.0
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.38,0.93,0.80,1)
+
+[node name="Hub" type="Button" parent="Panel"]
+offset_left = 46.0
+offset_top = 650.0
+offset_right = 428.0
+offset_bottom = 708.0
+text = "回训练中心"
+
+[node name="Catalog" type="Button" parent="Panel"]
+offset_left = 449.0
+offset_top = 650.0
+offset_right = 831.0
+offset_bottom = 708.0
+text = "训练目录"
+
+[node name="Retry" type="Button" parent="Panel"]
+offset_left = 852.0
+offset_top = 650.0
+offset_right = 1234.0
+offset_bottom = 708.0
+text = "再练一次"

@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="e1"]
+
+[ext_resource type="PackedScene" path="res://scenes/weapons/weapon.tscn" id="e2"]
+
+[ext_resource type="PackedScene" path="res://scenes/abilities/vyron_kit.tscn" id="abilities"]
+
+[ext_resource type="AudioStream" path="res://assets/audio/player_hurt.wav" id="hurt"]
+[ext_resource type="PackedScene" path="res://scenes/actors/player_visual.tscn" id="visual"]
+
+[sub_resource type="CapsuleShape3D" id="s1"]
+resource_local_to_scene = true
+radius = 0.3
+height = 1.85
+
+[sub_resource type="SphereShape3D" id="lean_probe"]
+radius = 0.08
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("e1")
+sensitivity = 3.5
+base_fov = 95.0
+floor_snap_length = 0.35
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0,0.925,0)
+shape = SubResource("s1")
+
+[node name="StandClearance" type="RayCast3D" parent="."]
+position = Vector3(0,1.05,0)
+target_position = Vector3(0,0.85,0)
+collision_mask = 1
+
+[node name="Head" type="Node3D" parent="."]
+position = Vector3(0,1.7,0)
+
+[node name="LeanProbe" type="ShapeCast3D" parent="Head"]
+shape = SubResource("lean_probe")
+target_position = Vector3(0,0,0)
+collision_mask = 1
+
+[node name="LeanPivot" type="Node3D" parent="Head"]
+position = Vector3(0,-0.24,0)
+
+[node name="CameraMount" type="Node3D" parent="Head/LeanPivot"]
+position = Vector3(0,0.24,0)
+
+[node name="Camera3D" type="Camera3D" parent="Head/LeanPivot/CameraMount"]
+cull_mask = 1
+fov = 95.0
+near = 0.03
+far = 300.0
+keep_aspect = 0
+
+[node name="ViewmodelLean" type="Node3D" parent="Head/LeanPivot/CameraMount/Camera3D"]
+
+[node name="Weapon" parent="Head/LeanPivot/CameraMount/Camera3D/ViewmodelLean" instance=ExtResource("e2")]
+
+[node name="Abilities" parent="." instance=ExtResource("abilities")]
+
+[node name="PlayerVisual" parent="." instance=ExtResource("visual")]
+
+[node name="HurtSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("hurt")
+volume_db = -7.0

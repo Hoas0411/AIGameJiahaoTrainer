@@ -1,0 +1,7 @@
+{
+  "provider": "compatible",
+  "url": "https://YOUR_PROVIDER/v1/chat/completions",
+  "model": "YOUR_MODEL_NAME",
+  "key": "YOUR_API_KEY_OR_USE_JH_AI_KEY_ENV",
+  "timeoutMs": 45000
+}

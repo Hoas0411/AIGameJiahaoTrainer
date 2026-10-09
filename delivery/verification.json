@@ -1,0 +1,41 @@
+{
+  "snapshot_date": "2026-10-08",
+  "passed": true,
+  "steps": [
+    {
+      "name": "version",
+      "exit_code": 0,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "name": "fresh-import",
+      "exit_code": 0,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "name": "all-active-courses",
+      "exit_code": 0,
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "user_data": "local-data inside the bundle; original player data untouched",
+  "scope": [
+    "fresh Godot import",
+    "main scene instantiation",
+    "sequential session initialization for all nine active course IDs",
+    "no private config or archived builds used"
+  ],
+  "not_covered": [
+    "human play/feel",
+    "visual quality approval",
+    "online AI/voice",
+    "complete existing historical smoke suites",
+    "training transfer efficacy"
+  ],
+  "blender_source_files_opened": 71,
+  "blender_missing_dependencies": 0,
+  "package_mode": "lean current runtime + separate authored model source supplement"
+}

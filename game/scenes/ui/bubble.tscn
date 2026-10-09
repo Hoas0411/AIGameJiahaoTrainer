@@ -1,0 +1,236 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/bubble_ui.gd" id="script"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Medium.ttf" id="font"]
+[ext_resource type="Script" path="res://scripts/dialogue_frame.gd" id="frame"]
+[ext_resource type="Texture2D" path="res://resources/ui/dialogue_mascot/neutral.tres" id="mascot"]
+
+[node name="BubbleUI" type="CanvasLayer"]
+layer = 21
+process_mode = 3
+script = ExtResource("script")
+
+[node name="WorldOverlay" type="Control" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="WorldBubble" type="Control" parent="WorldOverlay"]
+visible = false
+offset_right = 270.0
+offset_bottom = 105.0
+mouse_filter = 2
+
+[node name="Panel" type="Control" parent="WorldOverlay/WorldBubble"]
+offset_right = 270.0
+offset_bottom = 105.0
+mouse_filter = 2
+script = ExtResource("frame")
+
+[node name="Accent" type="ColorRect" parent="WorldOverlay/WorldBubble/Panel"]
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 19.0
+offset_bottom = 26.0
+mouse_filter = 2
+color = Color(0.678, 0.255, 0.267, 1)
+
+[node name="Who" type="Label" parent="WorldOverlay/WorldBubble/Panel"]
+offset_left = 26.0
+offset_top = 7.0
+offset_right = 220.0
+offset_bottom = 30.0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 15
+text = "麦小鼠"
+
+[node name="Summary" type="RichTextLabel" parent="WorldOverlay/WorldBubble/Panel"]
+offset_left = 16.0
+offset_top = 34.0
+offset_right = 254.0
+offset_bottom = 80.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("font")
+theme_override_font_sizes/normal_font_size = 17
+bbcode_enabled = false
+text = "慢慢来，我陪你练。"
+scroll_active = false
+autowrap_mode = 3
+
+[node name="Mascot" type="TextureRect" parent="WorldOverlay/WorldBubble"]
+offset_left = 10.0
+offset_top = -66.0
+offset_right = 90.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture_filter = 4
+texture = ExtResource("mascot")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EdgePrompt" type="Control" parent="WorldOverlay"]
+visible = false
+offset_right = 270.0
+offset_bottom = 105.0
+mouse_filter = 2
+
+[node name="Panel" type="Control" parent="WorldOverlay/EdgePrompt"]
+offset_right = 270.0
+offset_bottom = 105.0
+mouse_filter = 2
+script = ExtResource("frame")
+
+[node name="Accent" type="ColorRect" parent="WorldOverlay/EdgePrompt/Panel"]
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 19.0
+offset_bottom = 26.0
+mouse_filter = 2
+color = Color(0.678, 0.255, 0.267, 1)
+
+[node name="Who" type="Label" parent="WorldOverlay/EdgePrompt/Panel"]
+offset_left = 26.0
+offset_top = 7.0
+offset_right = 220.0
+offset_bottom = 30.0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 15
+text = "麦小鼠"
+
+[node name="Summary" type="RichTextLabel" parent="WorldOverlay/EdgePrompt/Panel"]
+offset_left = 16.0
+offset_top = 34.0
+offset_right = 254.0
+offset_bottom = 80.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("font")
+theme_override_font_sizes/normal_font_size = 17
+bbcode_enabled = false
+text = "慢慢来，我陪你练。"
+scroll_active = false
+autowrap_mode = 3
+
+[node name="Mascot" type="TextureRect" parent="WorldOverlay/EdgePrompt"]
+offset_left = 10.0
+offset_top = -66.0
+offset_right = 90.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture_filter = 4
+texture = ExtResource("mascot")
+expand_mode = 1
+stretch_mode = 5
+
+
+[node name="Root" type="Control" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Bubble" type="Panel" parent="Root"]
+visible = false
+offset_right = 860.0
+offset_bottom = 118.0
+mouse_filter = 1
+
+[node name="Who" type="Label" parent="Root/Bubble"]
+visible = false
+text = "麦小鼠 · 随行陪伴"
+
+[node name="Remember" type="Button" parent="Root/Bubble"]
+visible = false
+text = "记住这件事"
+
+[node name="Summon" type="Button" parent="Root/Bubble"]
+visible = false
+text = "召回"
+
+[node name="Preferences" type="Button" parent="Root/Bubble"]
+visible = false
+text = "偏好"
+
+[node name="Reply" type="RichTextLabel" parent="Root/Bubble"]
+visible = false
+text = ""
+bbcode_enabled = false
+
+[node name="Transcript" type="Label" parent="Root/Bubble"]
+visible = false
+text = ""
+
+[node name="Status" type="Label" parent="Root/Bubble"]
+offset_left = 18.0
+offset_top = 10.0
+offset_right = 842.0
+offset_bottom = 32.0
+theme_override_font_sizes/font_size = 14
+text = ""
+text_overrun_behavior = 3
+font = ExtResource("font")
+
+[node name="Entry" type="LineEdit" parent="Root/Bubble"]
+visible = false
+offset_left = 18.0
+offset_top = 36.0
+offset_right = 518.0
+offset_bottom = 78.0
+placeholder_text = "说点什么…"
+max_length = 1500
+font = ExtResource("font")
+
+[node name="Send" type="Button" parent="Root/Bubble"]
+visible = false
+offset_left = 528.0
+offset_top = 36.0
+offset_right = 610.0
+offset_bottom = 78.0
+text = "发送"
+
+[node name="MicMode" type="OptionButton" parent="Root/Bubble"]
+visible = false
+offset_left = 18.0
+offset_top = 84.0
+offset_right = 238.0
+offset_bottom = 110.0
+
+[node name="MicButton" type="Button" parent="Root/Bubble"]
+visible = false
+offset_left = 620.0
+offset_top = 36.0
+offset_right = 750.0
+offset_bottom = 78.0
+text = "开始录音"
+
+[node name="Level" type="ProgressBar" parent="Root/Bubble"]
+visible = false
+offset_left = 755.0
+offset_top = 50.0
+offset_right = 842.0
+offset_bottom = 65.0
+max_value = 1.0
+show_percentage = false
+mouse_filter = 2
+
+[node name="MicStatus" type="Label" parent="Root/Bubble"]
+visible = false
+offset_left = 250.0
+offset_top = 84.0
+offset_right = 842.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 14
+text = "麦克风关闭"
+text_overrun_behavior = 3
+font = ExtResource("font")
+
+[node name="Fold" type="Button" parent="Root/Bubble"]
+visible = false
+text = "收起"
+

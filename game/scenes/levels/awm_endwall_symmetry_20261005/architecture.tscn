@@ -1,0 +1,571 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_terrace_local_repair_20261004/modules/w01.tscn" id="W01"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_terrace_local_repair_20261004/modules/r01.tscn" id="R01"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_terrace_local_repair_20261004/modules/j01.tscn" id="J01"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_terrace_local_repair_20261004/modules/f01.tscn" id="F01"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_terrace_local_repair_20261004/modules/g01.tscn" id="G01"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_rear_seam_local_20261004/w01_rear_interface.tscn" id="rear_repair"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_front_material_match_20261005/r01_front_interface.tscn" id="front_repair"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_endwall_symmetry_20261005/r01_mirrored.tscn" id="mirror_R01"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_endwall_symmetry_20261005/j01_mirrored.tscn" id="mirror_J01"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_endwall_symmetry_20261005/w01rear_mirrored.tscn" id="mirror_W01rear"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_endwall_symmetry_20261005/w01_mirrored.tscn" id="mirror_W01"]
+[sub_resource type="BoxShape3D" id="guardRear"]
+size = Vector3(34,14,1)
+[sub_resource type="BoxShape3D" id="guardFront"]
+size = Vector3(34,14,1)
+[sub_resource type="BoxShape3D" id="guardLeft"]
+size = Vector3(1,14,91)
+[sub_resource type="BoxShape3D" id="guardRight"]
+size = Vector3(1,14,91)
+[node name="TerraceArchitecture" type="Node3D"]
+[node name="Floor_0_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,-30.99499053390154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_0_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,-30.99499053390154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_0_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,-30.99499053390154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_0_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,-30.99499053390154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_0_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,-30.99499053390154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,-30.99499053390154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_0" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,-31)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_0" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,-30.99499053390154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_0" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,-31)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_1_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,-24.984971601704615)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_1_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,-24.984971601704615)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_1_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,-24.984971601704615)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_1_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,-24.984971601704615)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_1_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,-24.984971601704615)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,-24.984971601704615)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_1" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,-25)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_1" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,-24.984971601704615)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_1" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,-25)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_2_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,-18.974952669507694)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_2_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,-18.974952669507694)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_2_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,-18.974952669507694)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_2_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,-18.974952669507694)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_2_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,-18.974952669507694)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_2" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,-18.974952669507694)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_2" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,-19)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_2" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,-18.974952669507694)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_2" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,-19)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_3_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,-12.96493373731077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_3_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,-12.96493373731077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_3_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,-12.96493373731077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_3_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,-12.96493373731077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_3_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,-12.96493373731077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_3" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,-12.96493373731077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_3" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,-13)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_3" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,-12.96493373731077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_3" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,-13)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_4_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,-6.9549148051138445)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_4_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,-6.9549148051138445)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_4_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,-6.9549148051138445)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_4_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,-6.9549148051138445)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_4_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,-6.9549148051138445)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_4" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,-6.9549148051138445)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_4" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,-7)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_4" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,-6.9549148051138445)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_4" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,-7)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_5_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,-0.9448958729169199)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_5_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,-0.9448958729169199)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_5_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,-0.9448958729169199)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_5_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,-0.9448958729169199)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_5_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,-0.9448958729169199)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_5" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,-0.9448958729169199)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_5" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,-1)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_5" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,-0.9448958729169199)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_5" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,-1)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_6_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,5.065123059280001)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_6_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,5.065123059280001)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_6_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,5.065123059280001)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_6_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,5.065123059280001)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_6_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,5.065123059280001)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_6" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,5.065123059280001)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_6" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,5)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_6" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,5.065123059280001)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_6" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,5)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_7_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,11.07514199147693)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_7_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,11.07514199147693)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_7_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,11.07514199147693)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_7_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,11.07514199147693)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_7_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,11.07514199147693)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_7" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,11.07514199147693)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_7" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,11)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_7" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,11.07514199147693)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_7" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,11)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_8_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,17.08516092367385)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_8_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,17.08516092367385)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_8_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,17.08516092367385)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_8_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,17.08516092367385)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_8_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,17.08516092367385)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_8" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,17.08516092367385)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_8" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,17)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_8" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,17.08516092367385)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_8" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,17)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_9_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,23.09517985587077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_9_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,23.09517985587077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_9_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,23.09517985587077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_9_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,23.09517985587077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_9_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,23.09517985587077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_9" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,23.09517985587077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_9" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,23)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_9" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,23.09517985587077)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_9" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,23)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_10_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,29.1051987880677)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_10_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,29.1051987880677)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_10_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,29.1051987880677)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_10_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,29.1051987880677)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_10_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,29.1051987880677)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_10" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,29.1051987880677)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_10" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,29)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_10" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,29.1051987880677)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_10" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,29)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_11_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,35.115217720264624)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_11_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,35.115217720264624)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_11_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,35.115217720264624)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_11_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,35.115217720264624)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_11_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,35.115217720264624)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_11" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,35.115217720264624)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_11" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,35)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_11" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,35.115217720264624)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_11" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,35)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_12_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,41.12523665246154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_12_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,41.12523665246154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_12_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,41.12523665246154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_12_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,41.12523665246154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_12_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,41.12523665246154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_12" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,41.12523665246154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_12" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,41)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_12" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,41.12523665246154)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_12" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,41)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_13_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,47.135255584658466)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_13_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,47.135255584658466)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_13_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,47.135255584658466)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_13_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,47.135255584658466)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_13_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,47.135255584658466)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_13" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,47.135255584658466)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_13" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,47)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_13" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,47.135255584658466)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_13" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,47)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_14_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,53.145274516855395)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_14_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,53.145274516855395)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_14_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,53.145274516855395)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_14_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,53.145274516855395)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_14_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,53.145274516855395)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_14" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,53.145274516855395)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_14" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,53)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_14" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,53.145274516855395)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_14" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,53)
+rotation_degrees = Vector3(0,90,0)
+[node name="Floor_15_0" parent="." instance=ExtResource("F01")]
+position = Vector3(-12.56707981,0.09,59.15529344905231)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_15_1" parent="." instance=ExtResource("F01")]
+position = Vector3(-6,0.09,59.15529344905231)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_15_2" parent="." instance=ExtResource("F01")]
+position = Vector3(0,0.09,59.15529344905231)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_15_3" parent="." instance=ExtResource("F01")]
+position = Vector3(6,0.09,59.15529344905231)
+rotation_degrees = Vector3(0,0,0)
+[node name="Floor_15_4" parent="." instance=ExtResource("F01")]
+position = Vector3(12.56707981,0.09,59.15529344905231)
+rotation_degrees = Vector3(0,0,0)
+[node name="Apron_-1_15" parent="." instance=ExtResource("F01")]
+position = Vector3(-18.56707981,0.09,59.15529344905231)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_-1_15" parent="." instance=ExtResource("G01")]
+position = Vector3(-9.283539905,0.065,59)
+rotation_degrees = Vector3(0,90,0)
+[node name="Apron_1_15" parent="." instance=ExtResource("F01")]
+position = Vector3(18.56707981,0.09,59.15529344905231)
+rotation_degrees = Vector3(0,0,0)
+[node name="Drain_1_15" parent="." instance=ExtResource("G01")]
+position = Vector3(9.283539905,0.065,59)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_-1_0" parent="." instance=ExtResource("W01")]
+position = Vector3(-16.65,0.09,-22.0)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_-1_1" parent="." instance=ExtResource("W01")]
+position = Vector3(-16.65,0.09,-13.696554890431479)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_-1_2" parent="." instance=ExtResource("W01")]
+position = Vector3(-16.65,0.09,-5.393109780862957)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_-1_3" parent="." instance=ExtResource("W01")]
+position = Vector3(-16.65,0.09,2.910335328705564)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_-1_4" parent="." instance=ExtResource("W01")]
+position = Vector3(-16.65,0.09,11.213780438274085)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_-1_5" parent="." instance=ExtResource("W01")]
+position = Vector3(-16.65,0.09,19.517225547842607)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_-1_6" parent="." instance=ExtResource("W01")]
+position = Vector3(-16.65,0.09,27.820670657411128)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_-1_7" parent="." instance=ExtResource("W01")]
+position = Vector3(-16.65,0.09,36.12411576697965)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_-1_8" parent="." instance=ExtResource("W01")]
+position = Vector3(-16.65,0.09,44.42756087654817)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_-1_9" parent="." instance=ExtResource("W01")]
+position = Vector3(-16.65,0.09,52.731005986116685)
+rotation_degrees = Vector3(0,90,0)
+[node name="Side_1_0" parent="." instance=ExtResource("W01")]
+position = Vector3(16.65,0.09,-22.0)
+rotation_degrees = Vector3(0,-90,0)
+[node name="Side_1_1" parent="." instance=ExtResource("W01")]
+position = Vector3(16.65,0.09,-13.696554890431479)
+rotation_degrees = Vector3(0,-90,0)
+[node name="Side_1_2" parent="." instance=ExtResource("W01")]
+position = Vector3(16.65,0.09,-5.393109780862957)
+rotation_degrees = Vector3(0,-90,0)
+[node name="Side_1_3" parent="." instance=ExtResource("W01")]
+position = Vector3(16.65,0.09,2.910335328705564)
+rotation_degrees = Vector3(0,-90,0)
+[node name="Side_1_4" parent="." instance=ExtResource("W01")]
+position = Vector3(16.65,0.09,11.213780438274085)
+rotation_degrees = Vector3(0,-90,0)
+[node name="Side_1_5" parent="." instance=ExtResource("W01")]
+position = Vector3(16.65,0.09,19.517225547842607)
+rotation_degrees = Vector3(0,-90,0)
+[node name="Side_1_6" parent="." instance=ExtResource("W01")]
+position = Vector3(16.65,0.09,27.820670657411128)
+rotation_degrees = Vector3(0,-90,0)
+[node name="Side_1_7" parent="." instance=ExtResource("W01")]
+position = Vector3(16.65,0.09,36.12411576697965)
+rotation_degrees = Vector3(0,-90,0)
+[node name="Side_1_8" parent="." instance=ExtResource("W01")]
+position = Vector3(16.65,0.09,44.42756087654817)
+rotation_degrees = Vector3(0,-90,0)
+[node name="Side_1_9" parent="." instance=ExtResource("W01")]
+position = Vector3(16.65,0.09,52.731005986116685)
+rotation_degrees = Vector3(0,-90,0)
+[node name="Rear_0" parent="." instance=ExtResource("rear_repair")]
+position = Vector3(-12.455167664352782,0.09,58.5)
+rotation_degrees = Vector3(0,180,0)
+[node name="FrontBacking_0" parent="." instance=ExtResource("W01")]
+position = Vector3(-12.455167664352782,0.09,-33.0)
+rotation_degrees = Vector3(0,0,0)
+[node name="Rear_1" parent="." instance=ExtResource("rear_repair")]
+position = Vector3(-4.151722554784261,0.09,58.5)
+rotation_degrees = Vector3(0,180,0)
+[node name="FrontBacking_1" parent="." instance=ExtResource("W01")]
+position = Vector3(-4.151722554784261,0.09,-33.0)
+rotation_degrees = Vector3(0,0,0)
+[node name="Rear_2" parent="." instance=ExtResource("mirror_W01rear")]
+position = Vector3(4.151722554784261,0.09,58.5)
+rotation_degrees = Vector3(0,-180.0,0)
+[node name="FrontBacking_2" parent="." instance=ExtResource("mirror_W01")]
+position = Vector3(4.151722554784261,0.09,-33.0)
+rotation_degrees = Vector3(0,-0.0,0)
+[node name="Rear_3" parent="." instance=ExtResource("mirror_W01rear")]
+position = Vector3(12.455167664352782,0.09,58.5)
+rotation_degrees = Vector3(0,-180.0,0)
+[node name="FrontBacking_3" parent="." instance=ExtResource("mirror_W01")]
+position = Vector3(12.455167664352782,0.09,-33.0)
+rotation_degrees = Vector3(0,-0.0,0)
+[node name="FrontEnd_-1" parent="." instance=ExtResource("front_repair")]
+position = Vector3(-7.350023583222557,0.09,-29.5)
+rotation_degrees = Vector3(0,0,0)
+[node name="FrontEnd_1" parent="." instance=ExtResource("mirror_R01")]
+position = Vector3(7.350023583222557,0.09,-29.5)
+rotation_degrees = Vector3(0,-0.0,0)
+[node name="CornerFrontLeft" parent="." instance=ExtResource("J01")]
+position = Vector3(-14.9,0.09,-28.5)
+rotation_degrees = Vector3(0,0,0)
+[node name="CornerFrontRight" parent="." instance=ExtResource("mirror_J01")]
+position = Vector3(14.9,0.09,-28.5)
+rotation_degrees = Vector3(0,-0.0,0)
+[node name="CornerRearLeft" parent="." instance=ExtResource("J01")]
+position = Vector3(-14.9,0.09,56.5)
+rotation_degrees = Vector3(0,90,0)
+[node name="CornerRearRight" parent="." instance=ExtResource("mirror_J01")]
+position = Vector3(14.9,0.09,56.5)
+rotation_degrees = Vector3(0,-90.0,0)
+[node name="BoundaryRear" type="StaticBody3D" parent="."]
+[node name="Shape" type="CollisionShape3D" parent="BoundaryRear"]
+position = Vector3(0,7,59.5)
+shape = SubResource("guardRear")
+[node name="BoundaryFront" type="StaticBody3D" parent="."]
+[node name="Shape" type="CollisionShape3D" parent="BoundaryFront"]
+position = Vector3(0,7,-30.5)
+shape = SubResource("guardFront")
+[node name="BoundaryLeft" type="StaticBody3D" parent="."]
+[node name="Shape" type="CollisionShape3D" parent="BoundaryLeft"]
+position = Vector3(-17.9,7,14.5)
+shape = SubResource("guardLeft")
+[node name="BoundaryRight" type="StaticBody3D" parent="."]
+[node name="Shape" type="CollisionShape3D" parent="BoundaryRight"]
+position = Vector3(17.9,7,14.5)
+shape = SubResource("guardRight")

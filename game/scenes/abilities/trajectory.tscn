@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://scripts/trajectory.gd" id="1"]
+[sub_resource type="ImmediateMesh" id="mesh"]
+[sub_resource type="StandardMaterial3D" id="material"]
+shading_mode = 0
+albedo_color = Color(0.25, 1, 0.7, 1)
+[node name="Trajectory" type="MeshInstance3D"]
+script = ExtResource("1")
+mesh = SubResource("mesh")
+material_override = SubResource("material")
+cast_shadow = 0

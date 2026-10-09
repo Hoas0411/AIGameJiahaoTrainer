@@ -1,0 +1,195 @@
+[gd_scene load_steps=27 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon.gd" id="e1"]
+
+[ext_resource type="Resource" path="res://resources/weapons/awm.tres" id="e2"]
+
+[ext_resource type="PackedScene" path="res://assets/models/awm_delta_optic_20261005/awm_delta_optic_runtime.tscn" id="e3"]
+[ext_resource type="Script" path="res://scripts/awm_viewmodel.gd" id="viewmodel"]
+[ext_resource type="Script" path="res://scripts/ads_lean_anchor.gd" id="ads_lean_anchor"]
+[ext_resource type="Script" path="res://scripts/muzzle_flash.gd" id="muzzle_flash"]
+
+[ext_resource type="PackedScene" path="res://assets/models/rifle.glb" id="e4"]
+[ext_resource type="PackedScene" path="res://resources/weapons/m7_model/m7.glb" id="m7"]
+
+[ext_resource type="Material" path="res://resources/materials/gold.tres" id="e5"]
+
+[ext_resource type="Material" path="res://resources/materials/cloth.tres" id="e6"]
+
+[ext_resource type="Material" path="res://resources/materials/vest.tres" id="e7"]
+
+[ext_resource type="AudioStream" path="res://assets/audio/shot.wav" id="e8"]
+
+[ext_resource type="AudioStream" path="res://assets/audio/reload.wav" id="e9"]
+
+[ext_resource type="AudioStream" path="res://assets/audio/bolt.wav" id="e10"]
+
+[ext_resource type="PackedScene" path="res://scenes/weapons/first_person_arms.tscn" id="arms"]
+[ext_resource type="PackedScene" path="res://scenes/weapons/awm_arms.tscn" id="awm_arms"]
+
+[ext_resource type="AnimationLibrary" path="res://resources/animations/weapon_actions.tres" id="v3anim"]
+
+[sub_resource type="StandardMaterial3D" id="s1"]
+shading_mode = 0
+albedo_color = Color(1,0.09,0.02,1)
+emission_enabled = true
+emission = Color(1,0.025,0.008,1)
+emission_energy_multiplier = 5.0
+
+[sub_resource type="StandardMaterial3D" id="s2"]
+shading_mode = 0
+transparency = 1
+albedo_color = Color(1,0.06,0.025,0.2)
+no_depth_test = false
+
+[sub_resource type="SphereMesh" id="s3"]
+radius = 0.052
+height = 0.104
+radial_segments = 32
+rings = 16
+material = ExtResource("e7")
+
+[sub_resource type="SphereMesh" id="s4"]
+radius = 0.065
+height = 0.13
+radial_segments = 32
+rings = 16
+material = ExtResource("e6")
+
+[sub_resource type="SphereMesh" id="s5"]
+radius = 0.054
+height = 0.108
+radial_segments = 32
+rings = 16
+material = ExtResource("e7")
+
+[sub_resource type="SphereMesh" id="s6"]
+radius = 0.067
+height = 0.134
+radial_segments = 32
+rings = 16
+material = ExtResource("e6")
+
+[sub_resource type="SphereMesh" id="s7"]
+radius = 0.032
+height = 0.064
+radial_segments = 32
+rings = 16
+material = ExtResource("e5")
+
+[sub_resource type="BoxMesh" id="flash_long"]
+size = Vector3(0.018, 0.065, 0.26)
+material = ExtResource("e5")
+
+[sub_resource type="BoxMesh" id="flash_cross"]
+size = Vector3(0.065, 0.018, 0.19)
+material = ExtResource("e5")
+
+[sub_resource type="SphereMesh" id="s8"]
+radius = 0.019
+height = 0.038
+radial_segments = 32
+rings = 16
+material = SubResource("s1")
+
+[sub_resource type="BoxMesh" id="s9"]
+size = Vector3(0.0015, 0.0015, 1)
+material = SubResource("s2")
+
+[node name="Weapon" type="Node3D"]
+position = Vector3(0.24,-0.23,-0.5)
+script = ExtResource("e1")
+profile = ExtResource("e2")
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="Viewmodel" type="Node" parent="."]
+script = ExtResource("viewmodel")
+
+[node name="ADSLeanAnchor" type="Node" parent="."]
+script = ExtResource("ads_lean_anchor")
+
+[node name="AWM" parent="Model" instance=ExtResource("e3")]
+rotation = Vector3(0,3.141593,0)
+
+[node name="Rifle" parent="Model" instance=ExtResource("e4")]
+rotation = Vector3(0,3.141593,0)
+visible = false
+
+[node name="M7" parent="Model" instance=ExtResource("m7")]
+visible = false
+
+
+
+
+
+[node name="Muzzle" type="Marker3D" parent="."]
+position = Vector3(0,0.021,-0.877)
+
+[node name="LaserOrigin" type="Marker3D" parent="."]
+position = Vector3(-0.032,0.010,-0.584)
+
+[node name="MuzzleFlash" type="Node3D" parent="."]
+position = Vector3(0, 0.021, -0.89)
+visible = false
+script = ExtResource("muzzle_flash")
+
+[node name="Core" type="MeshInstance3D" parent="MuzzleFlash"]
+mesh = SubResource("s7")
+cast_shadow = 0
+
+[node name="LongFlame" type="MeshInstance3D" parent="MuzzleFlash"]
+position = Vector3(0, 0, -0.10)
+mesh = SubResource("flash_long")
+cast_shadow = 0
+
+[node name="CrossFlame" type="MeshInstance3D" parent="MuzzleFlash"]
+position = Vector3(0, 0, -0.07)
+mesh = SubResource("flash_cross")
+cast_shadow = 0
+
+[node name="FlashLight" type="OmniLight3D" parent="MuzzleFlash"]
+light_color = Color(1, 0.48, 0.16, 1)
+light_energy = 2.2
+omni_range = 2.2
+shadow_enabled = false
+
+[node name="LaserDot" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, -3)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("s8")
+top_level = true
+cast_shadow = 0
+
+[node name="LaserBeam" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, -1)
+mesh = SubResource("s9")
+top_level = true
+cast_shadow = 0
+
+[node name="Shot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("e8")
+volume_db = -5.0
+max_polyphony = 8
+
+[node name="ReloadSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("e9")
+volume_db = -7.0
+
+[node name="WorldShot" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("e8")
+volume_db = -18.0
+unit_size = 30.0
+max_distance = 800.0
+max_polyphony = 8
+
+[node name="BoltSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("e10")
+volume_db = -4.0
+
+[node name="Arms" parent="Model" instance=ExtResource("arms")]
+
+[node name="AWMArms" parent="Model" instance=ExtResource("awm_arms")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {&"": ExtResource("v3anim")}

@@ -1,0 +1,347 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="PackedScene" path="res://scenes/props/phonograph_station.tscn" id="phonograph_station"]
+[ext_resource type="Script" path="res://scripts/training/gridshot_drill.gd" id="script"]
+[ext_resource type="PackedScene" path="res://scenes/training/gridshot_controls.tscn" id="controls"]
+[ext_resource type="Shader" path="res://resources/training/checker.gdshader" id="checker"]
+[ext_resource type="AudioStream" path="res://assets/audio/hit.wav" id="sound"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Medium.ttf" id="font"]
+[ext_resource type="PackedScene" path="res://assets/models/training/gridshot_tool.glb" id="click_tool_art"]
+[sub_resource type="ShaderMaterial" id="r1"]
+shader = ExtResource("checker")
+shader_parameter/base_color = Color(0.39,0.4,0.39,1)
+shader_parameter/square_size = 0.5
+
+[sub_resource type="ShaderMaterial" id="r2"]
+shader = ExtResource("checker")
+shader_parameter/base_color = Color(0.12,0.15,0.17,1)
+shader_parameter/square_size = 0.5
+
+[sub_resource type="StandardMaterial3D" id="r3"]
+albedo_color = Color(0.25,0.26,0.27,1)
+metallic = 0.0
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="r4"]
+albedo_color = Color(0.0,0.72,0.88,1)
+metallic = 0.0
+roughness = 0.35
+emission_enabled = true
+emission = Color(0.0,0.42,0.55,1)
+emission_energy_multiplier = 0.25
+
+[sub_resource type="StandardMaterial3D" id="r5"]
+albedo_color = Color(0.085,0.095,0.11,1)
+metallic = 0.65
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="r6"]
+albedo_color = Color(0.23,0.26,0.29,1)
+metallic = 0.8
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="r7"]
+albedo_color = Color(1.0,0.48,0.07,1)
+metallic = 0.0
+roughness = 0.7
+emission_enabled = true
+emission = Color(1.0,0.48,0.07,1)
+emission_energy_multiplier = 1.4
+
+[sub_resource type="BoxMesh" id="r8"]
+size = Vector3(18,0.6,21)
+material = SubResource("r1")
+
+[sub_resource type="BoxShape3D" id="r9"]
+size = Vector3(18,0.6,21)
+
+[sub_resource type="BoxMesh" id="r10"]
+size = Vector3(18,7,0.5)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r11"]
+size = Vector3(18,7,0.5)
+
+[sub_resource type="BoxMesh" id="r12"]
+size = Vector3(0.5,7,21)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r13"]
+size = Vector3(0.5,7,21)
+
+[sub_resource type="BoxMesh" id="r14"]
+size = Vector3(0.5,7,21)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r15"]
+size = Vector3(0.5,7,21)
+
+[sub_resource type="BoxMesh" id="r16"]
+size = Vector3(18,7,0.5)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r17"]
+size = Vector3(18,7,0.5)
+
+[sub_resource type="BoxMesh" id="r18"]
+size = Vector3(18,0.25,21)
+material = SubResource("r3")
+
+[sub_resource type="BoxShape3D" id="r19"]
+size = Vector3(18,0.25,21)
+
+[sub_resource type="BoxMesh" id="r20"]
+size = Vector3(17.5,1.6,6)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r21"]
+size = Vector3(17.5,1.6,6)
+
+[sub_resource type="BoxMesh" id="r22"]
+size = Vector3(17.5,0.025,6)
+material = SubResource("r1")
+
+[sub_resource type="BoxMesh" id="r23"]
+size = Vector3(12,1,1.5)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r24"]
+size = Vector3(12,1,1.5)
+
+[sub_resource type="SphereMesh" id="r25"]
+radius = 0.42
+height = 0.84
+radial_segments = 32
+rings = 16
+material = SubResource("r4")
+
+[sub_resource type="SphereShape3D" id="r26"]
+radius = 0.42
+
+[sub_resource type="BoxMesh" id="r27"]
+size = Vector3(0.085,0.23,0.11)
+material = SubResource("r5")
+
+[sub_resource type="BoxMesh" id="r28"]
+size = Vector3(0.09,0.09,0.39)
+material = SubResource("r6")
+
+[sub_resource type="BoxMesh" id="r29"]
+size = Vector3(0.012,0.025,0.025)
+material = SubResource("r5")
+
+[sub_resource type="BoxMesh" id="r30"]
+size = Vector3(0.033,0.033,0.07)
+material = SubResource("r7")
+
+[node name="Gridshot" type="Node3D"]
+script = ExtResource("script")
+level_number = 20
+
+[node name="Enemies" type="Node3D" parent="."]
+
+
+[node name="Architecture" type="Node3D" parent="."]
+
+
+[node name="Floor" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,-0.3,4)
+mesh = SubResource("r8")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/Floor"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/Floor/Body"]
+shape = SubResource("r9")
+
+[node name="Back" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,3.5,-6.5)
+mesh = SubResource("r10")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/Back"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/Back/Body"]
+shape = SubResource("r11")
+
+[node name="Left" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(-9,3.5,4)
+mesh = SubResource("r12")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/Left"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/Left/Body"]
+shape = SubResource("r13")
+
+[node name="Right" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(9,3.5,4)
+mesh = SubResource("r14")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/Right"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/Right/Body"]
+shape = SubResource("r15")
+
+[node name="Rear" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,3.5,14.5)
+mesh = SubResource("r16")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/Rear"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/Rear/Body"]
+shape = SubResource("r17")
+
+[node name="Ceiling" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,7,4)
+mesh = SubResource("r18")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/Ceiling"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/Ceiling/Body"]
+shape = SubResource("r19")
+
+[node name="RearShelf" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,0.8,-3.25)
+mesh = SubResource("r20")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/RearShelf"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/RearShelf/Body"]
+shape = SubResource("r21")
+
+[node name="ShelfTop" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,1.61,-3.25)
+mesh = SubResource("r22")
+
+[node name="UpperShelf" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,2.1,-5.5)
+mesh = SubResource("r23")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/UpperShelf"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperShelf/Body"]
+shape = SubResource("r24")
+
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+position = Vector3(0,0.1,10)
+
+[node name="Targets" type="Node3D" parent="."]
+
+
+[node name="Sphere0" type="MeshInstance3D" parent="Targets"]
+position = Vector3(-1,1.7,2)
+mesh = SubResource("r25")
+
+[node name="Hitbox" type="Area3D" parent="Targets/Sphere0"]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+
+[node name="Shape" type="CollisionShape3D" parent="Targets/Sphere0/Hitbox"]
+shape = SubResource("r26")
+
+[node name="Sphere1" type="MeshInstance3D" parent="Targets"]
+position = Vector3(0,1.7,2)
+mesh = SubResource("r25")
+
+[node name="Hitbox" type="Area3D" parent="Targets/Sphere1"]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+
+[node name="Shape" type="CollisionShape3D" parent="Targets/Sphere1/Hitbox"]
+shape = SubResource("r26")
+
+[node name="Sphere2" type="MeshInstance3D" parent="Targets"]
+position = Vector3(1,1.7,2)
+mesh = SubResource("r25")
+
+[node name="Hitbox" type="Area3D" parent="Targets/Sphere2"]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+
+[node name="Shape" type="CollisionShape3D" parent="Targets/Sphere2/Hitbox"]
+shape = SubResource("r26")
+
+[node name="ClickTool" type="Node3D" parent="."]
+
+
+[node name="Muzzle" type="MeshInstance3D" parent="ClickTool"]
+position = Vector3(0.34,-0.27,-0.805)
+mesh = SubResource("r30")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("sound")
+volume_db = -12.0
+
+[node name="Softbox0" type="OmniLight3D" parent="."]
+position = Vector3(-5,5.8,5)
+light_color = Color(0.9,0.94,1,1)
+light_energy = 2.2
+omni_range = 20.0
+shadow_enabled = true
+omni_shadow_mode = 1
+
+[node name="Softbox1" type="OmniLight3D" parent="."]
+position = Vector3(5,5.8,5)
+light_color = Color(0.9,0.94,1,1)
+light_energy = 2.2
+omni_range = 20.0
+shadow_enabled = false
+omni_shadow_mode = 1
+
+[node name="Softbox2" type="OmniLight3D" parent="."]
+position = Vector3(0,5.8,-3)
+light_color = Color(0.9,0.94,1,1)
+light_energy = 2.2
+omni_range = 20.0
+shadow_enabled = false
+omni_shadow_mode = 1
+
+[node name="Countdown" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="Label" type="Label" parent="Countdown"]
+offset_left = 620.0
+offset_top = 210.0
+offset_right = 980.0
+offset_bottom = 410.0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 110
+text = "3"
+horizontal_alignment = 1
+
+[node name="Instruction" type="Label" parent="Countdown"]
+offset_left = 360.0
+offset_top = 805.0
+offset_right = 1400.0
+offset_bottom = 860.0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 22
+text = ""
+
+[node name="CompanionStand" type="Marker3D" parent="."]
+position = Vector3(-2,0.1,11)
+
+[node name="Art" parent="ClickTool" instance=ExtResource("click_tool_art")]
+position = Vector3(0.12,-0.06,0)
+
+[node name="GridshotControls" parent="." instance=ExtResource("controls")]
+
+[node name="PhonographStation" parent="." instance=ExtResource("phonograph_station")]
+position = Vector3(2.1, 0.0, 10.0)
+rotation = Vector3(0, -1.5707963, 0)

@@ -1,0 +1,411 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/keybindings.gd" id="1"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Medium.ttf" id="2"]
+[node name="Keybindings" type="Window"]
+title = "按键设置"
+size = Vector2i(820, 710)
+visible = false
+exclusive = true
+unresizable = true
+script = ExtResource("1")
+[node name="Rows" type="Control" parent="."]
+
+[node name="move_forwardLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 25.0
+offset_right = 202.0
+offset_bottom = 66.0
+text = "前进"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="move_forward" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 25.0
+offset_right = 392.0
+offset_bottom = 66.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="move_backLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 74.0
+offset_right = 202.0
+offset_bottom = 115.0
+text = "后退"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="move_back" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 74.0
+offset_right = 392.0
+offset_bottom = 115.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="move_leftLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 123.0
+offset_right = 202.0
+offset_bottom = 164.0
+text = "左移"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="move_left" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 123.0
+offset_right = 392.0
+offset_bottom = 164.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="move_rightLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 172.0
+offset_right = 202.0
+offset_bottom = 213.0
+text = "右移"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="move_right" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 172.0
+offset_right = 392.0
+offset_bottom = 213.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="jumpLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 221.0
+offset_right = 202.0
+offset_bottom = 262.0
+text = "跳跃"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="jump" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 221.0
+offset_right = 392.0
+offset_bottom = 262.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="sprintLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 270.0
+offset_right = 202.0
+offset_bottom = 311.0
+text = "奔跑"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="sprint" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 270.0
+offset_right = 392.0
+offset_bottom = 311.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="crouchLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 319.0
+offset_right = 202.0
+offset_bottom = 360.0
+text = "蹲伏"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="crouch" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 319.0
+offset_right = 392.0
+offset_bottom = 360.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="fireLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 368.0
+offset_right = 202.0
+offset_bottom = 409.0
+text = "开火 / 投掷"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="fire" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 368.0
+offset_right = 392.0
+offset_bottom = 409.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="aimLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 417.0
+offset_right = 202.0
+offset_bottom = 458.0
+text = "瞄准 / 收起道具"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="aim" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 417.0
+offset_right = 392.0
+offset_bottom = 458.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="reloadLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 466.0
+offset_right = 202.0
+offset_bottom = 507.0
+text = "换弹"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="reload" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 466.0
+offset_right = 392.0
+offset_bottom = 507.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="lean_leftLabel" type="Label" parent="Rows"]
+offset_left = 22.0
+offset_top = 515.0
+offset_right = 202.0
+offset_bottom = 556.0
+text = "向左侧头"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="lean_left" type="Button" parent="Rows"]
+offset_left = 205.0
+offset_top = 515.0
+offset_right = 392.0
+offset_bottom = 556.0
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="laserLabel" type="Label" parent="Rows"]
+offset_left = 427.0
+offset_top = 25.0
+offset_right = 607.0
+offset_bottom = 66.0
+text = "循环所有瞄具"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="laser" type="Button" parent="Rows"]
+offset_left = 610.0
+offset_top = 25.0
+offset_right = 797.0
+offset_bottom = 66.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="zoomLabel" type="Label" parent="Rows"]
+offset_left = 427.0
+offset_top = 74.0
+offset_right = 607.0
+offset_bottom = 115.0
+text = "切换镜瞄倍率"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="zoom" type="Button" parent="Rows"]
+offset_left = 610.0
+offset_top = 74.0
+offset_right = 797.0
+offset_bottom = 115.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="dashLabel" type="Label" parent="Rows"]
+offset_left = 427.0
+offset_top = 123.0
+offset_right = 607.0
+offset_bottom = 164.0
+text = "动力推进"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="dash" type="Button" parent="Rows"]
+offset_left = 610.0
+offset_top = 123.0
+offset_right = 797.0
+offset_bottom = 164.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="chargeLabel" type="Label" parent="Rows"]
+offset_left = 427.0
+offset_top = 172.0
+offset_right = 607.0
+offset_bottom = 213.0
+text = "拿出 C4"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="charge" type="Button" parent="Rows"]
+offset_left = 610.0
+offset_top = 172.0
+offset_right = 797.0
+offset_bottom = 213.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="thumperLabel" type="Label" parent="Rows"]
+offset_left = 427.0
+offset_top = 221.0
+offset_right = 607.0
+offset_bottom = 262.0
+text = "拿出虎蹲炮"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="thumper" type="Button" parent="Rows"]
+offset_left = 610.0
+offset_top = 221.0
+offset_right = 797.0
+offset_bottom = 262.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="restartLabel" type="Label" parent="Rows"]
+offset_left = 427.0
+offset_top = 270.0
+offset_right = 607.0
+offset_bottom = 311.0
+text = "重新开始"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="restart" type="Button" parent="Rows"]
+offset_left = 610.0
+offset_top = 270.0
+offset_right = 797.0
+offset_bottom = 311.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="Status" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 575.0
+offset_right = 795.0
+offset_bottom = 625.0
+text = "点击动作右侧按钮更改；Esc 保留为菜单键。"
+theme_override_fonts/font = ExtResource("2")
+[node name="Restore" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 645.0
+offset_right = 795.0
+offset_bottom = 690.0
+text = "恢复默认按键"
+theme_override_fonts/font = ExtResource("2")
+
+[node name="mapLabel" type="Label" parent="Rows"]
+offset_left = 427.0
+offset_top = 319.0
+offset_right = 607.0
+offset_bottom = 360.0
+text = "整图导览"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="map" type="Button" parent="Rows"]
+offset_left = 610.0
+offset_top = 319.0
+offset_right = 797.0
+offset_bottom = 360.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="weapon_oneLabel" type="Label" parent="Rows"]
+offset_left = 427.0
+offset_top = 368.0
+offset_right = 607.0
+offset_bottom = 409.0
+text = "切换 AWM"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="weapon_one" type="Button" parent="Rows"]
+offset_left = 610.0
+offset_top = 368.0
+offset_right = 797.0
+offset_bottom = 409.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="weapon_twoLabel" type="Label" parent="Rows"]
+offset_left = 427.0
+offset_top = 417.0
+offset_right = 607.0
+offset_bottom = 458.0
+text = "切换步枪"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="weapon_two" type="Button" parent="Rows"]
+offset_left = 610.0
+offset_top = 417.0
+offset_right = 797.0
+offset_bottom = 458.0
+text = ""
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="lean_rightLabel" type="Label" parent="Rows"]
+offset_left = 427.0
+offset_top = 466.0
+offset_right = 607.0
+offset_bottom = 507.0
+text = "向右侧头"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="lean_right" type="Button" parent="Rows"]
+offset_left = 610.0
+offset_top = 466.0
+offset_right = 797.0
+offset_bottom = 507.0
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+
+[node name="LeanToggle" type="CheckButton" parent="."]
+offset_left = 427.0
+offset_top = 515.0
+offset_right = 797.0
+offset_bottom = 556.0
+text = "点击切换侧头（默认长按）"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17

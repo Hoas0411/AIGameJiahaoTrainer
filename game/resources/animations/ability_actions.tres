@@ -1,0 +1,63 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://xec1e4tyadcx"]
+
+[sub_resource type="Animation" id="s1"]
+resource_name = "charge_throw"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CastVisual/Charge:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.22, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.25, 0.15), Vector3(0, 0, 0), Vector3(-0.1, 0.13, 0.06), Vector3(0.15, 0.05, -0.25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CastVisual/Charge:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.4, 0.2, -0.3), Vector3(-0.5, 0, 0.2)]
+}
+
+[sub_resource type="Animation" id="s2"]
+resource_name = "thumper_launch"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CastVisual/Shell:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.45, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.3, -0.3, 0.2), Vector3(0.5, 0.02, 0), Vector3(0.5, 0.02, 0), Vector3(0.5, 0.02, 0.08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CastVisual/Shell:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0)]
+}
+
+[resource]
+_data = {
+&"charge_throw": SubResource("s1"),
+&"thumper_launch": SubResource("s2")
+}

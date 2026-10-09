@@ -1,0 +1,60 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://scripts/training/gridshot_controls.gd" id="script"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Medium.ttf" id="font"]
+[sub_resource type="StyleBoxFlat" id="panel"]
+bg_color = Color(0.025,0.045,0.055,0.99)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_left = 18
+corner_radius_bottom_right = 18
+[sub_resource type="Theme" id="theme"]
+default_font = ExtResource("font")
+default_font_size = 25
+Panel/styles/panel = SubResource("panel")
+[node name="GridshotControls" type="CanvasLayer"]
+layer = 24
+process_mode = 3
+script = ExtResource("script")
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_right = 900.0
+offset_bottom = 520.0
+theme = SubResource("theme")
+[node name="Title" type="Label" parent="Panel"]
+offset_left = 40.0
+offset_top = 30.0
+text = "Gridshot / 基准与精度练习"
+theme_override_font_sizes/font_size = 34
+[node name="Precision" type="CheckButton" parent="Panel"]
+offset_left = 40.0
+offset_top = 110.0
+offset_right = 860.0
+offset_bottom = 165.0
+text = "精度加强：缩小目标，保留网格间距"
+[node name="Viewmodel" type="CheckButton" parent="Panel"]
+offset_left = 40.0
+offset_top = 190.0
+offset_right = 860.0
+offset_bottom = 245.0
+text = "显示持枪模型"
+button_pressed = true
+[node name="Hint" type="Label" parent="Panel"]
+offset_left = 40.0
+offset_top = 275.0
+offset_right = 860.0
+offset_bottom = 400.0
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "关闭精度加强即为视频参考基准。两种练习使用相同目标序列、时长和共享玩家参数。\n基准练速度与节奏，精度版练末段微调；成绩分开标记。隐藏持枪模型可减少视野遮挡。"
+[node name="Close" type="Button" parent="Panel"]
+offset_left = 40.0
+offset_top = 430.0
+offset_right = 430.0
+offset_bottom = 486.0
+text = "返回 / Esc"
+[node name="Apply" type="Button" parent="Panel"]
+offset_left = 470.0
+offset_top = 430.0
+offset_right = 860.0
+offset_bottom = 486.0
+text = "应用并重新开始"

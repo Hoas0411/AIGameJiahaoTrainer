@@ -1,0 +1,182 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_endwall_symmetry_20261005/architecture.tscn" id="architecture"]
+[ext_resource type="Script" path="res://scripts/peek_squad.gd" id="logic"]
+[ext_resource type="PackedScene" path="res://scenes/props/phonograph_station.tscn" id="phonograph_station"]
+[ext_resource type="PackedScene" path="res://scenes/levels/awm_modular/r3_cover_stack.tscn" id="cover"]
+[ext_resource type="PackedScene" path="res://scenes/actors/enemy.tscn" id="enemy"]
+[ext_resource type="Texture2D" path="res://assets/models/awm_terrace_local_repair_20261004/alps_field_4k.hdr" id="hdr"]
+[sub_resource type="PanoramaSkyMaterial" id="skymat"]
+panorama = ExtResource("hdr")
+[sub_resource type="Sky" id="sky"]
+sky_material = SubResource("skymat")
+[sub_resource type="Environment" id="env"]
+background_mode = 2
+sky = SubResource("sky")
+ambient_light_source = 3
+ambient_light_color = Color(0.68,0.78,0.9,1)
+ambient_light_energy = 1.4
+sky_rotation = Vector3(0,1.5707963,0)
+reflected_light_source = 2
+tonemap_mode = 4
+tonemap_exposure = 1.15
+ssao_enabled = true
+ssao_radius = 0.6
+ssao_intensity = 1.1
+ssil_enabled = true
+ssr_enabled = true
+ssr_max_steps = 64
+glow_enabled = true
+glow_intensity = 0.3
+glow_bloom = 0.03
+[node name="AWMSymmetricTerrace" type="Node3D"]
+metadata/preserve_authored_visuals = true
+script = ExtResource("logic")
+level_number = 1
+target_count = 0
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("env")
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-41.4,124.56,0)
+light_color = Color(1,0.93,0.82,1)
+light_energy = 2.25
+shadow_enabled = true
+directional_shadow_max_distance = 120.0
+directional_shadow_mode = 2
+directional_shadow_blend_splits = true
+[node name="Architecture" parent="." instance=ExtResource("architecture")]
+[node name="Cover0" parent="." instance=ExtResource("cover")]
+position = Vector3(-4,0,-13)
+[node name="Cover1" parent="." instance=ExtResource("cover")]
+position = Vector3(4,0,-13)
+[node name="Cover2" parent="." instance=ExtResource("cover")]
+position = Vector3(-5,0,35)
+[node name="Cover3" parent="." instance=ExtResource("cover")]
+position = Vector3(5,0,35)
+[node name="Cover4" parent="." instance=ExtResource("cover")]
+position = Vector3(0,0,43)
+[node name="ServiceLight_-1_0" type="OmniLight3D" parent="."]
+position = Vector3(-14.3,2.25,-22.0)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_-1_1" type="OmniLight3D" parent="."]
+position = Vector3(-14.3,2.25,-13.696554890431479)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_-1_2" type="OmniLight3D" parent="."]
+position = Vector3(-14.3,2.25,-5.393109780862957)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_-1_3" type="OmniLight3D" parent="."]
+position = Vector3(-14.3,2.25,2.910335328705564)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_-1_4" type="OmniLight3D" parent="."]
+position = Vector3(-14.3,2.25,11.213780438274085)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_-1_5" type="OmniLight3D" parent="."]
+position = Vector3(-14.3,2.25,19.517225547842607)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_-1_6" type="OmniLight3D" parent="."]
+position = Vector3(-14.3,2.25,27.820670657411128)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_-1_7" type="OmniLight3D" parent="."]
+position = Vector3(-14.3,2.25,36.12411576697965)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_-1_8" type="OmniLight3D" parent="."]
+position = Vector3(-14.3,2.25,44.42756087654817)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_-1_9" type="OmniLight3D" parent="."]
+position = Vector3(-14.3,2.25,52.731005986116685)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_1_0" type="OmniLight3D" parent="."]
+position = Vector3(14.3,2.25,-22.0)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_1_1" type="OmniLight3D" parent="."]
+position = Vector3(14.3,2.25,-13.696554890431479)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_1_2" type="OmniLight3D" parent="."]
+position = Vector3(14.3,2.25,-5.393109780862957)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_1_3" type="OmniLight3D" parent="."]
+position = Vector3(14.3,2.25,2.910335328705564)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_1_4" type="OmniLight3D" parent="."]
+position = Vector3(14.3,2.25,11.213780438274085)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_1_5" type="OmniLight3D" parent="."]
+position = Vector3(14.3,2.25,19.517225547842607)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_1_6" type="OmniLight3D" parent="."]
+position = Vector3(14.3,2.25,27.820670657411128)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_1_7" type="OmniLight3D" parent="."]
+position = Vector3(14.3,2.25,36.12411576697965)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_1_8" type="OmniLight3D" parent="."]
+position = Vector3(14.3,2.25,44.42756087654817)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+[node name="ServiceLight_1_9" type="OmniLight3D" parent="."]
+position = Vector3(14.3,2.25,52.731005986116685)
+light_color = Color(1,0.66,0.3,1)
+light_energy = 1.0
+omni_range = 3.0
+
+[node name="Enemies" type="Node3D" parent="."]
+[node name="Enemy" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(-4, 0.09, -14.5)
+behavior = 0
+externally_scheduled = true
+peek_distance = 2.7
+
+[node name="EnemyTwo" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(4, 0.09, -14.5)
+behavior = 0
+externally_scheduled = true
+peek_distance = 2.7
+
+[node name="EnemyThree" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(4, 0.09, -16)
+behavior = 0
+externally_scheduled = true
+peek_distance = 2.7
+
+
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+position = Vector3(0,0.09,38)
+[node name="PhonographStation" parent="." instance=ExtResource("phonograph_station")]
+position = Vector3(2.1,0.07,38)
+rotation = Vector3(0,-1.5707963,0)

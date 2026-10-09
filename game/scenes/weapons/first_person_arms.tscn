@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/player/winter_operator_character_arms_v2.glb" id="e1"]
+
+[ext_resource type="Script" path="res://scripts/first_person_arms.gd" id="controller"]
+
+[node name="FirstPersonArms" type="Node3D"]
+script = ExtResource("controller")
+
+
+[node name="Model" parent="." instance=ExtResource("e1")]
+

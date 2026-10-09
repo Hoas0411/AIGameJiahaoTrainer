@@ -1,0 +1,101 @@
+{
+  "iteration": "003",
+  "date": "2026-09-14",
+  "status": "active-trial",
+  "owned_files": [
+    {
+      "path": "ui/rebuild/iteration-003/author_resources.py",
+      "sha256": "73abb6755f49e184f6e1c6cbc4a6cc9c241092ad63df78c1c324edd64d0ed891",
+      "bytes": 1252
+    },
+    {
+      "path": "ui/rebuild/iteration-003/companion-static.png",
+      "sha256": "073fd63b0b54b80c0ca474e819d41412e1372865a870f2bf76ab4e5fd2e54519",
+      "bytes": 78028
+    },
+    {
+      "path": "ui/rebuild/iteration-003/companion.tscn",
+      "sha256": "017fbd3caf85412af3b40ae50ed9211a31bd3a8e68cec1fdc7bde2071687e67d",
+      "bytes": 13146
+    },
+    {
+      "path": "ui/rebuild/iteration-003/course-cover.svg",
+      "sha256": "adfb0eb6db2c2418d7055b9a775f64293ecf311ef929535cff7f7de1877bb117",
+      "bytes": 488
+    },
+    {
+      "path": "ui/rebuild/iteration-003/hero-atmosphere.svg",
+      "sha256": "8d62f057828da8e252e3d2ed4fa49b8243bc98a5a6bbd4f5c1788bd6946aebb1",
+      "bytes": 5983
+    },
+    {
+      "path": "ui/rebuild/iteration-003/hub-static.png",
+      "sha256": "8b3a252c216b5566a9d8b1fd83a0f871bd6394ccc1db0db4594cfb4ed8e52e9b",
+      "bytes": 192462
+    },
+    {
+      "path": "ui/rebuild/iteration-003/hub.tscn",
+      "sha256": "1d0e46649eb3b169cac93d92d8598692b0a1690b300b64ce5117d2b7e6fa1022",
+      "bytes": 11432
+    },
+    {
+      "path": "ui/rebuild/iteration-003/integrate_art.py",
+      "sha256": "68f17ef171f8b18148805a5e1bbed8f752213a1d663cfd80d5eb48badebf58b7",
+      "bytes": 3259
+    },
+    {
+      "path": "ui/rebuild/iteration-003/integrate_tools.py",
+      "sha256": "30b863954418356765bdb0d1fd855ed11ec3040556a1b02bc1aea20ae78f912f",
+      "bytes": 1937
+    },
+    {
+      "path": "ui/rebuild/iteration-003/manifest.md",
+      "sha256": "b0942a189c60f8b7920f25b07b0c106ee6cc252dff3608714b0e93882a4ef93a",
+      "bytes": 495
+    },
+    {
+      "path": "ui/rebuild/iteration-003/mouse-avatar.svg",
+      "sha256": "d228e98e7eefbbd726075b5871735bfcde5210e249d15fc79377866cb9d01213",
+      "bytes": 543
+    },
+    {
+      "path": "ui/rebuild/iteration-003/offline_capture.gd",
+      "sha256": "4751212df6a5143231777267b868dc9bc8b23569fd91a59f347ff2e190cd0d2d",
+      "bytes": 539
+    },
+    {
+      "path": "ui/rebuild/iteration-003/theme.tres",
+      "sha256": "38708a626da90a40ccf0f453bacdc7e2325d6bddcea34bc2f7d404f8a7bade79",
+      "bytes": 3097
+    },
+    {
+      "path": "ui/rebuild/iteration-003/tools-static.png",
+      "sha256": "94980fffc29170918572ac23f0ceb8b963c0f249cf1cb748062b3f7483fe78b8",
+      "bytes": 85493
+    },
+    {
+      "path": "ui/rebuild/iteration-003/tools.tscn",
+      "sha256": "d822a50593856d67ef11be29a5ff873b22d80e466c406713c84c2878ef2812f7",
+      "bytes": 7896
+    },
+    {
+      "path": "ui/rebuild/iteration-003/workspace-gradient.svg",
+      "sha256": "cee775070211fefa9a7e81ee814d860a52fe797a81a658a292634d6782467926",
+      "bytes": 240
+    }
+  ],
+  "evidence_directory": "evidence/ui-rebuild-20260914/iteration-003",
+  "shared_dependencies": [
+    "ui/rebuild/shared/message_flow.gd",
+    "ui/rebuild/shared/overhead_frame.gd",
+    "ui/rebuild/shared/course_row.gd",
+    "ui/rebuild/shared/lounge-art.png",
+    "assets/fonts/NotoSansSC-Medium.ttf",
+    "scripts/ui_appearance.gd",
+    "scripts/hub_ui.gd",
+    "scripts/companion_ui.gd",
+    "scripts/bubble_ui.gd",
+    "scripts/ui_tool_workspace.gd"
+  ],
+  "removal_boundary": "This iteration folder and matching evidence/documents only; shared files are not owned by this iteration. Active 003/005 must be removed from UIAppearance RESOURCE_ROOTS before removal. No deletion has been performed by this manifest."
+}

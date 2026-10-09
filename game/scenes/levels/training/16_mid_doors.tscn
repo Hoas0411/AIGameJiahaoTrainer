@@ -1,0 +1,3 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="PackedScene" path="res://scenes/levels/mid_gap_20261005/runtime.tscn" id="new_level"]
+[node name="MidGap" instance=ExtResource("new_level")]

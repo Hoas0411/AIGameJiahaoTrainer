@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_visual.gd" id="script"]
+[ext_resource type="PackedScene" path="res://assets/models/player/winter_operator_game.glb" id="body"]
+
+[node name="PlayerVisual" type="Node3D"]
+script = ExtResource("script")
+
+[node name="Body" parent="." instance=ExtResource("body")]

@@ -1,0 +1,6 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://assets/models/range_R23/M04.glb" id="m"]
+[ext_resource type="Material" path="res://assets/models/range_R23/floor.tres" id="f"]
+[node name="FloorPanel" instance=ExtResource("m")]
+[node name="M04_M04_Hyper3D_original_uniform_only" parent="." index="0"]
+material_override = ExtResource("f")

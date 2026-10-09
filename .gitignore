@@ -1,0 +1,12 @@
+﻿.godot/
+local-data/
+exports/
+workbench/
+runtime/
+builds/
+*.local.json
+service.pid.json
+*.blend1
+*.zip
+400MB上传分卷/
+game/source_art/range_honor_R37/R37后墙等比扩展.blend

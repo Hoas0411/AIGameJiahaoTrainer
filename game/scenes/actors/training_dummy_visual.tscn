@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/enemies/training_dummy.glb" id="model"]
+[ext_resource type="Script" path="res://scripts/doll.gd" id="doll_script"]
+
+[sub_resource type="SphereMesh" id="flash_mesh"]
+radius = 0.06
+height = 0.12
+
+[node name="Doll" type="Node3D"]
+script = ExtResource("doll_script")
+
+[node name="Model" parent="." instance=ExtResource("model")]
+
+[node name="ShotFlash" type="MeshInstance3D" parent="."]
+position = Vector3(0.25, 1.15, 0.6)
+visible = false
+mesh = SubResource("flash_mesh")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MotionProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/motion_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+lean_angle_degrees = 6.0
+lean_seconds = 0.65
+lean_curve_strength = 5.0
+lean_distance = 0.42
+lean_neck_pivot = 0.24
+lean_drop = 0.035
+lean_viewmodel_counter_roll = 1.47
+lean_ads_viewmodel_counter_roll = 3.0
+lean_viewmodel_drop = 0.008
+lean_collision_margin = 0.03

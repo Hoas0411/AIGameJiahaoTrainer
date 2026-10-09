@@ -1,0 +1,306 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="PackedScene" path="res://scenes/props/phonograph_station.tscn" id="phonograph_station"]
+[ext_resource type="Script" path="res://scripts/training/training_drill.gd" id="script"]
+[ext_resource type="PackedScene" path="res://scenes/training/target.tscn" id="target"]
+[ext_resource type="PackedScene" path="res://assets/models/training/training_hall.glb" id="hall_art"]
+[sub_resource type="StandardMaterial3D" id="r1"]
+albedo_color = Color(0.055,0.085,0.11,1)
+metallic = 0.25
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="r2"]
+albedo_color = Color(0.12,0.18,0.22,1)
+metallic = 0.2
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="r3"]
+albedo_color = Color(0.1,0.58,0.5,1)
+metallic = 0.0
+roughness = 0.7
+emission_enabled = true
+emission = Color(0.1,0.58,0.5,1)
+emission_energy_multiplier = 1.4
+
+[sub_resource type="StandardMaterial3D" id="r4"]
+albedo_color = Color(0.25,0.32,0.36,1)
+metallic = 0.6
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="r5"]
+albedo_color = Color(0.35,0.23,0.13,1)
+metallic = 0.0
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="r6"]
+size = Vector3(24,0.6,32)
+material = SubResource("r1")
+
+[sub_resource type="BoxShape3D" id="r7"]
+size = Vector3(24,0.6,32)
+
+[sub_resource type="BoxMesh" id="r8"]
+size = Vector3(24,8,0.5)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r9"]
+size = Vector3(24,8,0.5)
+
+[sub_resource type="BoxMesh" id="r10"]
+size = Vector3(0.5,8,32)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r11"]
+size = Vector3(0.5,8,32)
+
+[sub_resource type="BoxMesh" id="r12"]
+size = Vector3(0.5,8,32)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r13"]
+size = Vector3(0.5,8,32)
+
+[sub_resource type="BoxMesh" id="r14"]
+size = Vector3(24,8,0.5)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r15"]
+size = Vector3(24,8,0.5)
+
+[sub_resource type="BoxMesh" id="r16"]
+size = Vector3(0.06,0.025,30)
+material = SubResource("r3")
+
+[sub_resource type="BoxMesh" id="r17"]
+size = Vector3(0.06,0.025,30)
+material = SubResource("r3")
+
+[sub_resource type="BoxMesh" id="r18"]
+size = Vector3(20,0.012,0.045)
+material = SubResource("r4")
+
+[sub_resource type="BoxMesh" id="r19"]
+size = Vector3(20,0.012,0.045)
+material = SubResource("r4")
+
+[sub_resource type="BoxMesh" id="r20"]
+size = Vector3(20,0.012,0.045)
+material = SubResource("r4")
+
+[sub_resource type="BoxMesh" id="r21"]
+size = Vector3(20,0.012,0.045)
+material = SubResource("r4")
+
+[sub_resource type="BoxMesh" id="r22"]
+size = Vector3(20,0.012,0.045)
+material = SubResource("r4")
+
+[sub_resource type="BoxMesh" id="r23"]
+size = Vector3(0.14,7.5,0.25)
+material = SubResource("r4")
+
+[sub_resource type="BoxMesh" id="r24"]
+size = Vector3(0.14,7.5,0.25)
+material = SubResource("r4")
+
+[sub_resource type="BoxMesh" id="r25"]
+size = Vector3(0.14,7.5,0.25)
+material = SubResource("r4")
+
+[sub_resource type="BoxMesh" id="r26"]
+size = Vector3(0.14,7.5,0.25)
+material = SubResource("r4")
+
+[sub_resource type="BoxMesh" id="r27"]
+size = Vector3(0.14,7.5,0.25)
+material = SubResource("r4")
+
+[sub_resource type="BoxShape3D" id="hall_roof_shape"]
+size = Vector3(23.5,0.18,31.5)
+
+[node name="14_smooth_tracking" type="Node3D"]
+script = ExtResource("script")
+mode = 1
+level_number = 14
+round_seconds = 60.0
+
+[node name="Enemies" type="Node3D" parent="."]
+
+
+[node name="Architecture" type="Node3D" parent="."]
+
+
+[node name="Floor" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,-0.3,0)
+mesh = SubResource("r6")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/Floor"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/Floor/Body"]
+shape = SubResource("r7")
+
+[node name="Backstop" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,4,-16)
+mesh = SubResource("r8")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/Backstop"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/Backstop/Body"]
+shape = SubResource("r9")
+
+[node name="LeftWall" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(-12,4,0)
+mesh = SubResource("r10")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/LeftWall"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LeftWall/Body"]
+shape = SubResource("r11")
+
+[node name="RightWall" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(12,4,0)
+mesh = SubResource("r12")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/RightWall"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/RightWall/Body"]
+shape = SubResource("r13")
+
+[node name="RearWall" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,4,16)
+mesh = SubResource("r14")
+
+[node name="Body" type="StaticBody3D" parent="Architecture/RearWall"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/RearWall/Body"]
+shape = SubResource("r15")
+
+[node name="Rail-11_6" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(-11.6,0.035,0)
+mesh = SubResource("r16")
+
+[node name="Rail11_6" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(11.6,0.035,0)
+mesh = SubResource("r17")
+
+[node name="Distance-10" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,0.015,-10)
+mesh = SubResource("r18")
+
+[node name="Distance-5" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,0.015,-5)
+mesh = SubResource("r19")
+
+[node name="Distance0" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,0.015,0)
+mesh = SubResource("r20")
+
+[node name="Distance5" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,0.015,5)
+mesh = SubResource("r21")
+
+[node name="Distance10" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,0.015,10)
+mesh = SubResource("r22")
+
+[node name="WallRib-10" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(-10,4,-15.6)
+mesh = SubResource("r23")
+
+[node name="WallRib-5" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(-5,4,-15.6)
+mesh = SubResource("r24")
+
+[node name="WallRib0" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0,4,-15.6)
+mesh = SubResource("r25")
+
+[node name="WallRib5" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(5,4,-15.6)
+mesh = SubResource("r26")
+
+[node name="WallRib10" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(10,4,-15.6)
+mesh = SubResource("r27")
+
+[node name="Title" type="Label3D" parent="."]
+position = Vector3(0,5.6,-15.65)
+text = "持续跟枪 · 平滑横移"
+font_size = 64
+pixel_size = 0.01
+modulate = Color(0.7,0.9,0.9,1)
+outline_size = 3
+no_depth_test = false
+
+[node name="Description" type="Label3D" parent="."]
+position = Vector3(0,4.6,-15.6)
+text = "TRACK / CONTROL / REPEAT"
+font_size = 30
+pixel_size = 0.01
+modulate = Color(0.7,0.9,0.9,1)
+outline_size = 3
+no_depth_test = false
+
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+position = Vector3(0,0.1,10)
+
+[node name="Targets" type="Node3D" parent="."]
+
+
+[node name="Target0" parent="Targets" instance=ExtResource("target")]
+position = Vector3(0,0,-10)
+
+[node name="PriorityMarker" type="Label3D" parent="."]
+visible = false
+text = "▼"
+font_size = 70
+pixel_size = 0.01
+modulate = Color(0.2,1,0.75,1)
+billboard = 1
+
+[node name="Fill0" type="OmniLight3D" parent="."]
+position = Vector3(-7,6,-6)
+light_color = Color(0.73,0.86,1,1)
+light_energy = 2.5
+omni_range = 18.0
+shadow_enabled = false
+
+[node name="Fill1" type="OmniLight3D" parent="."]
+position = Vector3(7,6,-6)
+light_color = Color(0.73,0.86,1,1)
+light_energy = 2.5
+omni_range = 18.0
+shadow_enabled = false
+
+[node name="Fill2" type="OmniLight3D" parent="."]
+position = Vector3(0,6,8)
+light_color = Color(0.73,0.86,1,1)
+light_energy = 2.5
+omni_range = 18.0
+shadow_enabled = false
+
+[node name="CompanionStand" type="Marker3D" parent="."]
+position = Vector3(-2,0.1,11)
+
+[node name="HallArt" parent="Architecture" instance=ExtResource("hall_art")]
+
+[node name="RoofBoundary" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,8.05,0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape3D" parent="Architecture/RoofBoundary"]
+shape = SubResource("hall_roof_shape")
+
+[node name="PhonographStation" parent="." instance=ExtResource("phonograph_station")]
+position = Vector3(2.1, 0.0, 10.0)
+rotation = Vector3(0, -1.5707963, 0)

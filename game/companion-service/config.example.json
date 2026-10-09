@@ -1,0 +1,13 @@
+{
+  "provider": "ollama",
+  "url": "http://127.0.0.1:11434/api/chat",
+  "model": "REPLACE_WITH_INSTALLED_MODEL",
+  "port": 18765,
+  "timeoutMs": 90000,
+  "context": 8192,
+  "maxPredict": 900,
+  "temperature": 0.35,
+  "thinking": false,
+  "verifyReplies": true,
+  "prewarm": true
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+ <rect width="1600" height="900" fill="#12232d"/>
+ <text x="48" y="58" fill="#f2f5f4" font-size="30">M7 1.5× open sight — v3 Blender reconstruction detail</text>
+ <text x="48" y="94" fill="#88d8d5" font-size="19">Target: source screenshot at 1600 × 900; rifle receiver remains R5 geometry</text>
+ <g stroke="#446976" stroke-width="1"><path d="M800 124V840M70 450H1530"/><path d="M240 160V760M1360 160V760"/></g>
+ <g fill="none" stroke="#ef887c" stroke-width="5" stroke-linejoin="round">
+  <path d="M710 408V462L750 500M890 408V462L850 500"/>
+  <path d="M745 500H855V545H745Z"/>
+  <path d="M750 545L767 630H833L850 545"/>
+  <path d="M767 630H833"/>
+ </g>
+ <g fill="none" stroke="#85d7d2" stroke-width="2"><path d="M710 388V395M890 388V395M710 392H890"/><path d="M923 408H951M937 408V500"/><path d="M730 685H870"/><path d="M685 850H915"/></g>
+ <g fill="#f2f5f4" font-size="22"><text x="975" y="428">uprights: separate plates, inward shallow V</text><text x="975" y="467">clear window; no dark lens sheet</text><text x="975" y="519">front plate: ~45 px high in target</text><text x="975" y="566">lower frame: real open trapezoid</text><text x="975" y="607">right controls: two discrete round knobs</text><text x="975" y="685">receiver behind sight is not reshaped</text></g>
+ <g fill="#8bddda" font-size="20"><text x="713" y="380">target outer width ≈180 px</text><text x="718" y="673">target aperture ≈140 px</text><text x="660" y="837">near body at y≈850: ≈230 px</text></g>
+ <g fill="#ef887c" font-size="20"><text x="100" y="729">CAD specification for newly constructed parts:</text><text x="100" y="762">outer post spacing 49 mm; front plate width 43 mm; lower braces converge to 27 mm</text><text x="100" y="795">post top z 123 mm; front plate z 88–96 mm; open braces z 58–88 mm</text></g>
+</svg>

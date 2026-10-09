@@ -1,0 +1,150 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/levels/range_honor_R36/range.gd" id="script"]
+[ext_resource type="PackedScene" path="res://scenes/levels/range_honor_R38/architecture.tscn" id="architecture"]
+[ext_resource type="PackedScene" path="res://scenes/actors/enemy.tscn" id="enemy"]
+[ext_resource type="PackedScene" path="res://scenes/props/phonograph_station.tscn" id="phonograph"]
+[ext_resource type="PackedScene" path="res://assets/models/range_R23/M04.glb" id="targetplate"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Medium.ttf" id="font"]
+
+[ext_resource type="PackedScene" path="res://scenes/levels/range_honor_R38/honor.tscn" id="honor"]
+
+[sub_resource type="BoxShape3D" id="floor"]
+size = Vector3(27.466067364811895,0.4,58.11668114661399)
+
+[sub_resource type="BoxShape3D" id="side"]
+size = Vector3(0.4,12.649999999999999,58.11668114661399)
+
+[sub_resource type="BoxShape3D" id="end"]
+size = Vector3(27.466067364811895,12.649999999999999,0.4)
+
+[sub_resource type="BoxShape3D" id="cover"]
+size = Vector3(1.8, 0.95, 0.7)
+
+[sub_resource type="BoxShape3D" id="backstop"]
+size = Vector3(3, 3.2, 0.16)
+
+[node name="07_range" type="Node3D"]
+script = ExtResource("script")
+level_number = 7
+drill_kind = 0
+respawn_delay = 1.0
+
+[node name="Architecture" type="Node3D" parent="."]
+[node name="BlenderArchitecture" parent="Architecture" instance=ExtResource("architecture")]
+[node name="Markings" type="Node3D" parent="."]
+[node name="Props" type="Node3D" parent="."]
+[node name="Enemies" type="Node3D" parent="."]
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+position = Vector3(0, 0.1, 3)
+[node name="Stations" type="Node3D" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,-0.2,-20.858340573306997)
+[node name="Shape" type="CollisionShape3D" parent="Architecture/Floor"]
+shape = SubResource("floor")
+
+[node name="Left" type="StaticBody3D" parent="Architecture"]
+position = Vector3(-11.600533682405947,6.324999999999999,-20.858340573306997)
+[node name="Shape" type="CollisionShape3D" parent="Architecture/Left"]
+shape = SubResource("side")
+
+[node name="Right" type="StaticBody3D" parent="Architecture"]
+position = Vector3(11.600533682405947,6.324999999999999,-20.858340573306997)
+[node name="Shape" type="CollisionShape3D" parent="Architecture/Right"]
+shape = SubResource("side")
+
+[node name="Back" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0,6.324999999999999,-49.596681146613996)
+[node name="Shape" type="CollisionShape3D" parent="Architecture/Back"]
+shape = SubResource("end")
+
+[node name="Station0" type="Marker3D" parent="Stations"]
+position = Vector3(-8, 0.1, 0)
+[node name="Target0" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(-8, 0, -10)
+behavior = 3
+[node name="Distance0" type="Label3D" parent="Markings"]
+position = Vector3(-8, 3.9, -10.38)
+text = "10 m"
+font = ExtResource("font")
+font_size = 64
+pixel_size = 0.008
+outline_size = 0
+modulate = Color(0.85, 0.81, 0.73, 1)
+no_depth_test = false
+
+[node name="Backstop0" type="StaticBody3D" parent="Architecture"]
+position = Vector3(-8, 1.6, -10.38)
+[node name="Shape" type="CollisionShape3D" parent="Architecture/Backstop0"]
+shape = SubResource("backstop")
+
+[node name="Station1" type="Marker3D" parent="Stations"]
+position = Vector3(0, 0.1, 0)
+[node name="Target1" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(0, 0, -25)
+behavior = 3
+[node name="Distance1" type="Label3D" parent="Markings"]
+position = Vector3(0, 3.9, -25.38)
+text = "25 m"
+font = ExtResource("font")
+font_size = 64
+pixel_size = 0.008
+outline_size = 0
+modulate = Color(0.85, 0.81, 0.73, 1)
+no_depth_test = false
+
+[node name="Backstop1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, 1.6, -25.38)
+[node name="Shape" type="CollisionShape3D" parent="Architecture/Backstop1"]
+shape = SubResource("backstop")
+
+[node name="Station2" type="Marker3D" parent="Stations"]
+position = Vector3(8, 0.1, 0)
+[node name="Target2" parent="Enemies" instance=ExtResource("enemy")]
+position = Vector3(8, 0, -50)
+behavior = 3
+[node name="Distance2" type="Label3D" parent="Markings"]
+position = Vector3(8, 3.9, -50.38)
+text = "50 m"
+font = ExtResource("font")
+font_size = 64
+pixel_size = 0.008
+outline_size = 0
+modulate = Color(0.85, 0.81, 0.73, 1)
+no_depth_test = false
+
+[node name="Backstop2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(8, 1.6, -50.38)
+[node name="Shape" type="CollisionShape3D" parent="Architecture/Backstop2"]
+shape = SubResource("backstop")
+
+[node name="PhonographStation" parent="." instance=ExtResource("phonograph")]
+position = Vector3(4.5, 0, 3.6)
+rotation = Vector3(0, -1.5707963, 0)
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-48,-35,0)
+light_energy = 1.4
+shadow_enabled = true
+directional_shadow_mode = 1
+directional_shadow_max_distance = 55.0
+
+[node name="TargetPlates" type="Node3D" parent="."]
+
+[node name="Plate0" parent="TargetPlates" instance=ExtResource("targetplate")]
+position = Vector3(-8,1.6,-10.6)
+rotation = Vector3(1.57079633,0,0)
+scale = Vector3(1.6,1.6,1.6)
+
+[node name="Plate1" parent="TargetPlates" instance=ExtResource("targetplate")]
+position = Vector3(0,1.6,-25.6)
+rotation = Vector3(1.57079633,0,0)
+scale = Vector3(1.6,1.6,1.6)
+
+[node name="Plate2" parent="TargetPlates" instance=ExtResource("targetplate")]
+position = Vector3(8,1.6,-50.6)
+rotation = Vector3(1.57079633,0,0)
+scale = Vector3(1.6,1.6,1.6)
+
+[node name="HonorWall" parent="." instance=ExtResource("honor")]

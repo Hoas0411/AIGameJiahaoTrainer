@@ -1,0 +1,377 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Theme" path="res://ui/rebuild/iteration-005/theme.tres" id="1"]
+[ext_resource type="Texture2D" path="res://ui/rebuild/iteration-005/mouse-ink.png" id="2"]
+[ext_resource type="Texture2D" path="res://ui/rebuild/iteration-005/dialogue-frame.svg" id="3"]
+[ext_resource type="Texture2D" path="res://ui/rebuild/iteration-005/nameplate.svg" id="4"]
+[ext_resource type="Texture2D" path="res://ui/rebuild/shared/lounge-art.png" id="5"]
+
+[sub_resource type="AtlasTexture" id="PortraitCrop"]
+atlas = ExtResource("2")
+region = Rect2(180, 0, 760, 820)
+
+[sub_resource type="StyleBoxFlat" id="PrefsPanel"]
+bg_color = Color(0.025, 0.025, 0.03, 0.985)
+border_width_left = 12
+border_width_top = 5
+border_width_right = 12
+border_width_bottom = 8
+border_color = Color(0.96, 0.95, 0.9, 1)
+
+[node name="Root" type="Control"]
+offset_right = 1600.0
+offset_bottom = 900.0
+theme = ExtResource("1")
+mouse_filter = 2
+
+[node name="Open" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 174.0
+offset_right = 244.0
+offset_bottom = 220.0
+text = "麦小鼠 / F7"
+
+[node name="Toast" type="Label" parent="."]
+visible = false
+offset_left = 24.0
+offset_top = 230.0
+offset_right = 430.0
+offset_bottom = 330.0
+
+[node name="Shade" type="ColorRect" parent="."]
+visible = false
+offset_right = 1600.0
+offset_bottom = 900.0
+color = Color(0.02, 0.02, 0.025, 0.94)
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="Background" type="TextureRect" parent="Panel"]
+offset_right = 1600.0
+offset_bottom = 900.0
+expand_mode = 1
+stretch_mode = 6
+texture = ExtResource("5")
+mouse_filter = 2
+
+[node name="SceneBackdrop" type="Control" parent="Panel"]
+offset_right = 1600.0
+offset_bottom = 900.0
+mouse_filter = 2
+[node name="Sky" type="ColorRect" parent="Panel/SceneBackdrop"]
+visible = false
+offset_right = 1600.0
+offset_bottom = 610.0
+color = Color(0.17, 0.08, 0.075, 1)
+[node name="Window" type="ColorRect" parent="Panel/SceneBackdrop"]
+visible = false
+offset_left = 80.0
+offset_top = 90.0
+offset_right = 1510.0
+offset_bottom = 500.0
+color = Color(0.22, 0.13, 0.12, 0.58)
+[node name="Horizon" type="ColorRect" parent="Panel/SceneBackdrop"]
+visible = false
+offset_left = 0.0
+offset_top = 480.0
+offset_right = 1600.0
+offset_bottom = 690.0
+color = Color(0.08, 0.045, 0.04, 1)
+[node name="TopSlash" type="Polygon2D" parent="Panel/SceneBackdrop"]
+polygon = PackedVector2Array(0, 0, 1600, 0, 1600, 92, 1030, 54, 460, 84, 0, 142)
+color = Color(0.01, 0.01, 0.012, 1)
+[node name="BottomSlash" type="Polygon2D" parent="Panel/SceneBackdrop"]
+polygon = PackedVector2Array(0, 860, 410, 825, 820, 870, 1240, 820, 1600, 850, 1600, 900, 0, 900)
+color = Color(0.01, 0.01, 0.012, 1)
+
+[node name="Margin" type="Control" parent="Panel"]
+offset_right = 1600.0
+offset_bottom = 900.0
+[node name="Columns" type="Control" parent="Panel/Margin"]
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="Chat" type="Control" parent="Panel/Margin/Columns"]
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="Portrait" type="TextureRect" parent="Panel/Margin/Columns/Chat"]
+offset_left = 115.0
+offset_top = 410.0
+offset_right = 502.0
+offset_bottom = 900.0
+texture = SubResource("PortraitCrop")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DialogueFrame" type="TextureRect" parent="Panel/Margin/Columns/Chat"]
+offset_left = 395.0
+offset_top = 610.0
+offset_right = 1409.0
+offset_bottom = 900.0
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="NamePlateGraphic" type="TextureRect" parent="Panel/Margin/Columns/Chat"]
+offset_left = 395.0
+offset_top = 602.0
+offset_right = 790.0
+offset_bottom = 717.0
+texture = ExtResource("4")
+expand_mode = 1
+mouse_filter = 2
+[node name="NamePlate" type="Label" parent="Panel/Margin/Columns/Chat"]
+offset_left = 485.0
+offset_top = 624.0
+offset_right = 720.0
+offset_bottom = 680.0
+text = "麦小鼠"
+theme_override_colors/font_color = Color(0.02, 0.02, 0.025, 1)
+theme_override_font_sizes/font_size = 34
+rotation = -0.055
+
+[node name="ReplyTime" type="Label" parent="Panel/Margin/Columns/Chat"]
+visible = false
+offset_left = 900.0
+offset_top = 680.0
+offset_right = 1228.0
+offset_bottom = 712.0
+text = "本次回复 2.35 秒"
+horizontal_alignment = 2
+theme_override_colors/font_color = Color(1, 0.99, 0.95, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="Latest" type="RichTextLabel" parent="Panel/Margin/Columns/Chat"]
+offset_left = 562.0
+offset_top = 721.0
+offset_right = 1224.0
+offset_bottom = 835.0
+bbcode_enabled = false
+fit_content = false
+scroll_active = false
+autowrap_mode = 2
+theme_override_colors/default_color = Color(1, 0.99, 0.95, 1)
+theme_override_font_sizes/normal_font_size = 32
+theme_override_constants/line_separation = 4
+text = "今天想从哪里聊起？训练里的小事，或者今天的心情，都可以。"
+
+[node name="History" type="Button" parent="Panel/Margin/Columns/Chat"]
+offset_left = 1460.0
+offset_top = 778.0
+offset_right = 1572.0
+offset_bottom = 826.0
+text = "▣  记录"
+theme_override_font_sizes/font_size = 17
+
+[node name="Write" type="Button" parent="Panel/Margin/Columns/Chat"]
+offset_left = 1460.0
+offset_top = 718.0
+offset_right = 1572.0
+offset_bottom = 766.0
+text = "✎  写话"
+theme_override_font_sizes/font_size = 17
+
+[node name="Status" type="Label" parent="Panel/Margin/Columns/Chat"]
+offset_left = 30.0
+offset_top = 22.0
+offset_right = 630.0
+offset_bottom = 50.0
+text = "本地陪伴已就绪"
+horizontal_alignment = 0
+theme_override_font_sizes/font_size = 15
+
+[node name="InputBackdrop" type="Polygon2D" parent="Panel/Margin/Columns/Chat"]
+visible = false
+polygon = PackedVector2Array(180, 565, 1420, 520, 1530, 650, 1430, 840, 210, 850, 80, 730)
+color = Color(0.015, 0.015, 0.02, 0.985)
+[node name="Input" type="LineEdit" parent="Panel/Margin/Columns/Chat"]
+visible = false
+offset_left = 270.0
+offset_top = 672.0
+offset_right = 1265.0
+offset_bottom = 744.0
+placeholder_text = "给麦小鼠发消息…"
+max_length = 1500
+theme_override_font_sizes/font_size = 25
+[node name="Send" type="Button" parent="Panel/Margin/Columns/Chat"]
+visible = false
+offset_left = 1280.0
+offset_top = 672.0
+offset_right = 1435.0
+offset_bottom = 744.0
+text = "发送 →"
+[node name="InputHint" type="Label" parent="Panel/Margin/Columns/Chat"]
+visible = false
+offset_left = 270.0
+offset_top = 760.0
+offset_right = 1435.0
+offset_bottom = 800.0
+text = "Enter 发送 · 再按“写句话”收起输入层"
+horizontal_alignment = 1
+
+[node name="HistoryBackdrop" type="ColorRect" parent="Panel/Margin/Columns/Chat"]
+visible = false
+offset_left = 250.0
+offset_top = 120.0
+offset_right = 1420.0
+offset_bottom = 840.0
+color = Color(0.015, 0.015, 0.02, 0.985)
+[node name="Log" type="RichTextLabel" parent="Panel/Margin/Columns/Chat"]
+visible = false
+offset_left = 330.0
+offset_top = 200.0
+offset_right = 1340.0
+offset_bottom = 755.0
+theme_override_font_sizes/normal_font_size = 24
+theme_override_constants/line_separation = 8
+
+[node name="MemoryProposal" type="Label" parent="Panel/Margin/Columns/Chat"]
+visible = false
+offset_left = 310.0
+offset_top = 790.0
+offset_right = 1030.0
+offset_bottom = 830.0
+[node name="Remember" type="Button" parent="Panel/Margin/Columns/Chat"]
+visible = false
+offset_left = 1040.0
+offset_top = 785.0
+offset_right = 1260.0
+offset_bottom = 835.0
+text = "确认记住"
+[node name="Close" type="Button" parent="Panel/Margin/Columns/Chat"]
+offset_left = 1430.0
+offset_top = 92.0
+offset_right = 1568.0
+offset_bottom = 140.0
+text = "关闭"
+
+[node name="Title" type="Label" parent="Panel/Margin/Columns/Chat"]
+visible = false
+[node name="Byline" type="Label" parent="Panel/Margin/Columns/Chat"]
+visible = false
+[node name="Artwork" type="Control" parent="Panel/Margin/Columns/Chat"]
+visible = false
+[node name="Summon" type="Button" parent="Panel/Margin/Columns/Chat"]
+visible = false
+[node name="Studio" type="Button" parent="Panel/Margin/Columns/Chat"]
+visible = false
+[node name="Tools" type="Button" parent="Panel/Margin/Columns/Chat"]
+offset_left = 30.0
+offset_top = 88.0
+offset_right = 220.0
+offset_bottom = 132.0
+text = "训练操作台"
+theme_override_font_sizes/font_size = 17
+
+[node name="Preferences" type="Control" parent="Panel/Margin/Columns"]
+visible = false
+offset_left = 220.0
+offset_top = 130.0
+offset_right = 1380.0
+offset_bottom = 820.0
+[node name="PrefsPanel" type="Panel" parent="Panel/Margin/Columns/Preferences"]
+offset_right = 1160.0
+offset_bottom = 690.0
+theme_override_styles/panel = SubResource("PrefsPanel")
+[node name="PrefsTitle" type="Label" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 60.0
+offset_top = 38.0
+offset_right = 500.0
+offset_bottom = 90.0
+text = "相处方式 / PERSONA"
+theme_override_font_sizes/font_size = 35
+[node name="Role" type="OptionButton" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 60.0
+offset_top = 125.0
+offset_right = 340.0
+offset_bottom = 175.0
+[node name="Address" type="LineEdit" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 370.0
+offset_top = 125.0
+offset_right = 700.0
+offset_bottom = 175.0
+placeholder_text = "自定义称呼"
+[node name="Partner" type="OptionButton" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 60.0
+offset_top = 200.0
+offset_right = 340.0
+offset_bottom = 250.0
+[node name="Style" type="OptionButton" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 370.0
+offset_top = 200.0
+offset_right = 700.0
+offset_bottom = 250.0
+[node name="Enabled" type="CheckButton" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 60.0
+offset_top = 280.0
+offset_right = 700.0
+offset_bottom = 325.0
+text = "人物陪伴与训练鼓励"
+[node name="AI" type="CheckButton" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 60.0
+offset_top = 335.0
+offset_right = 700.0
+offset_bottom = 380.0
+text = "启用 AI 自由聊天"
+[node name="Reconnect" type="Button" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 60.0
+offset_top = 405.0
+offset_right = 700.0
+offset_bottom = 455.0
+text = "检查 / 重连 AI"
+[node name="AINote" type="Label" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 60.0
+offset_top = 470.0
+offset_right = 700.0
+offset_bottom = 525.0
+text = "开关立即生效。云端模式会发送聊天与相关训练资料。"
+autowrap_mode = 3
+[node name="Memories" type="TextEdit" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 740.0
+offset_top = 125.0
+offset_right = 1100.0
+offset_bottom = 430.0
+placeholder_text = "想让我记住的事，每行一条"
+[node name="Save" type="Button" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 740.0
+offset_top = 450.0
+offset_right = 1100.0
+offset_bottom = 505.0
+text = "保存偏好与记忆"
+[node name="Stats" type="Label" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 740.0
+offset_top = 525.0
+offset_right = 1100.0
+offset_bottom = 610.0
+autowrap_mode = 3
+[node name="ForgetChat" type="Button" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 740.0
+offset_top = 620.0
+offset_right = 1100.0
+offset_bottom = 670.0
+text = "清空聊天记录"
+[node name="Back" type="Button" parent="Panel/Margin/Columns/Preferences"]
+offset_left = 60.0
+offset_top = 600.0
+offset_right = 430.0
+offset_bottom = 655.0
+text = "← 回到对话"
+[node name="Cultivate" type="Button" parent="Panel/Margin/Columns/Preferences"]
+visible = false
+
+[node name="Appearance" type="OptionButton" parent="Panel"]
+offset_left = 1170.0
+offset_top = 92.0
+offset_right = 1360.0
+offset_bottom = 140.0
+[node name="Settings" type="Button" parent="Panel"]
+offset_left = 960.0
+offset_top = 92.0
+offset_right = 1150.0
+offset_bottom = 140.0
+text = "相处方式"

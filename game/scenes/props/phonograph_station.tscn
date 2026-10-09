@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/phonograph_precision_20261001/pedestal_precision.glb" id="1_pedestal"]
+[ext_resource type="PackedScene" path="res://assets/models/phonograph_precision_20261001/record_player_precision.glb" id="2_player"]
+
+[sub_resource type="BoxShape3D" id="StandCollision"]
+size = Vector3(1.04, 0.85, 0.78)
+
+[node name="PhonographStation" type="Node3D"]
+
+[node name="Pedestal" parent="." instance=ExtResource("1_pedestal")]
+
+[node name="RecordPlayer" parent="." instance=ExtResource("2_player")]
+
+[node name="StandBody" type="StaticBody3D" parent="."]
+
+[node name="StandShape" type="CollisionShape3D" parent="StandBody"]
+position = Vector3(0, 0.425, 0)
+shape = SubResource("StandCollision")
+
+[node name="AudioOrigin" type="Marker3D" parent="."]
+position = Vector3(0, 0.95, 0.255)

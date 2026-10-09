@@ -1,0 +1,6 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="PackedScene" path="res://scenes/actors/enemy.tscn" id="enemy"]
+[ext_resource type="Script" path="res://scripts/levels/mid_gap_20261005/crosser.gd" id="script"]
+[node name="Crosser" instance=ExtResource("enemy")]
+script = ExtResource("script")
+shooting_enabled = false

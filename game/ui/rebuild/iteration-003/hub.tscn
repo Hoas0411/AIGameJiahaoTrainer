@@ -1,0 +1,402 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Theme" path="res://ui/rebuild/iteration-003/theme.tres" id="1_theme"]
+[ext_resource type="Texture2D" path="res://ui/rebuild/iteration-003/course-cover.svg" id="2_cover"]
+
+[ext_resource type="Texture2D" path="res://ui/rebuild/iteration-003/hero-atmosphere.svg" id="3_hero"]
+[ext_resource type="Script" path="res://ui/rebuild/shared/course_row.gd" id="4_row"]
+
+[node name="Root" type="Control"]
+offset_right = 1600.0
+offset_bottom = 900.0
+theme = ExtResource("1_theme")
+mouse_filter = 2
+
+[node name="Prompt" type="Label" parent="."]
+offset_left = 500.0
+offset_top = 730.0
+offset_right = 1100.0
+offset_bottom = 770.0
+horizontal_alignment = 1
+
+[node name="Catalog" type="Control" parent="."]
+offset_right = 1600.0
+offset_bottom = 900.0
+visible = false
+
+[node name="Background" type="ColorRect" parent="Catalog"]
+offset_right = 1600.0
+offset_bottom = 900.0
+color = Color(0.018, 0.024, 0.029, 1)
+mouse_filter = 2
+
+[node name="BackgroundArt" type="TextureRect" parent="Catalog"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1600.0
+offset_bottom = 900.0
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+texture = ExtResource("3_hero")
+
+[node name="TopBar" type="ColorRect" parent="Catalog"]
+offset_left = 38.0
+offset_top = 10.0
+offset_right = 1405.0
+offset_bottom = 54.0
+color = Color(0.015, 0.019, 0.024, 1)
+mouse_filter = 2
+
+[node name="Logo" type="Label" parent="Catalog"]
+offset_left = 56.0
+offset_top = 18.0
+offset_right = 102.0
+offset_bottom = 48.0
+text = "◈"
+theme_override_colors/font_color = Color(0.28, 0.84, 0.84, 1)
+theme_override_font_sizes/font_size = 28
+
+[node name="PlaySlice" type="Polygon2D" parent="Catalog"]
+polygon = PackedVector2Array(110, 10, 255, 10, 240, 54, 110, 54)
+color = Color(0.27, 0.80, 0.81, 1)
+
+[node name="Play" type="Label" parent="Catalog"]
+offset_left = 110.0
+offset_top = 10.0
+offset_right = 240.0
+offset_bottom = 54.0
+text = "PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.015, 0.11, 0.13, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="Nav" type="Label" parent="Catalog"]
+offset_left = 280.0
+offset_top = 20.0
+offset_right = 880.0
+offset_bottom = 46.0
+text = "嘉豪训练器    /    训练与陪伴"
+theme_override_font_sizes/font_size = 18
+
+[node name="Appearance" type="OptionButton" parent="Catalog"]
+offset_left = 1120.0
+offset_top = 12.0
+offset_right = 1320.0
+offset_bottom = 52.0
+
+[node name="Close" type="Button" parent="Catalog"]
+offset_left = 1430.0
+offset_top = 12.0
+offset_right = 1560.0
+offset_bottom = 52.0
+text = "关闭  Esc"
+
+[node name="HeroKicker" type="Label" parent="Catalog"]
+offset_left = 64.0
+offset_top = 248.0
+offset_right = 600.0
+offset_bottom = 276.0
+text = "嘉豪训练器  /  训练工作站"
+theme_override_colors/font_color = Color(0.28, 0.84, 0.84, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="HeroTitle" type="Label" parent="Catalog"]
+offset_left = 64.0
+offset_top = 351.0
+offset_right = 720.0
+offset_bottom = 450.0
+text = "准星归位，\n从这一轮开始。"
+theme_override_font_sizes/font_size = 43
+
+[node name="HeroCopy" type="Label" parent="Catalog"]
+offset_left = 68.0
+offset_top = 474.0
+offset_right = 670.0
+offset_bottom = 538.0
+text = "找一个想练的项目，按自己的节奏开始。\n也可以先和麦小鼠聊聊今天的状态。"
+theme_override_colors/font_color = Color(0.72, 0.78, 0.81, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="TaskFrame" type="Panel" parent="Catalog"]
+offset_left = 823.0
+offset_top = 78.0
+offset_right = 1192.0
+offset_bottom = 818.0
+
+
+[node name="TasksHeading" type="Label" parent="Catalog"]
+offset_left = 844.0
+offset_top = 92.0
+offset_right = 1000.0
+offset_bottom = 122.0
+text = "训练项目"
+theme_override_font_sizes/font_size = 18
+
+[node name="TaskRule" type="ColorRect" parent="Catalog"]
+offset_left = 844.0
+offset_top = 126.0
+offset_right = 1000.0
+offset_bottom = 128.0
+color = Color(0.20, 0.77, 0.79, 1)
+
+[node name="RightTop" type="Panel" parent="Catalog"]
+offset_left = 1205.0
+offset_top = 78.0
+offset_right = 1573.0
+offset_bottom = 258.0
+
+[node name="ChatTitle" type="Label" parent="Catalog/RightTop"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 330.0
+offset_bottom = 48.0
+text = "麦小鼠 · 陪练通信"
+theme_override_font_sizes/font_size = 18
+
+[node name="ChatBody" type="Label" parent="Catalog/RightTop"]
+offset_left = 20.0
+offset_top = 64.0
+offset_right = 342.0
+offset_bottom = 120.0
+text = "训练前后可聊聊感受，\n也可以让它协助编排路线。"
+theme_override_colors/font_color = Color(0.70, 0.75, 0.78, 1)
+
+[node name="Companion" type="Button" parent="Catalog"]
+offset_left = 1225.0
+offset_top = 206.0
+offset_right = 1553.0
+offset_bottom = 236.0
+text = "打开对话  F7"
+
+[node name="RightMiddle" type="Panel" parent="Catalog"]
+offset_left = 1205.0
+offset_top = 274.0
+offset_right = 1573.0
+offset_bottom = 440.0
+
+[node name="RecordTitle" type="Label" parent="Catalog/RightMiddle"]
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 330.0
+offset_bottom = 46.0
+text = "最近训练"
+theme_override_font_sizes/font_size = 18
+
+[node name="RecordEmpty" type="Label" parent="Catalog/RightMiddle"]
+offset_left = 20.0
+offset_top = 68.0
+offset_right = 340.0
+offset_bottom = 132.0
+text = "还没有已结算的记录。\n完成一轮训练后会在这里显示。"
+theme_override_colors/font_color = Color(0.56, 0.61, 0.65, 1)
+
+[node name="CourseCard" type="Panel" parent="Catalog"]
+offset_left = 1205.0
+offset_top = 456.0
+offset_right = 1573.0
+offset_bottom = 823.0
+
+[node name="Cover" type="TextureRect" parent="Catalog/CourseCard"]
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 354.0
+offset_bottom = 206.0
+texture = ExtResource("2_cover")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Selected" type="Label" parent="Catalog"]
+offset_left = 1223.0
+offset_top = 670.0
+offset_right = 1549.0
+offset_bottom = 696.0
+text = "01    三人双掩体"
+theme_override_font_sizes/font_size = 19
+
+[node name="Description" type="Label" parent="Catalog"]
+offset_left = 1223.0
+offset_top = 700.0
+offset_right = 1549.0
+offset_bottom = 726.0
+text = "击倒 · 喷气 · 跳拉"
+theme_override_colors/font_color = Color(0.29, 0.82, 0.83, 1)
+
+[node name="Start" type="Button" parent="Catalog"]
+offset_left = 1223.0
+offset_top = 731.0
+offset_right = 1549.0
+offset_bottom = 811.0
+text = "开始训练"
+theme_type_variation = &"PrimaryButton"
+
+[node name="Difficulty" type="OptionButton" parent="Catalog"]
+offset_left = 64.0
+offset_top = 562.0
+offset_right = 240.0
+offset_bottom = 606.0
+
+[node name="Invincible" type="CheckButton" parent="Catalog"]
+offset_left = 264.0
+offset_top = 564.0
+offset_right = 420.0
+offset_bottom = 604.0
+text = "无敌练习"
+
+[node name="Tools" type="Button" parent="Catalog"]
+offset_left = 1000.0
+offset_top = 850.0
+offset_right = 1264.0
+offset_bottom = 895.0
+text = "训练操作台"
+
+[node name="Training" type="Button" parent="Catalog"]
+offset_left = 1276.0
+offset_top = 850.0
+offset_right = 1548.0
+offset_bottom = 895.0
+text = "专项训练"
+
+theme_type_variation = &"PrimaryButton"
+
+[node name="Course0" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 166.0
+offset_right = 1191.0
+offset_bottom = 216.0
+text = "01  三人双掩体\n基础训练"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+[node name="Course2" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 272.0
+offset_right = 1191.0
+offset_bottom = 322.0
+text = "03  门框切角\n预瞄与清角"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+[node name="Course3" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 325.0
+offset_right = 1191.0
+offset_bottom = 375.0
+text = "04  急停与跟枪\n持续追踪"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+[node name="Course4" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 378.0
+offset_right = 1191.0
+offset_bottom = 428.0
+text = "05  喷气突入\n移动衔接"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+[node name="Course5" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 431.0
+offset_right = 1191.0
+offset_bottom = 481.0
+text = "06  航天基地 2.0\n探索训练"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+[node name="Course6" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 484.0
+offset_right = 1191.0
+offset_bottom = 534.0
+text = "07  距离与控枪\n基础训练"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+[node name="Course7" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 537.0
+offset_right = 1191.0
+offset_bottom = 587.0
+text = "08  随机反应\n反应训练"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+[node name="Course8" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 590.0
+offset_right = 1191.0
+offset_bottom = 640.0
+text = "09  高低差转火\n目标切换"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+[node name="Course9" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 643.0
+offset_right = 1191.0
+offset_bottom = 693.0
+text = "10  投掷物工坊\n战术练习"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+[node name="Course10" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 696.0
+offset_right = 1191.0
+offset_bottom = 746.0
+text = "11  听声定位\n听觉训练"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+[node name="Course11" type="Button" parent="Catalog"]
+offset_left = 824.0
+offset_top = 748.0
+offset_right = 1191.0
+offset_bottom = 798.0
+text = "12  运动校准场\n动作校准"
+alignment = 0
+toggle_mode = true
+theme_type_variation = &"IndexButton"
+script = ExtResource("4_row")
+
+
+[node name="RecentTab" type="Label" parent="Catalog"]
+offset_left = 1018.0
+offset_top = 96.0
+offset_right = 1174.0
+offset_bottom = 122.0
+text = "基础训练"
+theme_override_colors/font_color = Color(0.55, 0.60, 0.64, 1)
+theme_override_font_sizes/font_size = 16
+
+[node name="FilterRow" type="Label" parent="Catalog"]
+offset_left = 844.0
+offset_top = 137.0
+offset_right = 1172.0
+offset_bottom = 158.0
+text = "训练目录   ·   12 个基础项目"
+theme_override_colors/font_color = Color(0.56, 0.63, 0.66, 1)
+theme_override_font_sizes/font_size = 12

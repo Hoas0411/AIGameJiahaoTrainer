@@ -1,0 +1,161 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://scripts/training/training_target.gd" id="script"]
+[ext_resource type="PackedScene" path="res://assets/models/training/sentinel.glb" id="sentinel"]
+
+[sub_resource type="StandardMaterial3D" id="r1"]
+albedo_color = Color(0.92,0.36,0.14,1)
+metallic = 0.2
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="r2"]
+albedo_color = Color(0.12,0.16,0.2,1)
+metallic = 0.0
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="r3"]
+albedo_color = Color(0.1,0.95,0.75,1)
+metallic = 0.0
+roughness = 0.7
+emission_enabled = true
+emission = Color(0.1,0.95,0.75,1)
+emission_energy_multiplier = 1.4
+
+[sub_resource type="BoxMesh" id="r4"]
+size = Vector3(0.48,0.7,0.3)
+material = SubResource("r1")
+
+[sub_resource type="BoxShape3D" id="r5"]
+size = Vector3(0.48,0.4,0.3)
+
+[sub_resource type="BoxMesh" id="r6"]
+size = Vector3(0.42,0.28,0.28)
+material = SubResource("r1")
+
+[sub_resource type="BoxShape3D" id="r7"]
+size = Vector3(0.42,0.28,0.28)
+
+[sub_resource type="BoxMesh" id="r8"]
+size = Vector3(0.3,0.3,0.3)
+material = SubResource("r1")
+
+[sub_resource type="BoxShape3D" id="r9"]
+size = Vector3(0.3,0.3,0.3)
+
+[sub_resource type="BoxMesh" id="r10"]
+size = Vector3(0.16,0.5,0.2)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r11"]
+size = Vector3(0.16,0.5,0.2)
+
+[sub_resource type="BoxMesh" id="r12"]
+size = Vector3(0.16,0.5,0.2)
+material = SubResource("r2")
+
+[sub_resource type="BoxShape3D" id="r13"]
+size = Vector3(0.16,0.5,0.2)
+
+[sub_resource type="BoxMesh" id="r14"]
+size = Vector3(0.38,0.5,0.015)
+material = SubResource("r3")
+
+[sub_resource type="BoxShape3D" id="arm_shape"]
+size = Vector3(0.15,0.78,0.3)
+
+[sub_resource type="BoxShape3D" id="abdomen_shape"]
+size = Vector3(0.46,0.25,0.3)
+
+[node name="TrainingTarget" type="Node3D"]
+script = ExtResource("script")
+
+[node name="Hitboxes" type="Node3D" parent="."]
+
+
+[node name="Chest" type="Area3D" parent="Hitboxes"]
+position = Vector3(0,1.25,0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "body"
+
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/Chest"]
+shape = SubResource("r5")
+
+[node name="Pelvis" type="Area3D" parent="Hitboxes"]
+position = Vector3(0,0.65,0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "abdomen"
+
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/Pelvis"]
+shape = SubResource("r7")
+
+[node name="Head" type="Area3D" parent="Hitboxes"]
+position = Vector3(0,1.7,0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "head"
+
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/Head"]
+shape = SubResource("r9")
+
+[node name="LegL" type="Area3D" parent="Hitboxes"]
+position = Vector3(-0.13,0.27,0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "limb"
+
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/LegL"]
+shape = SubResource("r11")
+
+[node name="LegR" type="Area3D" parent="Hitboxes"]
+position = Vector3(0.13,0.27,0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "limb"
+
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/LegR"]
+shape = SubResource("r13")
+
+[node name="HitIndicator" type="Node3D" parent="."]
+visible = false
+
+[node name="Flash" type="MeshInstance3D" parent="HitIndicator"]
+position = Vector3(0,1.15,0.17)
+mesh = SubResource("r14")
+
+[node name="Art" parent="." instance=ExtResource("sentinel")]
+rotation = Vector3(0,3.14159265,0)
+
+[node name="ArmL" type="Area3D" parent="Hitboxes"]
+position = Vector3(-0.30,1.085,0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "limb"
+
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/ArmL"]
+shape = SubResource("arm_shape")
+
+[node name="ArmR" type="Area3D" parent="Hitboxes"]
+position = Vector3(0.30,1.085,0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "limb"
+
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/ArmR"]
+shape = SubResource("arm_shape")
+
+[node name="Abdomen" type="Area3D" parent="Hitboxes"]
+position = Vector3(0,0.925,0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+metadata/zone = "abdomen"
+[node name="Shape" type="CollisionShape3D" parent="Hitboxes/Abdomen"]
+shape = SubResource("abdomen_shape")

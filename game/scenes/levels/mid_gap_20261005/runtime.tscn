@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3]
+[ext_resource type="Script" path="res://scripts/levels/mid_gap_20261005/drill.gd" id="script"]
+[ext_resource type="PackedScene" path="res://assets/models/mid_gap_20261005/architecture.glb" id="art"]
+[ext_resource type="PackedScene" path="res://scenes/levels/mid_gap_20261005/crosser.tscn" id="enemy"]
+[sub_resource type="ProceduralSkyMaterial" id="sky_material"]
+sky_top_color = Color(0.36,0.47,0.58,1)
+sky_horizon_color = Color(0.70,0.73,0.74,1)
+ground_bottom_color = Color(0.30,0.31,0.31,1)
+ground_horizon_color = Color(0.62,0.64,0.64,1)
+sun_angle_max = 18.0
+[sub_resource type="Sky" id="sky"]
+sky_material = SubResource("sky_material")
+[sub_resource type="Environment" id="environment"]
+background_mode = 2
+sky = SubResource("sky")
+ambient_light_source = 3
+ambient_light_color = Color(0.78,0.8,0.82,1)
+ambient_light_sky_contribution = 0.85
+ambient_light_energy = 0.55
+reflected_light_source = 2
+tonemap_mode = 4
+tonemap_exposure = 0.92
+tonemap_white = 6.0
+ssao_enabled = true
+ssao_radius = 0.6
+ssao_intensity = 1.35
+ssao_power = 1.4
+ssao_light_affect = 0.2
+ssil_enabled = true
+ssil_radius = 2.0
+ssil_intensity = 0.45
+adjustment_enabled = true
+adjustment_contrast = 1.06
+adjustment_saturation = 1.04
+[node name="MidGap" type="Node3D"]
+script = ExtResource("script")
+level_number = 16
+free_roam = true
+[node name="Architecture" parent="." instance=ExtResource("art")]
+[node name="Enemies" type="Node3D" parent="."]
+[node name="Crosser" parent="Enemies" instance=ExtResource("enemy")]
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+position = Vector3(0,0.02,10)
+[node name="CompanionStand" type="Marker3D" parent="."]
+position = Vector3(-2,0.02,11)
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-38,-42,0)
+light_color = Color(1,0.93,0.84,1)
+light_energy = 1.65
+light_angular_distance = 0.6
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 1.2
+directional_shadow_mode = 1
+directional_shadow_max_distance = 45.0
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("environment")

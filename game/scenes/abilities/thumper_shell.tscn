@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/gadget_projectile.gd" id="e1"]
+
+[ext_resource type="PackedScene" path="res://assets/models/thumper_shell.glb" id="e2"]
+
+[ext_resource type="Material" path="res://resources/materials/orange.tres" id="e3"]
+
+[sub_resource type="SphereMesh" id="s1"]
+radius = 0.018
+height = 0.036
+radial_segments = 32
+rings = 16
+material = ExtResource("e3")
+
+[node name="thumper_shell" type="Node3D"]
+script = ExtResource("e1")
+kind = 1
+fuse_seconds = 2.5
+
+[node name="Model" parent="." instance=ExtResource("e2")]
+
+
+[node name="Indicator" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.04, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("s1")
+

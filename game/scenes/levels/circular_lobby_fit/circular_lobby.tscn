@@ -1,0 +1,1734 @@
+[gd_scene load_steps=34 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/P0_80.glb" id="1_p0"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/F1_45.glb" id="2_f1"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/F2_45.glb" id="3_f2"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/F3_45.glb" id="4_f3"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/W1.glb" id="5_w1"]
+[ext_resource type="PackedScene" path="res://assets/models/lobby_metal_glass_20261005/G1M.glb" id="6_g1"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/C0.glb" id="7_c0"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/C1.glb" id="8_c1"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/C2.glb" id="9_c2"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/C3.glb" id="10_c3"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/B1.glb" id="11_b1"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/B2.glb" id="12_b2"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/D1.glb" id="13_d1"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/E1_20.glb" id="14_e1"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/T1_40.glb" id="15_t1"]
+[ext_resource type="PackedScene" path="res://assets/models/circular_lobby_fit/T2.glb" id="16_t2"]
+[ext_resource type="Script" path="res://scenes/levels/circular_lobby_fit/circular_lobby.gd" id="17_logic"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Medium.ttf" id="18_font"]
+[ext_resource type="Texture2D" path="res://assets/models/circular_lobby_fit/icons/awm_icon.svg" id="19_awm_icon"]
+[ext_resource type="Texture2D" path="res://assets/models/circular_lobby_fit/icons/m7_icon.svg" id="20_m7_icon"]
+[ext_resource type="Texture2D" path="res://assets/models/circular_lobby_fit/icons/tracking_icon.svg" id="21_tracking_icon"]
+[ext_resource type="Texture2D" path="res://assets/models/circular_lobby_fit/icons/cover_icon.svg" id="21_cover_icon"]
+[ext_resource type="PackedScene" path="res://scenes/props/phonograph_station.tscn" id="22_phonograph_station"]
+
+[ext_resource type="PackedScene" path="res://assets/models/lobby_metal_glass_20261005/C1G.glb" id="glass_C1"]
+[ext_resource type="PackedScene" path="res://assets/models/lobby_metal_glass_20261005/C2G.glb" id="glass_C2"]
+[ext_resource type="PackedScene" path="res://assets/models/lobby_metal_glass_20261005/C3G.glb" id="glass_C3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="SkyMat"]
+sky_top_color = Color(0.10, 0.15, 0.19, 1)
+sky_horizon_color = Color(0.24, 0.30, 0.33, 1)
+ground_bottom_color = Color(0.06, 0.08, 0.09, 1)
+ground_horizon_color = Color(0.16, 0.20, 0.22, 1)
+
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("SkyMat")
+
+[sub_resource type="Environment" id="Environment"]
+background_mode = 2
+sky = SubResource("Sky")
+ambient_light_source = 3
+ambient_light_color = Color(0.56, 0.68, 0.76, 1)
+ambient_light_energy = 0.72
+reflected_light_source = 1
+tonemap_mode = 2
+
+[sub_resource type="CylinderShape3D" id="FloorCollision"]
+radius = 18.0
+height = 0.18
+
+[sub_resource type="CylinderShape3D" id="PlatformCollision"]
+radius = 6.0
+height = 0.8
+
+[sub_resource type="BoxShape3D" id="WallCollision"]
+size = Vector3(4.75, 6.65, 0.25)
+
+[sub_resource type="BoxShape3D" id="CounterCollision"]
+size = Vector3(3.85, 1.12, 0.96)
+
+[sub_resource type="BoxShape3D" id="PortalHitArea"]
+size = Vector3(3.35, 1.65, 0.35)
+
+[sub_resource type="BoxShape3D" id="WeaponHitArea"]
+size = Vector3(1.90, 2.65, 0.35)
+
+[sub_resource type="BoxShape3D" id="PortalDisplayHitArea"]
+size = Vector3(2.50, 4.05, 0.35)
+
+[node name="CircularLobby" type="Node3D"]
+script = ExtResource("17_logic")
+level_number = 13
+free_roam = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-50, -30, 0)
+light_energy = 1.1
+shadow_enabled = true
+
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+position = Vector3(0, 0.95, 0)
+
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="Architecture" type="Node3D" parent="."]
+
+[node name="PhonographStation" parent="." instance=ExtResource("22_phonograph_station")]
+position = Vector3(-3.36, 0.8, -2.35)
+rotation = Vector3(0, 0.96004, 0)
+
+[node name="InteriorLighting" type="Node3D" parent="."]
+
+[node name="CeilingFill_01" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(-3.157592, 5.65, -11.784295)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_02" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(-8.626703, 5.65, -8.626703)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_03" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(-11.784295, 5.65, -3.157592)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_04" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(-11.784295, 5.65, 3.157592)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_05" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(-8.626703, 5.65, 8.626703)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_06" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(-3.157592, 5.65, 11.784295)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_07" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(3.157592, 5.65, 11.784295)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_08" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(8.626703, 5.65, 8.626703)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_09" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(11.784295, 5.65, 3.157592)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_10" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(11.784295, 5.65, -3.157592)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_11" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(8.626703, 5.65, -8.626703)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CeilingFill_12" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(3.157592, 5.65, -11.784295)
+light_color = Color(0.72, 0.86, 0.98, 1)
+light_energy = 4.5
+omni_range = 14.0
+shadow_enabled = false
+
+[node name="CentralFill" type="OmniLight3D" parent="InteriorLighting"]
+position = Vector3(0, 5.7, 0)
+light_color = Color(0.83, 0.90, 1, 1)
+light_energy = 4.0
+omni_range = 12.0
+shadow_enabled = false
+
+[node name="P0_Instances" type="Node3D" parent="Architecture"]
+
+[node name="P0_02" parent="Architecture/P0_Instances" instance=ExtResource("1_p0")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="P0_03" parent="Architecture/P0_Instances" instance=ExtResource("1_p0")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="P0_04" parent="Architecture/P0_Instances" instance=ExtResource("1_p0")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="P0_05" parent="Architecture/P0_Instances" instance=ExtResource("1_p0")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="P0_06" parent="Architecture/P0_Instances" instance=ExtResource("1_p0")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="P0_07" parent="Architecture/P0_Instances" instance=ExtResource("1_p0")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="P0_08" parent="Architecture/P0_Instances" instance=ExtResource("1_p0")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="P0_09" parent="Architecture/P0_Instances" instance=ExtResource("1_p0")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="F1_Instances" type="Node3D" parent="Architecture"]
+
+[node name="F1_02" parent="Architecture/F1_Instances" instance=ExtResource("2_f1")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="F1_03" parent="Architecture/F1_Instances" instance=ExtResource("2_f1")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="F1_04" parent="Architecture/F1_Instances" instance=ExtResource("2_f1")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="F1_05" parent="Architecture/F1_Instances" instance=ExtResource("2_f1")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="F1_06" parent="Architecture/F1_Instances" instance=ExtResource("2_f1")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="F1_07" parent="Architecture/F1_Instances" instance=ExtResource("2_f1")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="F1_08" parent="Architecture/F1_Instances" instance=ExtResource("2_f1")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="F1_09" parent="Architecture/F1_Instances" instance=ExtResource("2_f1")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="F2_Instances" type="Node3D" parent="Architecture"]
+
+[node name="F2_02" parent="Architecture/F2_Instances" instance=ExtResource("3_f2")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="F2_03" parent="Architecture/F2_Instances" instance=ExtResource("3_f2")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="F2_04" parent="Architecture/F2_Instances" instance=ExtResource("3_f2")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="F2_05" parent="Architecture/F2_Instances" instance=ExtResource("3_f2")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="F2_06" parent="Architecture/F2_Instances" instance=ExtResource("3_f2")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="F2_07" parent="Architecture/F2_Instances" instance=ExtResource("3_f2")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="F2_08" parent="Architecture/F2_Instances" instance=ExtResource("3_f2")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="F2_09" parent="Architecture/F2_Instances" instance=ExtResource("3_f2")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="F3_Instances" type="Node3D" parent="Architecture"]
+
+[node name="F3_02" parent="Architecture/F3_Instances" instance=ExtResource("4_f3")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="F3_03" parent="Architecture/F3_Instances" instance=ExtResource("4_f3")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="F3_04" parent="Architecture/F3_Instances" instance=ExtResource("4_f3")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="F3_05" parent="Architecture/F3_Instances" instance=ExtResource("4_f3")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="F3_06" parent="Architecture/F3_Instances" instance=ExtResource("4_f3")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="F3_07" parent="Architecture/F3_Instances" instance=ExtResource("4_f3")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="F3_08" parent="Architecture/F3_Instances" instance=ExtResource("4_f3")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="F3_09" parent="Architecture/F3_Instances" instance=ExtResource("4_f3")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="W1_Instances" type="Node3D" parent="Architecture"]
+
+[node name="W1_02" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 0.130899693900, 0)
+
+[node name="W1_03" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="W1_04" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 0.654498469498, 0)
+
+[node name="W1_05" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 0.916297857297, 0)
+
+[node name="W1_06" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="W1_07" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 1.439896632895, 0)
+
+[node name="W1_08" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 1.701696020694, 0)
+
+[node name="W1_09" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="W1_10" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 2.225294796293, 0)
+
+[node name="W1_11" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 2.487094184092, 0)
+
+[node name="W1_12" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="W1_13" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 3.010692959690, 0)
+
+[node name="W1_14" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 3.272492347489, 0)
+
+[node name="W1_15" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="W1_16" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 3.796091123088, 0)
+
+[node name="W1_17" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 4.057890510887, 0)
+
+[node name="W1_18" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="W1_19" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 4.581489286485, 0)
+
+[node name="W1_20" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 4.843288674284, 0)
+
+[node name="W1_21" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="W1_22" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 5.366887449883, 0)
+
+[node name="W1_23" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 5.628686837682, 0)
+
+[node name="W1_24" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="W1_25" parent="Architecture/W1_Instances" instance=ExtResource("5_w1")]
+rotation = Vector3(0, 6.152285613280, 0)
+
+[node name="G1_Instances" type="Node3D" parent="Architecture"]
+
+[node name="G1_02" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 0.130899693900, 0)
+
+[node name="G1_03" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="G1_04" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 0.654498469498, 0)
+
+[node name="G1_05" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 0.916297857297, 0)
+
+[node name="G1_06" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="G1_07" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 1.439896632895, 0)
+
+[node name="G1_08" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 1.701696020694, 0)
+
+[node name="G1_09" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="G1_10" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 2.225294796293, 0)
+
+[node name="G1_11" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 2.487094184092, 0)
+
+[node name="G1_12" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="G1_13" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 3.010692959690, 0)
+
+[node name="G1_14" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 3.272492347489, 0)
+
+[node name="G1_15" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="G1_16" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 3.796091123088, 0)
+
+[node name="G1_17" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 4.057890510887, 0)
+
+[node name="G1_18" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="G1_19" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 4.581489286485, 0)
+
+[node name="G1_20" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 4.843288674284, 0)
+
+[node name="G1_21" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="G1_22" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 5.366887449883, 0)
+
+[node name="G1_23" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 5.628686837682, 0)
+
+[node name="G1_24" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="G1_25" parent="Architecture/G1_Instances" instance=ExtResource("6_g1")]
+rotation = Vector3(0, 6.152285613280, 0)
+
+[node name="C0_Instances" type="Node3D" parent="Architecture"]
+
+[node name="C0_02" parent="Architecture/C0_Instances" instance=ExtResource("7_c0")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="C0_03" parent="Architecture/C0_Instances" instance=ExtResource("7_c0")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="C0_04" parent="Architecture/C0_Instances" instance=ExtResource("7_c0")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="C0_05" parent="Architecture/C0_Instances" instance=ExtResource("7_c0")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="C0_06" parent="Architecture/C0_Instances" instance=ExtResource("7_c0")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="C0_07" parent="Architecture/C0_Instances" instance=ExtResource("7_c0")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="C0_08" parent="Architecture/C0_Instances" instance=ExtResource("7_c0")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="C0_09" parent="Architecture/C0_Instances" instance=ExtResource("7_c0")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="C1_Instances" type="Node3D" parent="Architecture"]
+
+[node name="C1_02" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 0.130899693900, 0)
+
+[node name="C1_03" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="C1_04" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 0.654498469498, 0)
+
+[node name="C1_05" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 0.916297857297, 0)
+
+[node name="C1_06" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="C1_07" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 1.439896632895, 0)
+
+[node name="C1_08" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 1.701696020694, 0)
+
+[node name="C1_09" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="C1_10" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 2.225294796293, 0)
+
+[node name="C1_11" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 2.487094184092, 0)
+
+[node name="C1_12" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="C1_13" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 3.010692959690, 0)
+
+[node name="C1_14" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 3.272492347489, 0)
+
+[node name="C1_15" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="C1_16" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 3.796091123088, 0)
+
+[node name="C1_17" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 4.057890510887, 0)
+
+[node name="C1_18" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="C1_19" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 4.581489286485, 0)
+
+[node name="C1_20" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 4.843288674284, 0)
+
+[node name="C1_21" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="C1_22" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 5.366887449883, 0)
+
+[node name="C1_23" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 5.628686837682, 0)
+
+[node name="C1_24" parent="Architecture/C1_Instances" instance=ExtResource("8_c1")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="C1_25" parent="Architecture/C1_Instances" instance=ExtResource("glass_C1")]
+rotation = Vector3(0, 6.152285613280, 0)
+
+[node name="C2_Instances" type="Node3D" parent="Architecture"]
+
+[node name="C2_02" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 0.130899693900, 0)
+
+[node name="C2_03" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="C2_04" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 0.654498469498, 0)
+
+[node name="C2_05" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 0.916297857297, 0)
+
+[node name="C2_06" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="C2_07" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 1.439896632895, 0)
+
+[node name="C2_08" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 1.701696020694, 0)
+
+[node name="C2_09" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="C2_10" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 2.225294796293, 0)
+
+[node name="C2_11" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 2.487094184092, 0)
+
+[node name="C2_12" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="C2_13" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 3.010692959690, 0)
+
+[node name="C2_14" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 3.272492347489, 0)
+
+[node name="C2_15" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="C2_16" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 3.796091123088, 0)
+
+[node name="C2_17" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 4.057890510887, 0)
+
+[node name="C2_18" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="C2_19" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 4.581489286485, 0)
+
+[node name="C2_20" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 4.843288674284, 0)
+
+[node name="C2_21" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="C2_22" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 5.366887449883, 0)
+
+[node name="C2_23" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 5.628686837682, 0)
+
+[node name="C2_24" parent="Architecture/C2_Instances" instance=ExtResource("9_c2")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="C2_25" parent="Architecture/C2_Instances" instance=ExtResource("glass_C2")]
+rotation = Vector3(0, 6.152285613280, 0)
+
+[node name="C3_Instances" type="Node3D" parent="Architecture"]
+
+[node name="C3_02" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 0.130899693900, 0)
+
+[node name="C3_03" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="C3_04" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 0.654498469498, 0)
+
+[node name="C3_05" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 0.916297857297, 0)
+
+[node name="C3_06" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="C3_07" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 1.439896632895, 0)
+
+[node name="C3_08" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 1.701696020694, 0)
+
+[node name="C3_09" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="C3_10" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 2.225294796293, 0)
+
+[node name="C3_11" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 2.487094184092, 0)
+
+[node name="C3_12" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="C3_13" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 3.010692959690, 0)
+
+[node name="C3_14" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 3.272492347489, 0)
+
+[node name="C3_15" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="C3_16" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 3.796091123088, 0)
+
+[node name="C3_17" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 4.057890510887, 0)
+
+[node name="C3_18" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="C3_19" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 4.581489286485, 0)
+
+[node name="C3_20" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 4.843288674284, 0)
+
+[node name="C3_21" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="C3_22" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 5.366887449883, 0)
+
+[node name="C3_23" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 5.628686837682, 0)
+
+[node name="C3_24" parent="Architecture/C3_Instances" instance=ExtResource("10_c3")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="C3_25" parent="Architecture/C3_Instances" instance=ExtResource("glass_C3")]
+rotation = Vector3(0, 6.152285613280, 0)
+
+[node name="B1_Instances" type="Node3D" parent="Architecture"]
+
+[node name="B1_02" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 0.130899693900, 0)
+
+[node name="B1_03" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 0.392699081699, 0)
+
+[node name="B1_04" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 0.654498469498, 0)
+
+[node name="B1_05" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 0.916297857297, 0)
+
+[node name="B1_06" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="B1_07" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 1.439896632895, 0)
+
+[node name="B1_08" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 1.701696020694, 0)
+
+[node name="B1_09" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="B1_10" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 2.225294796293, 0)
+
+[node name="B1_11" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 2.487094184092, 0)
+
+[node name="B1_12" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="B1_13" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 3.010692959690, 0)
+
+[node name="B1_14" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 3.272492347489, 0)
+
+[node name="B1_15" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="B1_16" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 3.796091123088, 0)
+
+[node name="B1_17" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 4.057890510887, 0)
+
+[node name="B1_18" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="B1_19" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 4.581489286485, 0)
+
+[node name="B1_20" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 4.843288674284, 0)
+
+[node name="B1_21" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="B1_22" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 5.366887449883, 0)
+
+[node name="B1_23" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 5.628686837682, 0)
+
+[node name="B1_24" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 5.890486225481, 0)
+
+[node name="B1_25" parent="Architecture/B1_Instances" instance=ExtResource("11_b1")]
+rotation = Vector3(0, 6.152285613280, 0)
+
+[node name="B2_Instances" type="Node3D" parent="Architecture"]
+
+[node name="B2_02" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 0.000000000000, 0)
+
+[node name="B2_03" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 0.261799387799, 0)
+
+[node name="B2_04" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 0.523598775598, 0)
+
+[node name="B2_05" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 0.785398163397, 0)
+
+[node name="B2_06" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 1.047197551197, 0)
+
+[node name="B2_07" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 1.308996938996, 0)
+
+[node name="B2_08" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 1.570796326795, 0)
+
+[node name="B2_09" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 1.832595714594, 0)
+
+[node name="B2_10" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 2.094395102393, 0)
+
+[node name="B2_11" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 2.356194490192, 0)
+
+[node name="B2_12" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 2.617993877991, 0)
+
+[node name="B2_13" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 2.879793265791, 0)
+
+[node name="B2_14" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 3.141592653590, 0)
+
+[node name="B2_15" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 3.403392041389, 0)
+
+[node name="B2_16" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 3.665191429188, 0)
+
+[node name="B2_17" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 3.926990816987, 0)
+
+[node name="B2_18" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 4.188790204786, 0)
+
+[node name="B2_19" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 4.450589592586, 0)
+
+[node name="B2_20" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 4.712388980385, 0)
+
+[node name="B2_21" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 4.974188368184, 0)
+
+[node name="B2_22" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 5.235987755983, 0)
+
+[node name="B2_23" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 5.497787143782, 0)
+
+[node name="B2_24" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 5.759586531581, 0)
+
+[node name="B2_25" parent="Architecture/B2_Instances" instance=ExtResource("12_b2")]
+rotation = Vector3(0, 6.021385919380, 0)
+
+[node name="D1_Instances" type="Node3D" parent="Architecture"]
+
+[node name="D1_02" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 0.916297857297, 0)
+
+[node name="D1_03" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="D1_04" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 1.439896632895, 0)
+
+[node name="D1_05" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 1.701696020694, 0)
+
+[node name="D1_06" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="D1_07" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 2.225294796293, 0)
+
+[node name="D1_08" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 2.487094184092, 0)
+
+[node name="D1_09" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="D1_10" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 3.010692959690, 0)
+
+[node name="D1_11" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 3.272492347489, 0)
+
+[node name="D1_12" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="D1_13" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 3.796091123088, 0)
+
+[node name="D1_14" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 4.057890510887, 0)
+
+[node name="D1_15" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="D1_16" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 4.581489286485, 0)
+
+[node name="D1_17" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 4.843288674284, 0)
+
+[node name="D1_18" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="D1_19" parent="Architecture/D1_Instances" instance=ExtResource("13_d1")]
+rotation = Vector3(0, 5.366887449883, 0)
+
+[node name="E1_Instances" type="Node3D" parent="Architecture"]
+
+[node name="E1_02" parent="Architecture/E1_Instances" instance=ExtResource("14_e1")]
+rotation = Vector3(0, 5.694136684632, 0)
+
+[node name="E1_03" parent="Architecture/E1_Instances" instance=ExtResource("14_e1")]
+rotation = Vector3(0, 6.086835766330, 0)
+
+[node name="E1_04" parent="Architecture/E1_Instances" instance=ExtResource("14_e1")]
+rotation = Vector3(0, 0.196349540849, 0)
+
+[node name="E1_05" parent="Architecture/E1_Instances" instance=ExtResource("14_e1")]
+rotation = Vector3(0, 0.589048622548, 0)
+
+[node name="T1_Instances" type="Node3D" parent="Architecture"]
+
+[node name="T1_02" parent="Architecture/T1_Instances" instance=ExtResource("15_t1")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="T1_03" parent="Architecture/T1_Instances" instance=ExtResource("15_t1")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="T1_04" parent="Architecture/T1_Instances" instance=ExtResource("15_t1")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="T1_05" parent="Architecture/T1_Instances" instance=ExtResource("15_t1")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="T1_06" parent="Architecture/T1_Instances" instance=ExtResource("15_t1")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="T1_07" parent="Architecture/T1_Instances" instance=ExtResource("15_t1")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="T2_Instances" type="Node3D" parent="Architecture"]
+
+[node name="T2_02" parent="Architecture/T2_Instances" instance=ExtResource("16_t2")]
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="T2_03" parent="Architecture/T2_Instances" instance=ExtResource("16_t2")]
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="T2_04" parent="Architecture/T2_Instances" instance=ExtResource("16_t2")]
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="T2_05" parent="Architecture/T2_Instances" instance=ExtResource("16_t2")]
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="T2_06" parent="Architecture/T2_Instances" instance=ExtResource("16_t2")]
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="T2_07" parent="Architecture/T2_Instances" instance=ExtResource("16_t2")]
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="Collision" type="Node3D" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="Collision"]
+
+[node name="FloorShape" type="CollisionShape3D" parent="Collision/Floor"]
+position = Vector3(0, 0.09, 0)
+shape = SubResource("FloorCollision")
+
+[node name="Platform" type="StaticBody3D" parent="Collision"]
+
+[node name="PlatformShape" type="CollisionShape3D" parent="Collision/Platform"]
+position = Vector3(0, 0.4, 0)
+shape = SubResource("PlatformCollision")
+
+[node name="Perimeter_01" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_01"]
+position = Vector3(-2.329893, 3.325, -17.697291)
+rotation = Vector3(0, 0.130899693900, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_02" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_02"]
+position = Vector3(-6.830899, 3.325, -16.491250)
+rotation = Vector3(0, 0.392699081699, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_03" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_03"]
+position = Vector3(-10.866392, 3.325, -14.161357)
+rotation = Vector3(0, 0.654498469498, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_04" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_04"]
+position = Vector3(-14.161357, 3.325, -10.866392)
+rotation = Vector3(0, 0.916297857297, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_05" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_05"]
+position = Vector3(-16.491250, 3.325, -6.830899)
+rotation = Vector3(0, 1.178097245096, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_06" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_06"]
+position = Vector3(-17.697291, 3.325, -2.329893)
+rotation = Vector3(0, 1.439896632895, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_07" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_07"]
+position = Vector3(-17.697291, 3.325, 2.329893)
+rotation = Vector3(0, 1.701696020694, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_08" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_08"]
+position = Vector3(-16.491250, 3.325, 6.830899)
+rotation = Vector3(0, 1.963495408494, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_09" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_09"]
+position = Vector3(-14.161357, 3.325, 10.866392)
+rotation = Vector3(0, 2.225294796293, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_10" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_10"]
+position = Vector3(-10.866392, 3.325, 14.161357)
+rotation = Vector3(0, 2.487094184092, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_11" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_11"]
+position = Vector3(-6.830899, 3.325, 16.491250)
+rotation = Vector3(0, 2.748893571891, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_12" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_12"]
+position = Vector3(-2.329893, 3.325, 17.697291)
+rotation = Vector3(0, 3.010692959690, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_13" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_13"]
+position = Vector3(2.329893, 3.325, 17.697291)
+rotation = Vector3(0, 3.272492347489, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_14" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_14"]
+position = Vector3(6.830899, 3.325, 16.491250)
+rotation = Vector3(0, 3.534291735289, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_15" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_15"]
+position = Vector3(10.866392, 3.325, 14.161357)
+rotation = Vector3(0, 3.796091123088, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_16" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_16"]
+position = Vector3(14.161357, 3.325, 10.866392)
+rotation = Vector3(0, 4.057890510887, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_17" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_17"]
+position = Vector3(16.491250, 3.325, 6.830899)
+rotation = Vector3(0, 4.319689898686, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_18" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_18"]
+position = Vector3(17.697291, 3.325, 2.329893)
+rotation = Vector3(0, 4.581489286485, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_19" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_19"]
+position = Vector3(17.697291, 3.325, -2.329893)
+rotation = Vector3(0, 4.843288674284, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_20" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_20"]
+position = Vector3(16.491250, 3.325, -6.830899)
+rotation = Vector3(0, 5.105088062083, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_21" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_21"]
+position = Vector3(14.161357, 3.325, -10.866392)
+rotation = Vector3(0, 5.366887449883, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_22" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_22"]
+position = Vector3(10.866392, 3.325, -14.161357)
+rotation = Vector3(0, 5.628686837682, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_23" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_23"]
+position = Vector3(6.830899, 3.325, -16.491250)
+rotation = Vector3(0, 5.890486225481, 0)
+shape = SubResource("WallCollision")
+
+[node name="Perimeter_24" type="StaticBody3D" parent="Collision"]
+
+[node name="WallShape" type="CollisionShape3D" parent="Collision/Perimeter_24"]
+position = Vector3(2.329893, 3.325, -17.697291)
+rotation = Vector3(0, 6.152285613280, 0)
+shape = SubResource("WallCollision")
+
+[node name="Stations" type="Node3D" parent="."]
+
+[node name="DisplayPanels" type="Node3D" parent="."]
+
+[node name="Portal_0" type="Marker3D" parent="Stations"]
+position = Vector3(-12.888119, 0, -5.338434)
+metadata/station_id = 0
+
+[node name="PortalHit_0" type="Area3D" parent="Stations/Portal_0"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_0"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/Portal_0/PortalHit_0"]
+position = Vector3(0, 1.05, 0)
+rotation = Vector3(0, 1.178097245096, 0)
+shape = SubResource("PortalHitArea")
+
+[node name="PortalDisplay_0" type="Marker3D" parent="DisplayPanels"]
+position = Vector3(-15.816818, 0, -6.551540)
+
+[node name="DisplayHit_0" type="Area3D" parent="DisplayPanels/PortalDisplay_0"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_0"
+
+[node name="CollisionShape_1" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_0/DisplayHit_0"]
+position = Vector3(2.418566, 3.35, -4.105910)
+rotation = Vector3(0, 0.898844564777, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_2" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_0/DisplayHit_0"]
+position = Vector3(1.065726, 3.35, -2.137516)
+rotation = Vector3(0, 1.038470904937, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_3" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_0/DisplayHit_0"]
+position = Vector3(0.000000, 3.35, 0.000000)
+rotation = Vector3(0, 1.178097245096, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_4" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_0/DisplayHit_0"]
+position = Vector3(-0.757870, 3.35, 2.265035)
+rotation = Vector3(0, 1.317723585256, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_5" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_0/DisplayHit_0"]
+position = Vector3(-1.193133, 3.35, 4.613501)
+rotation = Vector3(0, 1.457349925415, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="Heading" type="Label3D" parent="DisplayPanels/PortalDisplay_0"]
+text = "训练窗口  01"
+font = ExtResource("18_font")
+font_size = 64
+pixel_size = 0.0060
+modulate = Color(0.52, 0.78, 0.88, 1)
+position = Vector3(0, 4.82, 0)
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="Name" type="Label3D" parent="DisplayPanels/PortalDisplay_0"]
+text = "AWM镭射"
+font = ExtResource("18_font")
+font_size = 145
+pixel_size = 0.0060
+modulate = Color(0.80, 0.94, 1, 1)
+position = Vector3(0, 3.55, 0)
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="Status" type="Label3D" parent="DisplayPanels/PortalDisplay_0"]
+text = "F / 射击靶牌或面板进入"
+font = ExtResource("18_font")
+font_size = 58
+pixel_size = 0.0048
+modulate = Color(0.41, 0.82, 0.96, 1)
+position = Vector3(0, 2.57, 0)
+rotation = Vector3(0, 1.178097245096, 0)
+
+[node name="Portal_1" type="Marker3D" parent="Stations"]
+position = Vector3(-12.888119, 0, 5.338434)
+metadata/station_id = 1
+
+[node name="PortalHit_1" type="Area3D" parent="Stations/Portal_1"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_1"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/Portal_1/PortalHit_1"]
+position = Vector3(0, 1.05, 0)
+rotation = Vector3(0, 1.963495408494, 0)
+shape = SubResource("PortalHitArea")
+
+[node name="PortalDisplay_1" type="Marker3D" parent="DisplayPanels"]
+position = Vector3(-15.816818, 0, 6.551540)
+
+[node name="DisplayHit_1" type="Area3D" parent="DisplayPanels/PortalDisplay_1"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_1"
+
+[node name="CollisionShape_1" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_1/DisplayHit_1"]
+position = Vector3(-1.193133, 3.35, -4.613501)
+rotation = Vector3(0, 1.684242728175, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_2" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_1/DisplayHit_1"]
+position = Vector3(-0.757870, 3.35, -2.265035)
+rotation = Vector3(0, 1.823869068334, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_3" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_1/DisplayHit_1"]
+position = Vector3(0.000000, 3.35, 0.000000)
+rotation = Vector3(0, 1.963495408494, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_4" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_1/DisplayHit_1"]
+position = Vector3(1.065726, 3.35, 2.137516)
+rotation = Vector3(0, 2.103121748653, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_5" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_1/DisplayHit_1"]
+position = Vector3(2.418566, 3.35, 4.105910)
+rotation = Vector3(0, 2.242748088813, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="Heading" type="Label3D" parent="DisplayPanels/PortalDisplay_1"]
+text = "训练窗口  02"
+font = ExtResource("18_font")
+font_size = 64
+pixel_size = 0.0060
+modulate = Color(0.52, 0.78, 0.88, 1)
+position = Vector3(0, 4.82, 0)
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="Name" type="Label3D" parent="DisplayPanels/PortalDisplay_1"]
+text = "三球定位"
+font = ExtResource("18_font")
+font_size = 145
+pixel_size = 0.0060
+modulate = Color(0.80, 0.94, 1, 1)
+position = Vector3(0, 3.55, 0)
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="Status" type="Label3D" parent="DisplayPanels/PortalDisplay_1"]
+text = "F / 射击面板进入"
+font = ExtResource("18_font")
+font_size = 58
+pixel_size = 0.0048
+modulate = Color(0.41, 0.82, 0.96, 1)
+position = Vector3(0, 2.57, 0)
+rotation = Vector3(0, 1.963495408494, 0)
+
+[node name="Portal_2" type="Marker3D" parent="Stations"]
+position = Vector3(-5.338434, 0.000000, 12.888119)
+metadata/station_id = 2
+
+[node name="PortalHit_2" type="Area3D" parent="Stations/Portal_2"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/Portal_2/PortalHit_2"]
+position = Vector3(0.000000, 1.050000, -0.000000)
+rotation = Vector3(0, 2.748893571891, 0)
+shape = SubResource("PortalHitArea")
+
+[node name="PortalDisplay_2" type="Marker3D" parent="DisplayPanels"]
+position = Vector3(-6.551540, 0.000000, 15.816818)
+
+[node name="DisplayHit_2" type="Area3D" parent="DisplayPanels/PortalDisplay_2"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_2"
+
+[node name="CollisionShape_1" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_2/DisplayHit_2"]
+position = Vector3(-4.105910, 3.350000, -2.418566)
+rotation = Vector3(0, 2.469640891572, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_2" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_2/DisplayHit_2"]
+position = Vector3(-2.137516, 3.350000, -1.065726)
+rotation = Vector3(0, 2.609267231732, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_3" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_2/DisplayHit_2"]
+position = Vector3(0.000000, 3.350000, -0.000000)
+rotation = Vector3(0, 2.748893571891, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_4" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_2/DisplayHit_2"]
+position = Vector3(2.265035, 3.350000, 0.757870)
+rotation = Vector3(0, 2.888519912051, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_5" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_2/DisplayHit_2"]
+position = Vector3(4.613501, 3.350000, 1.193133)
+rotation = Vector3(0, 3.028146252210, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="Heading" type="Label3D" parent="DisplayPanels/PortalDisplay_2"]
+text = "Valorant · 训练窗口 03"
+font = ExtResource("18_font")
+font_size = 64
+pixel_size = 0.0060
+modulate = Color(0.52, 0.78, 0.88, 1)
+position = Vector3(0.000000, 4.820000, -0.000000)
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="Name" type="Label3D" parent="DisplayPanels/PortalDisplay_2"]
+text = "随机反应"
+font = ExtResource("18_font")
+font_size = 125
+pixel_size = 0.0060
+modulate = Color(0.80, 0.94, 1, 1)
+position = Vector3(0.000000, 3.550000, -0.000000)
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="Status" type="Label3D" parent="DisplayPanels/PortalDisplay_2"]
+text = "F / 射击面板进入"
+font = ExtResource("18_font")
+font_size = 58
+pixel_size = 0.0048
+modulate = Color(0.41, 0.82, 0.96, 1)
+position = Vector3(0.000000, 2.570000, -0.000000)
+rotation = Vector3(0, 2.748893571891, 0)
+
+[node name="Portal_3" type="Marker3D" parent="Stations"]
+position = Vector3(5.338434, 0, 12.888119)
+metadata/station_id = 3
+
+[node name="PortalHit_3" type="Area3D" parent="Stations/Portal_3"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_3"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/Portal_3/PortalHit_3"]
+position = Vector3(0, 1.05, 0)
+rotation = Vector3(0, 3.534291735289, 0)
+shape = SubResource("PortalHitArea")
+
+[node name="PortalDisplay_3" type="Marker3D" parent="DisplayPanels"]
+position = Vector3(6.551540, 0, 15.816818)
+
+[node name="DisplayHit_3" type="Area3D" parent="DisplayPanels/PortalDisplay_3"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_3"
+
+[node name="CollisionShape_1" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_3/DisplayHit_3"]
+position = Vector3(-4.613501, 3.35, 1.193133)
+rotation = Vector3(0, 3.255039054969, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_2" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_3/DisplayHit_3"]
+position = Vector3(-2.265035, 3.35, 0.757870)
+rotation = Vector3(0, 3.394665395129, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_3" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_3/DisplayHit_3"]
+position = Vector3(0.000000, 3.35, 0.000000)
+rotation = Vector3(0, 3.534291735289, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_4" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_3/DisplayHit_3"]
+position = Vector3(2.137516, 3.35, -1.065726)
+rotation = Vector3(0, 3.673918075448, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_5" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_3/DisplayHit_3"]
+position = Vector3(4.105910, 3.35, -2.418566)
+rotation = Vector3(0, 3.813544415608, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="Heading" type="Label3D" parent="DisplayPanels/PortalDisplay_3"]
+text = "训练窗口  04"
+font = ExtResource("18_font")
+font_size = 64
+pixel_size = 0.0060
+modulate = Color(0.52, 0.78, 0.88, 1)
+position = Vector3(0, 4.82, 0)
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="Name" type="Label3D" parent="DisplayPanels/PortalDisplay_3"]
+text = "高低差转移"
+font = ExtResource("18_font")
+font_size = 125
+pixel_size = 0.0060
+modulate = Color(0.80, 0.94, 1, 1)
+position = Vector3(0, 3.55, 0)
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="Status" type="Label3D" parent="DisplayPanels/PortalDisplay_3"]
+text = "F / 射击面板进入"
+font = ExtResource("18_font")
+font_size = 58
+pixel_size = 0.0048
+modulate = Color(0.41, 0.82, 0.96, 1)
+position = Vector3(0, 2.57, 0)
+rotation = Vector3(0, 3.534291735289, 0)
+
+[node name="Portal_4" type="Marker3D" parent="Stations"]
+position = Vector3(12.888119, 0, 5.338434)
+metadata/station_id = 4
+
+[node name="PortalHit_4" type="Area3D" parent="Stations/Portal_4"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_4"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/Portal_4/PortalHit_4"]
+position = Vector3(0, 1.05, 0)
+rotation = Vector3(0, 4.319689898686, 0)
+shape = SubResource("PortalHitArea")
+
+[node name="PortalDisplay_4" type="Marker3D" parent="DisplayPanels"]
+position = Vector3(15.816818, 0, 6.551540)
+
+[node name="DisplayHit_4" type="Area3D" parent="DisplayPanels/PortalDisplay_4"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_4"
+
+[node name="CollisionShape_1" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_4/DisplayHit_4"]
+position = Vector3(-2.418566, 3.35, 4.105910)
+rotation = Vector3(0, 4.040437218367, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_2" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_4/DisplayHit_4"]
+position = Vector3(-1.065726, 3.35, 2.137516)
+rotation = Vector3(0, 4.180063558526, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_3" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_4/DisplayHit_4"]
+position = Vector3(0.000000, 3.35, 0.000000)
+rotation = Vector3(0, 4.319689898686, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_4" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_4/DisplayHit_4"]
+position = Vector3(0.757870, 3.35, -2.265035)
+rotation = Vector3(0, 4.459316238846, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_5" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_4/DisplayHit_4"]
+position = Vector3(1.193133, 3.35, -4.613501)
+rotation = Vector3(0, 4.598942579005, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="Heading" type="Label3D" parent="DisplayPanels/PortalDisplay_4"]
+text = "训练窗口  05"
+font = ExtResource("18_font")
+font_size = 64
+pixel_size = 0.0060
+modulate = Color(0.52, 0.78, 0.88, 1)
+position = Vector3(0, 4.82, 0)
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="Name" type="Label3D" parent="DisplayPanels/PortalDisplay_4"]
+text = "架门缝"
+font = ExtResource("18_font")
+font_size = 145
+pixel_size = 0.0060
+modulate = Color(0.80, 0.94, 1, 1)
+position = Vector3(0, 3.55, 0)
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="Status" type="Label3D" parent="DisplayPanels/PortalDisplay_4"]
+text = "F / 射击面板进入"
+font = ExtResource("18_font")
+font_size = 58
+pixel_size = 0.0048
+modulate = Color(0.41, 0.82, 0.96, 1)
+position = Vector3(0, 2.57, 0)
+rotation = Vector3(0, 4.319689898686, 0)
+
+[node name="Portal_5" type="Marker3D" parent="Stations"]
+position = Vector3(12.888119, 0, -5.338434)
+metadata/station_id = 5
+
+[node name="PortalHit_5" type="Area3D" parent="Stations/Portal_5"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/Portal_5/PortalHit_5"]
+position = Vector3(0, 1.05, 0)
+rotation = Vector3(0, 5.105088062083, 0)
+shape = SubResource("PortalHitArea")
+
+[node name="PortalDisplay_5" type="Marker3D" parent="DisplayPanels"]
+position = Vector3(15.816818, 0, -6.551540)
+
+[node name="DisplayHit_5" type="Area3D" parent="DisplayPanels/PortalDisplay_5"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "portal_5"
+
+[node name="CollisionShape_1" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_5/DisplayHit_5"]
+position = Vector3(1.193133, 3.35, 4.613501)
+rotation = Vector3(0, 4.825835381764, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_2" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_5/DisplayHit_5"]
+position = Vector3(0.757870, 3.35, 2.265035)
+rotation = Vector3(0, 4.965461721924, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_3" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_5/DisplayHit_5"]
+position = Vector3(0.000000, 3.35, 0.000000)
+rotation = Vector3(0, 5.105088062083, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_4" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_5/DisplayHit_5"]
+position = Vector3(-1.065726, 3.35, -2.137516)
+rotation = Vector3(0, 5.244714402243, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="CollisionShape_5" type="CollisionShape3D" parent="DisplayPanels/PortalDisplay_5/DisplayHit_5"]
+position = Vector3(-2.418566, 3.35, -4.105910)
+rotation = Vector3(0, 5.384340742403, 0)
+shape = SubResource("PortalDisplayHitArea")
+
+[node name="Heading" type="Label3D" parent="DisplayPanels/PortalDisplay_5"]
+text = "训练窗口  06"
+font = ExtResource("18_font")
+font_size = 64
+pixel_size = 0.0060
+modulate = Color(0.52, 0.78, 0.88, 1)
+position = Vector3(0, 4.82, 0)
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="Name" type="Label3D" parent="DisplayPanels/PortalDisplay_5"]
+text = "距离与控枪"
+font = ExtResource("18_font")
+font_size = 125
+pixel_size = 0.0060
+modulate = Color(0.80, 0.94, 1, 1)
+position = Vector3(0, 3.55, 0)
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="Status" type="Label3D" parent="DisplayPanels/PortalDisplay_5"]
+text = "F / 射击面板进入"
+font = ExtResource("18_font")
+font_size = 58
+pixel_size = 0.0048
+modulate = Color(0.41, 0.82, 0.96, 1)
+position = Vector3(0, 2.57, 0)
+rotation = Vector3(0, 5.105088062083, 0)
+
+[node name="Weapon_0" type="Marker3D" parent="Stations"]
+position = Vector3(3.140954, 0, -15.790643)
+metadata/station_id = 6
+
+[node name="WeaponHit_0" type="Area3D" parent="Stations/Weapon_0"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "weapon_0"
+
+[node name="CollisionShape_1" type="CollisionShape3D" parent="Stations/Weapon_0/WeaponHit_0"]
+position = Vector3(1.633365, 2.575, 0.414822)
+rotation = Vector3(0, 5.982116011211, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="CollisionShape_2" type="CollisionShape3D" parent="Stations/Weapon_0/WeaponHit_0"]
+position = Vector3(0.000000, 2.575, 0.000000)
+rotation = Vector3(0, 6.086835766330, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="CollisionShape_3" type="CollisionShape3D" parent="Stations/Weapon_0/WeaponHit_0"]
+position = Vector3(-1.667778, 2.575, -0.241816)
+rotation = Vector3(0, 6.191555521450, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="Weapon_1" type="Marker3D" parent="Stations"]
+position = Vector3(-3.140954, 0, -15.790643)
+metadata/station_id = 7
+
+[node name="WeaponHit_1" type="Area3D" parent="Stations/Weapon_1"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "weapon_1"
+
+[node name="CollisionShape_1" type="CollisionShape3D" parent="Stations/Weapon_1/WeaponHit_1"]
+position = Vector3(1.667778, 2.575, -0.241816)
+rotation = Vector3(0, 0.091629785730, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="CollisionShape_2" type="CollisionShape3D" parent="Stations/Weapon_1/WeaponHit_1"]
+position = Vector3(0.000000, 2.575, 0.000000)
+rotation = Vector3(0, 0.196349540849, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="CollisionShape_3" type="CollisionShape3D" parent="Stations/Weapon_1/WeaponHit_1"]
+position = Vector3(-1.633365, 2.575, 0.414822)
+rotation = Vector3(0, 0.301069295969, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="Weapon_2" type="Marker3D" parent="Stations"]
+position = Vector3(8.944681, 0, -13.386661)
+metadata/station_id = 8
+
+[node name="WeaponHit_2" type="Area3D" parent="Stations/Weapon_2"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "weapon_2"
+
+[node name="CollisionShape_1" type="CollisionShape3D" parent="Stations/Weapon_2/WeaponHit_2"]
+position = Vector3(1.350287, 2.575, 1.008307)
+rotation = Vector3(0, 5.589416929512, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="CollisionShape_2" type="CollisionShape3D" parent="Stations/Weapon_2/WeaponHit_2"]
+position = Vector3(0.000000, 2.575, 0.000000)
+rotation = Vector3(0, 5.694136684632, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="CollisionShape_3" type="CollisionShape3D" parent="Stations/Weapon_2/WeaponHit_2"]
+position = Vector3(-1.448287, 2.575, -0.861640)
+rotation = Vector3(0, 5.798856439751, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="Weapon_3" type="Marker3D" parent="Stations"]
+position = Vector3(-8.944681, 0, -13.386661)
+metadata/station_id = 9
+
+[node name="WeaponHit_3" type="Area3D" parent="Stations/Weapon_3"]
+collision_layer = 2
+collision_mask = 0
+metadata/zone = "weapon_3"
+
+[node name="CollisionShape_1" type="CollisionShape3D" parent="Stations/Weapon_3/WeaponHit_3"]
+position = Vector3(1.448287, 2.575, -0.861640)
+rotation = Vector3(0, 0.484328867428, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="CollisionShape_2" type="CollisionShape3D" parent="Stations/Weapon_3/WeaponHit_3"]
+position = Vector3(0.000000, 2.575, 0.000000)
+rotation = Vector3(0, 0.589048622548, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="CollisionShape_3" type="CollisionShape3D" parent="Stations/Weapon_3/WeaponHit_3"]
+position = Vector3(-1.350287, 2.575, 1.008307)
+rotation = Vector3(0, 0.693768377668, 0)
+shape = SubResource("WeaponHitArea")
+
+[node name="WeaponScreenContent" type="Node3D" parent="."]
+
+[node name="WeaponIcon_0" type="Sprite3D" parent="WeaponScreenContent"]
+position = Vector3(3.144856, 2.77, -15.810259)
+rotation = Vector3(0, 6.086835766330, 0)
+pixel_size = 0.0028
+texture = ExtResource("19_awm_icon")
+
+[node name="WeaponCaption_0" type="Label3D" parent="WeaponScreenContent"]
+text = "AWM  ·  精密狙击"
+font = ExtResource("18_font")
+font_size = 43
+pixel_size = 0.0038
+modulate = Color(0.68, 0.85, 0.89, 1)
+position = Vector3(3.144856, 1.95, -15.810259)
+rotation = Vector3(0, 6.086835766330, 0)
+
+[node name="WeaponIcon_1" type="Sprite3D" parent="WeaponScreenContent"]
+position = Vector3(-3.144856, 2.77, -15.810259)
+rotation = Vector3(0, 0.196349540849, 0)
+pixel_size = 0.0028
+texture = ExtResource("20_m7_icon")
+
+[node name="WeaponCaption_1" type="Label3D" parent="WeaponScreenContent"]
+text = "M7  ·  突击步枪"
+font = ExtResource("18_font")
+font_size = 43
+pixel_size = 0.0038
+modulate = Color(0.68, 0.85, 0.89, 1)
+position = Vector3(-3.144856, 1.95, -15.810259)
+rotation = Vector3(0, 0.196349540849, 0)
+
+[node name="WeaponIcon_2" type="Sprite3D" parent="WeaponScreenContent"]
+position = Vector3(8.955792, 2.77, -13.403290)
+rotation = Vector3(0, 5.694136684632, 0)
+pixel_size = 0.0026
+texture = ExtResource("21_tracking_icon")
+
+[node name="WeaponCaption_2" type="Label3D" parent="WeaponScreenContent"]
+text = "跟随移动射击"
+font = ExtResource("18_font")
+font_size = 43
+pixel_size = 0.0038
+modulate = Color(0.68, 0.85, 0.89, 1)
+position = Vector3(8.955792, 1.95, -13.403290)
+rotation = Vector3(0, 5.694136684632, 0)
+
+[node name="WeaponIcon_3" type="Sprite3D" parent="WeaponScreenContent"]
+position = Vector3(-8.955792, 2.77, -13.403290)
+rotation = Vector3(0, 0.589048622548, 0)
+pixel_size = 0.0026
+texture = ExtResource("21_cover_icon")
+
+[node name="WeaponCaption_3" type="Label3D" parent="WeaponScreenContent"]
+text = "掩体分段射击"
+font = ExtResource("18_font")
+font_size = 43
+pixel_size = 0.0038
+modulate = Color(0.68, 0.85, 0.89, 1)
+position = Vector3(-8.955792, 1.95, -13.403290)
+rotation = Vector3(0, 0.589048622548, 0)
+

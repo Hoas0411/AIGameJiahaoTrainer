@@ -1,0 +1,854 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Theme" path="res://ui/rebuild/iteration-005/theme.tres" id="1"]
+[ext_resource type="Texture2D" path="res://ui/rebuild/iteration-005/hub-graphic.svg" id="2"]
+[ext_resource type="Texture2D" path="res://ui/rebuild/iteration-005/mouse-ink.png" id="3"]
+[ext_resource type="Shader" path="res://ui/rebuild/iteration-005/mouse-monochrome.gdshader" id="4"]
+[ext_resource type="Texture2D" path="res://ui/rebuild/shared/lounge-art.png" id="5"]
+
+[ext_resource type="Script" path="res://ui/rebuild/iteration-005/menu_focus.gd" id="6_focus"]
+
+[sub_resource type="ShaderMaterial" id="Mono"]
+shader = ExtResource("4")
+
+[sub_resource type="AtlasTexture" id="MouseFull"]
+atlas = ExtResource("3")
+region = Rect2(0, 0, 1024, 1536)
+
+[node name="Root" type="Control"]
+offset_right = 1600.0
+offset_bottom = 900.0
+theme = ExtResource("1")
+mouse_filter = 2
+
+[node name="Prompt" type="Label" parent="."]
+visible = false
+
+[node name="Catalog" type="Control" parent="."]
+offset_right = 1600.0
+offset_bottom = 900.0
+visible = false
+
+[node name="Graphic" type="TextureRect" parent="Catalog"]
+offset_right = 1600.0
+offset_bottom = 900.0
+texture = ExtResource("2")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="LeftSceneArt" type="TextureRect" parent="Catalog"]
+offset_right = 530.0
+offset_bottom = 900.0
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 6
+modulate = Color(0.46, 0.035, 0.045, 0.86)
+mouse_filter = 2
+[node name="LeftRedWash" type="ColorRect" parent="Catalog"]
+offset_right = 530.0
+offset_bottom = 900.0
+color = Color(0.45, 0, 0.035, 0.38)
+mouse_filter = 2
+
+[node name="SceneReserve" type="Label" parent="Catalog"]
+offset_left = 40.0
+offset_top = 650.0
+offset_right = 430.0
+offset_bottom = 760.0
+text = "TRAINING LOBBY\n训练正在这里发生"
+theme_override_colors/font_color = Color(1, 0.72, 0.72, 0.75)
+theme_override_font_sizes/font_size = 24
+rotation = -0.055
+
+[node name="Character" type="TextureRect" parent="Catalog"]
+material = SubResource("Mono")
+offset_left = 720.0
+offset_top = 210.0
+offset_right = 1380.0
+offset_bottom = 1200.0
+texture = SubResource("MouseFull")
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="Identity" type="Label" parent="Catalog"]
+visible = false
+offset_left = 1095.0
+offset_top = 60.0
+offset_right = 1510.0
+offset_bottom = 145.0
+text = "麦小鼠\nMAIN MENU"
+horizontal_alignment = 2
+theme_override_colors/font_color = Color(0.04, 0.04, 0.05, 1)
+theme_override_colors/font_outline_color = Color(0.98, 0.97, 0.92, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 31
+rotation = 0.035
+
+[node name="FocusShard" type="Polygon2D" parent="Catalog"]
+script = ExtResource("6_focus")
+
+[node name="TrainingSelect" type="Button" parent="Catalog"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 525.0
+offset_top = 145.0
+offset_right = 925.0
+offset_bottom = 218.0
+text = "专项训练"
+theme_type_variation = &"MenuHit"
+toggle_mode = true
+button_pressed = true
+theme_override_font_sizes/font_size = 45
+rotation = -0.045
+
+[node name="Training" type="Button" parent="Catalog"]
+visible = false
+text = "专项训练兼容入口"
+
+[node name="Tracking" type="Button" parent="Catalog"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 485.0
+offset_top = 222.0
+offset_right = 870.0
+offset_bottom = 286.0
+text = "平滑跟枪"
+theme_type_variation = &"MenuHit"
+theme_override_font_sizes/font_size = 39
+rotation = 0.025
+
+[node name="Flick" type="Button" parent="Catalog"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 545.0
+offset_top = 292.0
+offset_right = 910.0
+offset_bottom = 354.0
+text = "甩枪切换"
+theme_type_variation = &"MenuHit"
+theme_override_font_sizes/font_size = 37
+rotation = -0.02
+
+[node name="Reaction" type="Button" parent="Catalog"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 500.0
+offset_top = 360.0
+offset_right = 875.0
+offset_bottom = 424.0
+text = "反应挑战"
+theme_type_variation = &"MenuHit"
+theme_override_font_sizes/font_size = 39
+rotation = 0.034
+
+[node name="DoorGap" type="Button" parent="Catalog"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 555.0
+offset_top = 430.0
+offset_right = 940.0
+offset_bottom = 492.0
+text = "门缝预瞄"
+theme_type_variation = &"MenuHit"
+theme_override_font_sizes/font_size = 38
+rotation = -0.032
+
+[node name="Companion" type="Button" parent="Catalog"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 485.0
+offset_top = 500.0
+offset_right = 860.0
+offset_bottom = 562.0
+text = "麦小鼠对话"
+theme_type_variation = &"MenuHit"
+theme_override_font_sizes/font_size = 37
+rotation = 0.025
+
+[node name="Tools" type="Button" parent="Catalog"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 540.0
+offset_top = 570.0
+offset_right = 930.0
+offset_bottom = 635.0
+text = "训练操作台"
+theme_type_variation = &"MenuHit"
+theme_override_font_sizes/font_size = 38
+rotation = -0.025
+
+[node name="RecordsOpen" type="Button" parent="Catalog"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 500.0
+offset_top = 640.0
+offset_right = 850.0
+offset_bottom = 699.0
+text = "训练记录"
+theme_type_variation = &"MenuHit"
+theme_override_font_sizes/font_size = 35
+rotation = 0.04
+
+[node name="PreferencesOpen" type="Button" parent="Catalog"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 555.0
+offset_top = 706.0
+offset_right = 910.0
+offset_bottom = 765.0
+text = "偏好设置"
+theme_type_variation = &"MenuHit"
+theme_override_font_sizes/font_size = 35
+rotation = -0.032
+
+[node name="Close" type="Button" parent="Catalog"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 505.0
+offset_top = 772.0
+offset_right = 820.0
+offset_bottom = 830.0
+text = "返回大厅"
+theme_type_variation = &"MenuHit"
+theme_override_font_sizes/font_size = 33
+rotation = 0.025
+
+[node name="Appearance" type="OptionButton" parent="Catalog"]
+offset_left = 1350.0
+offset_top = 20.0
+offset_right = 1572.0
+offset_bottom = 60.0
+
+[node name="CourseDrawer" type="Panel" parent="Catalog"]
+visible = false
+offset_left = 350.0
+offset_top = 90.0
+offset_right = 1250.0
+offset_bottom = 850.0
+
+[node name="DrawerTitle" type="Label" parent="Catalog/CourseDrawer"]
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 500.0
+offset_bottom = 75.0
+text = "选择完整课程"
+theme_override_font_sizes/font_size = 38
+
+[node name="CourseBack" type="Button" parent="Catalog"]
+visible = false
+offset_left = 1030.0
+offset_top = 780.0
+offset_right = 1210.0
+offset_bottom = 830.0
+text = "返回菜单"
+metadata/course_drawer = true
+
+[node name="Difficulty" type="OptionButton" parent="Catalog"]
+visible = false
+offset_left = 760.0
+offset_top = 690.0
+offset_right = 970.0
+offset_bottom = 740.0
+metadata/course_drawer = true
+
+[node name="Invincible" type="CheckButton" parent="Catalog"]
+visible = false
+offset_left = 980.0
+offset_top = 690.0
+offset_right = 1190.0
+offset_bottom = 740.0
+text = "无敌练习"
+metadata/course_drawer = true
+
+[node name="Start" type="Button" parent="Catalog"]
+visible = false
+offset_left = 760.0
+offset_top = 760.0
+offset_right = 1010.0
+offset_bottom = 820.0
+text = "开始训练"
+metadata/course_drawer = true
+
+[node name="Selected" type="Label" parent="Catalog"]
+visible = false
+offset_left = 760.0
+offset_top = 585.0
+offset_right = 1190.0
+offset_bottom = 625.0
+metadata/course_drawer = true
+
+[node name="Description" type="Label" parent="Catalog"]
+visible = false
+offset_left = 760.0
+offset_top = 630.0
+offset_right = 1190.0
+offset_bottom = 680.0
+autowrap_mode = 3
+metadata/course_drawer = true
+
+[node name="Course0" type="Button" parent="Catalog"]
+visible = false
+offset_left = 390.0
+offset_top = 180.0
+offset_right = 730.0
+offset_bottom = 225.0
+text = "01  三人双掩体"
+metadata/course_drawer = true
+[node name="Course2" type="Button" parent="Catalog"]
+visible = false
+offset_left = 390.0
+offset_top = 280.0
+offset_right = 730.0
+offset_bottom = 325.0
+text = "03  门框切角"
+metadata/course_drawer = true
+[node name="Course3" type="Button" parent="Catalog"]
+visible = false
+offset_left = 390.0
+offset_top = 330.0
+offset_right = 730.0
+offset_bottom = 375.0
+text = "04  急停与跟枪"
+metadata/course_drawer = true
+[node name="Course4" type="Button" parent="Catalog"]
+visible = false
+offset_left = 390.0
+offset_top = 380.0
+offset_right = 730.0
+offset_bottom = 425.0
+text = "05  喷气突入"
+metadata/course_drawer = true
+[node name="Course5" type="Button" parent="Catalog"]
+visible = false
+offset_left = 390.0
+offset_top = 430.0
+offset_right = 730.0
+offset_bottom = 475.0
+text = "06  航天基地 2.0"
+metadata/course_drawer = true
+[node name="Course6" type="Button" parent="Catalog"]
+visible = false
+offset_left = 760.0
+offset_top = 180.0
+offset_right = 1100.0
+offset_bottom = 225.0
+text = "07  距离与控枪"
+metadata/course_drawer = true
+[node name="Course7" type="Button" parent="Catalog"]
+visible = false
+offset_left = 760.0
+offset_top = 230.0
+offset_right = 1100.0
+offset_bottom = 275.0
+text = "08  随机反应"
+metadata/course_drawer = true
+[node name="Course8" type="Button" parent="Catalog"]
+visible = false
+offset_left = 760.0
+offset_top = 280.0
+offset_right = 1100.0
+offset_bottom = 325.0
+text = "09  高低差转火"
+metadata/course_drawer = true
+[node name="Course9" type="Button" parent="Catalog"]
+visible = false
+offset_left = 760.0
+offset_top = 330.0
+offset_right = 1100.0
+offset_bottom = 375.0
+text = "10  投掷物工坊"
+metadata/course_drawer = true
+[node name="Course10" type="Button" parent="Catalog"]
+visible = false
+offset_left = 760.0
+offset_top = 380.0
+offset_right = 1100.0
+offset_bottom = 425.0
+text = "11  听声定位"
+metadata/course_drawer = true
+[node name="Course11" type="Button" parent="Catalog"]
+visible = false
+offset_left = 760.0
+offset_top = 430.0
+offset_right = 1100.0
+offset_bottom = 475.0
+text = "12  运动校准场"
+metadata/course_drawer = true
+
+[node name="Char0" type="Label" parent="Catalog/TrainingSelect"]
+offset_left = 20.0
+offset_top = -4.0
+offset_right = 90.0
+offset_bottom = 68.0
+text = "专"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 58
+rotation = -0.052
+[node name="Char1" type="Label" parent="Catalog/TrainingSelect"]
+offset_left = 80.0
+offset_top = 3.0
+offset_right = 150.0
+offset_bottom = 72.0
+text = "项"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 53
+rotation = 0.035
+[node name="Char2" type="Label" parent="Catalog/TrainingSelect"]
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 208.0
+offset_bottom = 70.0
+text = "训"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 56
+rotation = -0.026
+[node name="Char3" type="Label" parent="Catalog/TrainingSelect"]
+offset_left = 200.0
+offset_top = 4.0
+offset_right = 275.0
+offset_bottom = 73.0
+text = "练"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 52
+rotation = 0.048
+
+[node name="Word" type="Label" parent="Catalog/Tracking"]
+visible = false
+offset_left = 34.0
+offset_top = -2.0
+offset_right = 310.0
+offset_bottom = 64.0
+text = "平  滑  跟  枪"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 47
+rotation = 0.028
+[node name="Word" type="Label" parent="Catalog/Flick"]
+visible = false
+offset_left = 16.0
+offset_top = -4.0
+offset_right = 300.0
+offset_bottom = 64.0
+text = "甩  枪  切  换"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 49
+rotation = -0.02
+[node name="Word" type="Label" parent="Catalog/Reaction"]
+visible = false
+offset_left = 26.0
+offset_top = 1.0
+offset_right = 310.0
+offset_bottom = 66.0
+text = "反  应  挑  战"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 46
+rotation = 0.03
+[node name="Word" type="Label" parent="Catalog/DoorGap"]
+visible = false
+offset_left = 12.0
+offset_top = -3.0
+offset_right = 300.0
+offset_bottom = 65.0
+text = "门  缝  预  瞄"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 48
+rotation = -0.032
+[node name="Word" type="Label" parent="Catalog/Companion"]
+visible = false
+offset_left = 15.0
+offset_top = 1.0
+offset_right = 340.0
+offset_bottom = 64.0
+text = "麦 小 鼠 对 话"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 44
+rotation = 0.025
+[node name="Word" type="Label" parent="Catalog/Tools"]
+visible = false
+offset_left = 5.0
+offset_top = -2.0
+offset_right = 355.0
+offset_bottom = 66.0
+text = "训 练 操 作 台"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 45
+rotation = -0.025
+[node name="Word" type="Label" parent="Catalog/RecordsOpen"]
+visible = false
+offset_left = 28.0
+offset_top = 0.0
+offset_right = 300.0
+offset_bottom = 61.0
+text = "训  练  记  录"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 43
+rotation = 0.04
+[node name="Word" type="Label" parent="Catalog/PreferencesOpen"]
+visible = false
+offset_left = 20.0
+offset_top = -3.0
+offset_right = 300.0
+offset_bottom = 61.0
+text = "偏  好  设  置"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 44
+rotation = -0.032
+[node name="Word" type="Label" parent="Catalog/Close"]
+visible = false
+offset_left = 25.0
+offset_top = 0.0
+offset_right = 280.0
+offset_bottom = 58.0
+text = "返  回  大  厅"
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.01,0.01,0.01,1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 42
+rotation = 0.025
+
+[node name="C0" type="Label" parent="Catalog/Tracking"]
+offset_left=30.0
+offset_top=-2.0
+offset_right=90.0
+offset_bottom=62.0
+text="平"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.04
+[node name="C1" type="Label" parent="Catalog/Tracking"]
+offset_left=92.0
+offset_top=3.0
+offset_right=152.0
+offset_bottom=67.0
+text="滑"
+theme_type_variation=&"MenuGlyph"
+rotation=0.035
+[node name="C2" type="Label" parent="Catalog/Tracking"]
+offset_left=154.0
+offset_top=-3.0
+offset_right=214.0
+offset_bottom=61.0
+text="跟"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.02
+[node name="C3" type="Label" parent="Catalog/Tracking"]
+offset_left=216.0
+offset_top=2.0
+offset_right=276.0
+offset_bottom=66.0
+text="枪"
+theme_type_variation=&"MenuGlyph"
+rotation=0.045
+
+[node name="C0" type="Label" parent="Catalog/Flick"]
+offset_left=25.0
+offset_top=3.0
+offset_right=85.0
+offset_bottom=67.0
+text="甩"
+theme_type_variation=&"MenuGlyph"
+rotation=0.035
+[node name="C1" type="Label" parent="Catalog/Flick"]
+offset_left=87.0
+offset_top=-3.0
+offset_right=147.0
+offset_bottom=61.0
+text="枪"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.045
+[node name="C2" type="Label" parent="Catalog/Flick"]
+offset_left=149.0
+offset_top=2.0
+offset_right=209.0
+offset_bottom=66.0
+text="切"
+theme_type_variation=&"MenuGlyph"
+rotation=0.025
+[node name="C3" type="Label" parent="Catalog/Flick"]
+offset_left=211.0
+offset_top=-2.0
+offset_right=271.0
+offset_bottom=62.0
+text="换"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.03
+
+[node name="C0" type="Label" parent="Catalog/Reaction"]
+offset_left=32.0
+offset_top=-4.0
+offset_right=92.0
+offset_bottom=60.0
+text="反"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.05
+[node name="C1" type="Label" parent="Catalog/Reaction"]
+offset_left=94.0
+offset_top=2.0
+offset_right=154.0
+offset_bottom=66.0
+text="应"
+theme_type_variation=&"MenuGlyph"
+rotation=0.04
+[node name="C2" type="Label" parent="Catalog/Reaction"]
+offset_left=156.0
+offset_top=-2.0
+offset_right=216.0
+offset_bottom=62.0
+text="挑"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.025
+[node name="C3" type="Label" parent="Catalog/Reaction"]
+offset_left=218.0
+offset_top=3.0
+offset_right=278.0
+offset_bottom=67.0
+text="战"
+theme_type_variation=&"MenuGlyph"
+rotation=0.035
+
+[node name="C0" type="Label" parent="Catalog/DoorGap"]
+offset_left=28.0
+offset_top=2.0
+offset_right=88.0
+offset_bottom=66.0
+text="门"
+theme_type_variation=&"MenuGlyph"
+rotation=0.045
+[node name="C1" type="Label" parent="Catalog/DoorGap"]
+offset_left=90.0
+offset_top=-3.0
+offset_right=150.0
+offset_bottom=61.0
+text="缝"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.04
+[node name="C2" type="Label" parent="Catalog/DoorGap"]
+offset_left=152.0
+offset_top=3.0
+offset_right=212.0
+offset_bottom=67.0
+text="预"
+theme_type_variation=&"MenuGlyph"
+rotation=0.03
+[node name="C3" type="Label" parent="Catalog/DoorGap"]
+offset_left=214.0
+offset_top=-2.0
+offset_right=274.0
+offset_bottom=62.0
+text="瞄"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.035
+
+[node name="C0" type="Label" parent="Catalog/Companion"]
+offset_left=15.0
+offset_top=-3.0
+offset_right=70.0
+offset_bottom=61.0
+text="麦"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.04
+[node name="C1" type="Label" parent="Catalog/Companion"]
+offset_left=70.0
+offset_top=3.0
+offset_right=125.0
+offset_bottom=67.0
+text="小"
+theme_type_variation=&"MenuGlyph"
+rotation=0.04
+[node name="C2" type="Label" parent="Catalog/Companion"]
+offset_left=125.0
+offset_top=-2.0
+offset_right=180.0
+offset_bottom=62.0
+text="鼠"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.025
+[node name="C3" type="Label" parent="Catalog/Companion"]
+offset_left=180.0
+offset_top=3.0
+offset_right=235.0
+offset_bottom=67.0
+text="对"
+theme_type_variation=&"MenuGlyph"
+rotation=0.03
+[node name="C4" type="Label" parent="Catalog/Companion"]
+offset_left=235.0
+offset_top=-3.0
+offset_right=290.0
+offset_bottom=61.0
+text="话"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.04
+
+[node name="C0" type="Label" parent="Catalog/Tools"]
+offset_left=8.0
+offset_top=3.0
+offset_right=63.0
+offset_bottom=67.0
+text="训"
+theme_type_variation=&"MenuGlyph"
+rotation=0.04
+[node name="C1" type="Label" parent="Catalog/Tools"]
+offset_left=63.0
+offset_top=-3.0
+offset_right=118.0
+offset_bottom=61.0
+text="练"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.045
+[node name="C2" type="Label" parent="Catalog/Tools"]
+offset_left=118.0
+offset_top=2.0
+offset_right=173.0
+offset_bottom=66.0
+text="操"
+theme_type_variation=&"MenuGlyph"
+rotation=0.025
+[node name="C3" type="Label" parent="Catalog/Tools"]
+offset_left=173.0
+offset_top=-2.0
+offset_right=228.0
+offset_bottom=62.0
+text="作"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.035
+[node name="C4" type="Label" parent="Catalog/Tools"]
+offset_left=228.0
+offset_top=3.0
+offset_right=283.0
+offset_bottom=67.0
+text="台"
+theme_type_variation=&"MenuGlyph"
+rotation=0.04
+
+[node name="C0" type="Label" parent="Catalog/RecordsOpen"]
+offset_left=30.0
+offset_top=-3.0
+offset_right=90.0
+offset_bottom=61.0
+text="训"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.04
+[node name="C1" type="Label" parent="Catalog/RecordsOpen"]
+offset_left=92.0
+offset_top=3.0
+offset_right=152.0
+offset_bottom=67.0
+text="练"
+theme_type_variation=&"MenuGlyph"
+rotation=0.035
+[node name="C2" type="Label" parent="Catalog/RecordsOpen"]
+offset_left=154.0
+offset_top=-2.0
+offset_right=214.0
+offset_bottom=62.0
+text="记"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.025
+[node name="C3" type="Label" parent="Catalog/RecordsOpen"]
+offset_left=216.0
+offset_top=2.0
+offset_right=276.0
+offset_bottom=66.0
+text="录"
+theme_type_variation=&"MenuGlyph"
+rotation=0.04
+
+[node name="C0" type="Label" parent="Catalog/PreferencesOpen"]
+offset_left=28.0
+offset_top=3.0
+offset_right=88.0
+offset_bottom=67.0
+text="偏"
+theme_type_variation=&"MenuGlyph"
+rotation=0.04
+[node name="C1" type="Label" parent="Catalog/PreferencesOpen"]
+offset_left=90.0
+offset_top=-3.0
+offset_right=150.0
+offset_bottom=61.0
+text="好"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.045
+[node name="C2" type="Label" parent="Catalog/PreferencesOpen"]
+offset_left=152.0
+offset_top=2.0
+offset_right=212.0
+offset_bottom=66.0
+text="设"
+theme_type_variation=&"MenuGlyph"
+rotation=0.025
+[node name="C3" type="Label" parent="Catalog/PreferencesOpen"]
+offset_left=214.0
+offset_top=-2.0
+offset_right=274.0
+offset_bottom=62.0
+text="置"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.035
+
+[node name="C0" type="Label" parent="Catalog/Close"]
+offset_left=20.0
+offset_top=-3.0
+offset_right=80.0
+offset_bottom=61.0
+text="返"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.04
+[node name="C1" type="Label" parent="Catalog/Close"]
+offset_left=82.0
+offset_top=3.0
+offset_right=142.0
+offset_bottom=67.0
+text="回"
+theme_type_variation=&"MenuGlyph"
+rotation=0.035
+[node name="C2" type="Label" parent="Catalog/Close"]
+offset_left=144.0
+offset_top=-2.0
+offset_right=204.0
+offset_bottom=62.0
+text="大"
+theme_type_variation=&"MenuGlyph"
+rotation=-0.025
+[node name="C3" type="Label" parent="Catalog/Close"]
+offset_left=206.0
+offset_top=2.0
+offset_right=266.0
+offset_bottom=66.0
+text="厅"
+theme_type_variation=&"MenuGlyph"
+rotation=0.04
+
+[node name="ActionTitle" type="Label" parent="Catalog"]
+offset_left = 900.0
+offset_top = 749.0
+offset_right = 1510.0
+offset_bottom = 857.0
+rotation = -0.13
+text = "TRAINING"
+theme_override_font_sizes/font_size = 90
+theme_override_colors/font_color = Color(0.89,0.89,0.87,1)
+mouse_filter = 2
+
+[node name="ActionHint" type="Label" parent="Catalog"]
+offset_left = 1035.0
+offset_top = 845.0
+offset_right = 1430.0
+offset_bottom = 880.0
+text = "选择一项，开始今天的练习"
+theme_override_font_sizes/font_size = 18
+mouse_filter = 2

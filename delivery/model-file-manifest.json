@@ -1,0 +1,747 @@
+[
+  {
+    "path": "game/source_art/.gdignore",
+    "bytes": 2,
+    "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+  },
+  {
+    "path": "game/source_art/jiahao_operator.blend",
+    "bytes": 1402021,
+    "sha256": "83fa4939bce5ed43c9b2c83d948e556b6a05b14161e1ca371572bc5c929a3848"
+  },
+  {
+    "path": "game/source_art/magnetic_charge.blend",
+    "bytes": 116262,
+    "sha256": "571b53356581685464d280eba2f3cf512edef1d587dfc9d603508a92536cab32"
+  },
+  {
+    "path": "game/source_art/rifle.blend",
+    "bytes": 188854,
+    "sha256": "cf09972ce4d2a62ceabff0b1dadcd22d084e48289762968a3ce5a397c274b408"
+  },
+  {
+    "path": "game/source_art/thumper_launcher.blend",
+    "bytes": 126052,
+    "sha256": "9f2f9cdd901c69e43221b7d00d9547a02365e0365550fd979bf9d061ccd8dfd8"
+  },
+  {
+    "path": "game/source_art/thumper_shell.blend",
+    "bytes": 102259,
+    "sha256": "dd1c09dbb1c82cba9ad883d515e7399c10def18f3abd221466ecd87c2a62febe"
+  },
+  {
+    "path": "game/source_art/range_honor_R36/01后墙立面.svg",
+    "bytes": 1590,
+    "sha256": "5676ba7b6189ef3c94436c256f7b8831b94ed1d83051af6b0911de81e7cbe45c"
+  },
+  {
+    "path": "game/source_art/range_honor_R36/02局部平面.svg",
+    "bytes": 1252,
+    "sha256": "2bfef5c5f2396dcefc851b3ad696639cd18ab563ffdcf99ad091e18c503a057c"
+  },
+  {
+    "path": "game/source_art/range_honor_R36/03短廊剖面.svg",
+    "bytes": 972,
+    "sha256": "c4624de350ab38bcc90f37a135b7c9ef64144c8300adae2bdc9f2749c3dae0f4"
+  },
+  {
+    "path": "game/source_art/range_honor_R36/04柜间接口.svg",
+    "bytes": 831,
+    "sha256": "bb1d10b98563b4a0a85f1421d5f38026de6f4bcac8d6bcfc65a2d980402e6487"
+  },
+  {
+    "path": "game/source_art/range_honor_R36/05顶棚与光组.svg",
+    "bytes": 740,
+    "sha256": "a69a42e21ebf7f439bd80f2cf4c0615c2181fb4b9db816c80acaf79e1e09efe6"
+  },
+  {
+    "path": "game/source_art/range_honor_R36/C01_helpers.blend",
+    "bytes": 93942,
+    "sha256": "4fa8ec496f14897783a84e9e7f676efef6beb199a13aedc0b658191947b463b7"
+  },
+  {
+    "path": "game/source_art/range_honor_R36/C01_material_master.blend",
+    "bytes": 33619152,
+    "sha256": "e96eb95e44e16df5b8fcf56e22ac7d3ed6b32ff44bc962241e666201a3e7b6fe"
+  },
+  {
+    "path": "game/source_art/range_honor_R36/crystal_material_master.blend",
+    "bytes": 35454748,
+    "sha256": "65e052a0c828f6caf49d887ce532158fbdf26feaa467accd6443a3705e7bb9f0"
+  },
+  {
+    "path": "game/source_art/range_honor_R36/D01_entrance.blend",
+    "bytes": 135166,
+    "sha256": "35d7c514c4dd9f0674b3c63ac9e3663d328cdc261c5e9ec135a165054a6ef48a"
+  },
+  {
+    "path": "game/source_art/range_honor_R36/silver_material_master.blend",
+    "bytes": 35479152,
+    "sha256": "64a1b587eff76778c055aaf217e083d5e535b12c6c99e025dabf7909c8bcda8f"
+  },
+  {
+    "path": "game/source_art/range_honor_R37/后墙立面.svg",
+    "bytes": 1769,
+    "sha256": "605134b1c1b3820258a5fd9615588ecdaf74512bd2cce3997de60303a4ca307b"
+  },
+  {
+    "path": "game/source_art/range_honor_R37/局部平面.svg",
+    "bytes": 681,
+    "sha256": "5be30695620e43e7e6228dcd1db05e9fc162f2528ab8001cb3cf12a9dbed07a3"
+  },
+  {
+    "path": "game/source_art/range_honor_R37/R37后墙等比扩展.blend",
+    "bytes": 104851995,
+    "sha256": "16a80bb9dbbd8a9dd587a0aaec23969f7778f24e1bc50a096effce5dc5bda9d7"
+  },
+  {
+    "path": "game/source_art/range_hyper_20261003/game_R25/01平面与顶棚.svg",
+    "bytes": 3693,
+    "sha256": "1147dd1c176aa89dbad115e775ffdde0005e5cb6d0722b9a16bf613687ed36ed"
+  },
+  {
+    "path": "game/source_art/range_hyper_20261003/game_R25/02横剖与后立面.svg",
+    "bytes": 1402,
+    "sha256": "ccaef46d770734f5c2ec6e77249ea86d4e61d8ae02fb23e455521d1cfa3003ab"
+  },
+  {
+    "path": "game/source_art/range_hyper_20261003/game_R25/03侧立面与接口.svg",
+    "bytes": 2383,
+    "sha256": "6a4d67251af978bc5c8831380812b4da5bc6d5422565d57353365412460ad7aa"
+  },
+  {
+    "path": "game/source_art/range_hyper_20261003/game_R25/04窗口接口实测.svg",
+    "bytes": 1369,
+    "sha256": "4a5421904bd6854ed8b691a0755a19d60e6145e136f534a2b072f1236bcfc778"
+  },
+  {
+    "path": "game/source_art/range_hyper_20261003/game_R25/M01窗口局部修复.blend",
+    "bytes": 4766824,
+    "sha256": "f8fd04d2565d4ea0636ad117a83699293f6b21ae061ac22755a9e7a23030c632"
+  },
+  {
+    "path": "game/source_art/range_hyper_20261003/game_R25/获批方案实际搭建.blend",
+    "bytes": 10169014,
+    "sha256": "3e86ec9ce7e46ef15ea65c5e90dc850692efa11210316490d6effcf2eae8680f"
+  },
+  {
+    "path": "game/source_art/awm_delta_optic_20261005/awm_delta_optic.blend",
+    "bytes": 1017997,
+    "sha256": "90f4201fc0183a97dae48b6ae35048c15df78e65d9bebef7e8a8ab04409387b0"
+  },
+  {
+    "path": "game/source_art/awm_endwall_symmetry_20261005/01_symmetry_design.svg",
+    "bytes": 1726,
+    "sha256": "c3fbc0904d18167a371dd12f01b464cbcc79c30b057fd5cdff96070358c11e75"
+  },
+  {
+    "path": "game/source_art/awm_endwall_symmetry_20261005/J01_mirrored.blend",
+    "bytes": 33737358,
+    "sha256": "9e1b726deb6f654b9d2ea255cdafc40b5e57d963a93600cf1e108ec23705649a"
+  },
+  {
+    "path": "game/source_art/awm_endwall_symmetry_20261005/R01_mirrored.blend",
+    "bytes": 33407995,
+    "sha256": "26425af6981e42e9f2caa5fcb65208d587f22a565633a5bfb923177a17b2a104"
+  },
+  {
+    "path": "game/source_art/awm_endwall_symmetry_20261005/W01_mirrored.blend",
+    "bytes": 35286238,
+    "sha256": "fe47eccc34e2325c5804feda466b54145757e523b49df3469422ac6e8e0aed6d"
+  },
+  {
+    "path": "game/source_art/awm_endwall_symmetry_20261005/W01rear_mirrored.blend",
+    "bytes": 35344019,
+    "sha256": "675daa3526b30b74c961d981e6112babeab07a70fdd6028cd991dbaeb5514f99"
+  },
+  {
+    "path": "game/source_art/awm_front_material_match_20261005/material_design.svg",
+    "bytes": 604,
+    "sha256": "4713cb2fd950feb93e5115ff72369dd585e755d2a81ed01cf9da6150739e4abf"
+  },
+  {
+    "path": "game/source_art/awm_front_material_match_20261005/R01_front_interface.blend",
+    "bytes": 32192224,
+    "sha256": "cf32a6f27b6ddcce9697df9f225fc6b26f98db6a08bf35826d9c330656c741b3"
+  },
+  {
+    "path": "game/source_art/awm_modular/Blender源文件/r3_cover_optimized.blend",
+    "bytes": 43371876,
+    "sha256": "8d35e2ec589d90bb729cf497df707a11e96105770149cf3a1c651f2127d58133"
+  },
+  {
+    "path": "game/source_art/awm_rear_seam_local_20261004/01_rear_interface_design.svg",
+    "bytes": 3238,
+    "sha256": "45752651c0808ce087c8a9dceed55292a4125fbbcdee59945af0306de2e97f32"
+  },
+  {
+    "path": "game/source_art/awm_rear_seam_local_20261004/W01_rear_interface.blend",
+    "bytes": 34269149,
+    "sha256": "8c7b019fa5fe3815ca88294786c88ba4767ad894ef699f8481e919c44b60b969"
+  },
+  {
+    "path": "game/source_art/awm_terrace_local_repair_20261004/parts/F01/F01_local_repair.blend",
+    "bytes": 31610285,
+    "sha256": "8ef4504e23ee25c1fc0fecbc4aac0ad571900ea83f1f017984597cf9dfaf0466"
+  },
+  {
+    "path": "game/source_art/awm_terrace_local_repair_20261004/parts/G01/G01_local_repair.blend",
+    "bytes": 31078321,
+    "sha256": "be99f278f332674d7397b89b2596f388775d89931da1b3f8c625d2ba4fdf32ec"
+  },
+  {
+    "path": "game/source_art/awm_terrace_local_repair_20261004/parts/J01/J01_local_repair.blend",
+    "bytes": 32538244,
+    "sha256": "8a85a76d65aa855300e2bfb28be9965f07906b271061142e5794750749617fac"
+  },
+  {
+    "path": "game/source_art/awm_terrace_local_repair_20261004/parts/R01/R01_local_repair.blend",
+    "bytes": 32129522,
+    "sha256": "ff645516ef2965deaaba0fb05bab1dd1da22f4265837dcb602c1f85492caa0a3"
+  },
+  {
+    "path": "game/source_art/awm_terrace_local_repair_20261004/parts/W01/W01_local_repair.blend",
+    "bytes": 34213648,
+    "sha256": "84516492e80d2adbe50ffd7f8d068566dd987d681b76eeb750f69259a41e31df"
+  },
+  {
+    "path": "game/source_art/banner_trophy_20261005/FourFlags_Blender.blend",
+    "bytes": 303487,
+    "sha256": "d5e375b5044aa5b2fe81cb82497cbbab443d866bf6e78f6d222ebe6f18d3d89e"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/B1.blend",
+    "bytes": 109846,
+    "sha256": "cb5eedf3b731361a15b048aad565dbecd455aa98ce798625617aca27ef787b75"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/B2.blend",
+    "bytes": 110351,
+    "sha256": "e1cf2ef343a21af855db97766c678cf0e79588bdbfc7139446978b673befa9b3"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/C0.blend",
+    "bytes": 125530,
+    "sha256": "20c8adbbe2d0dfb260b58785b64ee30a1c6574ff5d4fa16daaedeae8289252dd"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/C1.blend",
+    "bytes": 129239,
+    "sha256": "1dca59a2240803a96caac5a8507607dec050dc35bc08f7b243540e7281420e25"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/C2.blend",
+    "bytes": 137959,
+    "sha256": "0a275fc0a4d3d4d269b072f985ba1e5d0bdd05558dd356749123633f17d5d1d5"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/C3.blend",
+    "bytes": 137728,
+    "sha256": "d0df257c7d9ea50c0ddd66c3cb372d48aa3fe4537ca83ce1e76d02ce9f702b65"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/D1.blend",
+    "bytes": 123326,
+    "sha256": "16e23af701dae958ffbd43532a87bb808952ba6bd43c959892b3dd483c514d70"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/E1_20.blend",
+    "bytes": 116257,
+    "sha256": "2667554b84942f182b83860b46986137cc49da903825ce6c15ed087c40c6e745"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/F1_45.blend",
+    "bytes": 132891,
+    "sha256": "f62a4bf3abc8f6db6a07f85aef72a3dff5bbb14ac5918398abdaded72cc68f2e"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/F2_45.blend",
+    "bytes": 133435,
+    "sha256": "d4918eedf709e447f6084ee5fc45c086c64fa67769023feac07cdbd29d51de48"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/F3_45.blend",
+    "bytes": 140694,
+    "sha256": "969fd70a42cb1b3f90d26de7e5d7ff837f4bc357d4b83911ef7b999545e1dfc4"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/P0_80.blend",
+    "bytes": 149509,
+    "sha256": "f880e6e36863e6af2f3422c17716a035b883daeeaedbaccc8467f1c81876c120"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/T1_40.blend",
+    "bytes": 118686,
+    "sha256": "2e936e199b4454efb5d8c83e91e8bf69115324e4fe39bb681e397c9d024bff6a"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/T2.blend",
+    "bytes": 107176,
+    "sha256": "4f0d2d3d359cae20688f50709ca7e3ca82f87c024c0dd87394b7021cce85ee3c"
+  },
+  {
+    "path": "game/source_art/circular_lobby_phase1/r7_20260926/blend/W1.blend",
+    "bytes": 127601,
+    "sha256": "6827731bfae5b2ed9cd9ec2c2c51e1448abeb27a709e952d0d7454e51b78b863"
+  },
+  {
+    "path": "game/source_art/companions/mouse-cry-design.svg",
+    "bytes": 1329,
+    "sha256": "518f94433644d7dac0a4fe51e819c5d77d8eb3bd33b008d25e6564b449d1f5d1"
+  },
+  {
+    "path": "game/source_art/companions/mouse-cry-overlay.blend",
+    "bytes": 1711157,
+    "sha256": "4e39633bd08cbc15ec07e44dc99cdde4a96eba2aa7a1ae8856c60de58b2edfd6"
+  },
+  {
+    "path": "game/source_art/companions/expressions_20260930/mouse_angry.blend",
+    "bytes": 1913628,
+    "sha256": "e0aefe3bbe01e97109e735e19733821e78c816c4158af97669ee3cab6b3fb7e3"
+  },
+  {
+    "path": "game/source_art/companions/expressions_20260930/mouse_excited.blend",
+    "bytes": 1913237,
+    "sha256": "695dd6f1f3ab21b9e0091363f2c6ccbfcf283b78f13ad14ea23276b1244386a4"
+  },
+  {
+    "path": "game/source_art/companions/expressions_20260930/mouse_happy.blend",
+    "bytes": 1913517,
+    "sha256": "7a321b93981f28b4acc7932ac3d449254f3f99327db091124d7e30f9b2d66f6b"
+  },
+  {
+    "path": "game/source_art/companions/expressions_20260930/mouse_scared.blend",
+    "bytes": 1912993,
+    "sha256": "984a097d6989af560bdc8f1ac24a085b725c9a9dfbb1436fd9a409f6a02e9dc6"
+  },
+  {
+    "path": "game/source_art/companions/expressions_20260930/mouse_smug.blend",
+    "bytes": 1913296,
+    "sha256": "0b359887bcd7068b4d57c7d27b033d5bc3505842a6c03880841a69f0e7576651"
+  },
+  {
+    "path": "game/source_art/companions/hug_precision_20260930/README.md",
+    "bytes": 3996,
+    "sha256": "b4935af05d7e735710037713750dc531a6b897f09d445f5ec36184fe181343e1"
+  },
+  {
+    "path": "game/source_art/companions/hug_precision_20260930/hug_interaction.blend",
+    "bytes": 4541097,
+    "sha256": "de844d5339d5fba598ff3b7d123d40d095ab190f3ed7998fa9f61ad0a487abf6"
+  },
+  {
+    "path": "game/source_art/companions/hug_precision_20260930/mouse_hug.blend",
+    "bytes": 2393111,
+    "sha256": "2c7f47d5d9198b285eb8589573ea4064340bcd1c3a9741c8a7b8949d287df2d5"
+  },
+  {
+    "path": "game/source_art/companions/hug_rework_20260930/README.md",
+    "bytes": 3441,
+    "sha256": "c2db866192d97f4ffad3f0441cc7c942a7dbf39d6ca8405d9a10d94bd9fef586"
+  },
+  {
+    "path": "game/source_art/companions/hug_rework_20260930/operator_hug_rig.blend",
+    "bytes": 3577245,
+    "sha256": "d19bc4ddd9d7029041730455ad9bfcaf590c48d927258b9f3359af2f3ed9a133"
+  },
+  {
+    "path": "game/source_art/companions/three_spots_20261002/CURRENT_BASELINE.md",
+    "bytes": 1050,
+    "sha256": "ee60cf3cd7527cb3deecc627f054a92cf8656ed73d79835580bc79ce9aa39436"
+  },
+  {
+    "path": "game/source_art/companions/three_spots_20261002/mouse_repaired.blend",
+    "bytes": 15507377,
+    "sha256": "6a4a8eeb76f1fd0e7908eea12962854aa8a247159e528ab7c7286033da41cbfc"
+  },
+  {
+    "path": "game/source_art/enemies/training_dummy.blend",
+    "bytes": 10148773,
+    "sha256": "bc38fa3cbc42bf04a953b8a43faabfb097ef515fe5a0b232ac90018ead16d17c"
+  },
+  {
+    "path": "game/source_art/lobby_metal_glass_20261005/blend/C1G.blend",
+    "bytes": 483511,
+    "sha256": "b8204857e4025523eb484845f72f770b589dcb053fe9447a44e44e6f9d375b8e"
+  },
+  {
+    "path": "game/source_art/lobby_metal_glass_20261005/blend/C2G.blend",
+    "bytes": 481132,
+    "sha256": "69e808df14e3312d1e10fcd5e0c8d319dfedfdb24b80becedc56faac42e9abe2"
+  },
+  {
+    "path": "game/source_art/lobby_metal_glass_20261005/blend/C3G.blend",
+    "bytes": 480486,
+    "sha256": "b783901e1ae10e1044dc97b87a95c9f395859984a787050ad43838d19626ba76"
+  },
+  {
+    "path": "game/source_art/lobby_metal_glass_20261005/blend/G1M.blend",
+    "bytes": 803549,
+    "sha256": "8c6edfd8d7055d5103e3dc1d3e0071ad079dee34d19d8e2085b4576f7c1c8dcb"
+  },
+  {
+    "path": "game/source_art/m7_20260924/rebuild_v3/optic-detail-v3.svg",
+    "bytes": 1905,
+    "sha256": "4ab11347620e9cc5b22529eb26a8e0b646f27eeee8fa1ae214c7d43bfa5784b2"
+  },
+  {
+    "path": "game/source_art/m7_20260924/rebuild_v3/m7_rebuilt_optic_v3.blend",
+    "bytes": 617669,
+    "sha256": "5626e829455a6e42b0aa4827bf108164ffafdf56d56ac805cbd63bb1b14e9445"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/门柱结构分析.svg",
+    "bytes": 1691187,
+    "sha256": "66c90ceab0dee2d59b7770207c81a9a238cb6cc0f930529141487af62ecae3b4"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/设计图_南_正面.svg",
+    "bytes": 15428,
+    "sha256": "8e31de6d14331308ef17900844b91a1465961240a754c4d087f4c9cc9d297ec1"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/设计图_北_背面.svg",
+    "bytes": 15428,
+    "sha256": "644f1f16d56d6f6337916e0fff6e514ed99479ee2db346d11146ed249fb54eb5"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/设计图_东_右面.svg",
+    "bytes": 13296,
+    "sha256": "cf74653d376d4ab1f8a18e449c0a11aadc92eecd532bbcf1f29efa19ddf08913"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/设计图_西_左面.svg",
+    "bytes": 13296,
+    "sha256": "35ebb0416aab58a58f9bba402286c406f0c3fddfce9bc04087f56b64b9186685"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/设计图_天_俯视.svg",
+    "bytes": 14312,
+    "sha256": "0b510b01848070e0358dea58bc80601fc8348ddb2a4e9198bc37cb75f4cd08f7"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/设计图_地_仰视.svg",
+    "bytes": 14444,
+    "sha256": "7b30671cda28cd5d981fcad86b4a0b4017b8ab32c8df0e73355c60efe8e5f993"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/复核_南_正面.svg",
+    "bytes": 1401629,
+    "sha256": "4821b19562cdd8a8be956f612f4eaf344c3cf394715fb243867bcab4165636af"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/复核_北_背面.svg",
+    "bytes": 1843749,
+    "sha256": "cd4ab99c84554d57543027cacfbdc9338fd4b61e07263d19f43182097a4cf952"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/复核_东_右面.svg",
+    "bytes": 1251986,
+    "sha256": "9ef6f8ab69a37e3214c2aefcb876ec5cff60b6c484d48aece7830a379f98fa7c"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/复核_西_左面.svg",
+    "bytes": 1246872,
+    "sha256": "e1f36e992911166f4dbfd3204d36cd895dca8c8a71a36f725558dc5f0f94d728"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/复核_天_俯视.svg",
+    "bytes": 998245,
+    "sha256": "ed086a76480c45dbf926bdf73443ffd6ad3602590de9f6f90630c8bf5f59be9a"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/复核_地_仰视.svg",
+    "bytes": 923004,
+    "sha256": "133e7228c3ce06718f732501fdd603538ca8fde4ff72e40685f43cda26dae3bd"
+  },
+  {
+    "path": "game/source_art/mid_gap_r13_drawings_parts_scene/assembly/20261005_v8/架门缝_门柱加宽_v8.blend",
+    "bytes": 475011,
+    "sha256": "b6a65dd8ae3cb4b8990589c37b248a9778fae072c3a89b21ee7e5fb9590d7845"
+  },
+  {
+    "path": "game/source_art/phonograph_precision_20261001/01_梯形与材质修订图.svg",
+    "bytes": 3541,
+    "sha256": "93f14fb1bb7285fc8d07d4287d1216242246c56e82a0c733661f433a6c5577f2"
+  },
+  {
+    "path": "game/source_art/phonograph_precision_20261001/phonograph_precision.blend",
+    "bytes": 1073885,
+    "sha256": "e46fe21bf670a4518cf14795c756efc1e7195a075e5824cfb77889c5f19eb3cc"
+  },
+  {
+    "path": "game/source_art/player_skin/winter_operator_character_arms_v2.blend",
+    "bytes": 2981164,
+    "sha256": "268469a7e6531a4e238aee77e1bf2e6830637d4a3528c425d14df5f261cd41a1"
+  },
+  {
+    "path": "game/source_art/player_skin/winter_operator_game.blend",
+    "bytes": 13058147,
+    "sha256": "ad0d0a4489dc24f35840853d3a61047f60610f35b0f81cbfc3c2808c885284b8"
+  },
+  {
+    "path": "game/source_art/segmented_cover_gray_v3_20261005/doorway_game.blend",
+    "bytes": 91456,
+    "sha256": "283a140b8e97ff3f5ff97dc74224296e99b55ebcf7de10b8e9e653a5ef94c0cd"
+  },
+  {
+    "path": "game/source_art/segmented_cover_gray_v3_20261005/wall_game.blend",
+    "bytes": 90295,
+    "sha256": "4ccbf715e56817b197b68cf5eb1e9f29d6cbc5639b097c1213e43f3acebdd26a"
+  },
+  {
+    "path": "game/source_art/segmented_cover_gridshot_v2_20261005/制作合同.md",
+    "bytes": 1342,
+    "sha256": "7f012bbd7371cf5b452749383d31ab00f39e34ccc9be8208739a47f74f6c832e"
+  },
+  {
+    "path": "game/source_art/segmented_cover_gridshot_v2_20261005/blue_game.blend",
+    "bytes": 5248419,
+    "sha256": "414fdc7313e0c28a9bf497ad173492f442b4669297e5125be5a8b34cf4cf4851"
+  },
+  {
+    "path": "game/source_art/segmented_cover_gridshot_v2_20261005/dark_game.blend",
+    "bytes": 4722452,
+    "sha256": "b86d2bad205b310b6f30d3402c78fa8c6bd87419d7af4254b56850d5781f6010"
+  },
+  {
+    "path": "game/source_art/segmented_cover_gridshot_v2_20261005/floor_game.blend",
+    "bytes": 90715,
+    "sha256": "9c3153e4b5e7ca1395f509d8c867a05c71d2a1e889e7e0fafd476c3656ff0ce3"
+  },
+  {
+    "path": "game/source_art/segmented_cover_gridshot_v2_20261005/white_game.blend",
+    "bytes": 5161920,
+    "sha256": "49739616f40703ee1687f9d471700cc5a769d0a9913fd685e3af1bad99b4c813"
+  },
+  {
+    "path": "game/source_art/training/gridshot_tool.blend",
+    "bytes": 193613,
+    "sha256": "4f6c1ec6665395c1745e5499c1f8655f34701a42aca4a81aebacd4e53cc87d20"
+  },
+  {
+    "path": "game/source_art/training/sentinel.blend",
+    "bytes": 189075,
+    "sha256": "833d3e586b0de0f4805f99cbf601a7f247f5ac4507a860454a02218bacaa2666"
+  },
+  {
+    "path": "game/source_art/training/training_hall.blend",
+    "bytes": 311747,
+    "sha256": "03cd8d5ef34881cc47aa13b096982840bd35fd291897996e8e17b911350ac3c3"
+  },
+  {
+    "path": "game/blender-dependencies/.gdignore",
+    "bytes": 2,
+    "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+  },
+  {
+    "path": "game/blender-dependencies/shared-ab5140637b7f6192e92fac40.png",
+    "bytes": 1120,
+    "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639"
+  },
+  {
+    "path": "game/blender-dependencies/shared-04e7fc3499de4005959c768d.png",
+    "bytes": 3198569,
+    "sha256": "04e7fc3499de4005959c768d43e0788e9a65ec1f8afb0eb686fae58d9218e8d9"
+  },
+  {
+    "path": "game/blender-dependencies/shared-a0f2c718bd1e884dede0c6b6.png",
+    "bytes": 2953616,
+    "sha256": "a0f2c718bd1e884dede0c6b63c350d633f29b31faca0def88c5632a24a5b3ef2"
+  },
+  {
+    "path": "game/blender-dependencies/shared-dc1771024582cbaa90b8ec80.png",
+    "bytes": 2810941,
+    "sha256": "dc1771024582cbaa90b8ec80a1e6e3be000ebab9e84428bc15fcec7f0ce8287e"
+  },
+  {
+    "path": "game/blender-dependencies/shared-abfc9cb57ddb188c5371df1f.png",
+    "bytes": 3392242,
+    "sha256": "abfc9cb57ddb188c5371df1f3be85ef27728ea7980b5c1052f56521fdeb64412"
+  },
+  {
+    "path": "game/blender-dependencies/shared-eb301fcf1afb001d6f627b05.png",
+    "bytes": 1504230,
+    "sha256": "eb301fcf1afb001d6f627b0560de0f0629b21f433dc3487b5d4bcac08d57421b"
+  },
+  {
+    "path": "game/blender-dependencies/shared-cb68944a462c7a7ba7a8afbd.png",
+    "bytes": 1923309,
+    "sha256": "cb68944a462c7a7ba7a8afbd2f0b7b3e135cb8a6d752c9939b89a7a3526dacd7"
+  },
+  {
+    "path": "game/blender-dependencies/shared-f7ab245e93d0944707c7e7d0.png",
+    "bytes": 2709976,
+    "sha256": "f7ab245e93d0944707c7e7d0122886cfc3c80e906aa7ae02902712abdcea5175"
+  },
+  {
+    "path": "game/blender-dependencies/shared-38ce1eb01a8e9d15ac9a9db3.png",
+    "bytes": 2714048,
+    "sha256": "38ce1eb01a8e9d15ac9a9db3cc84200e18ca0467bff29934b8844c9b68b068fd"
+  },
+  {
+    "path": "game/blender-dependencies/shared-a556e99a27dc2365627c0bb5.png",
+    "bytes": 2701945,
+    "sha256": "a556e99a27dc2365627c0bb5d687dd733a9fb4fbfda59c95e01b5cd4b54191dd"
+  },
+  {
+    "path": "game/blender-dependencies/shared-2660cb8f05790eaaaa9a20cd.png",
+    "bytes": 2706306,
+    "sha256": "2660cb8f05790eaaaa9a20cd1c7f1de4d6cd4802d7c62d99c55ff6bd7d97d7a6"
+  },
+  {
+    "path": "game/blender-dependencies/shared-f3c2c98019f4318bc107f1ca.png",
+    "bytes": 1930046,
+    "sha256": "f3c2c98019f4318bc107f1cada0babb1af7a9cc5c8ef0fdacc3cc45542f991d1"
+  },
+  {
+    "path": "game/blender-dependencies/shared-2de8e8be831256643d5a498e.png",
+    "bytes": 1473196,
+    "sha256": "2de8e8be831256643d5a498e64e437bac4ac33097a6172f0f5f6be5be66e4d74"
+  },
+  {
+    "path": "game/blender-dependencies/shared-aa059ceea18a481b111bd1f2.png",
+    "bytes": 1914578,
+    "sha256": "aa059ceea18a481b111bd1f201b4360995463d7da43bceea399167aa3aab3641"
+  },
+  {
+    "path": "game/blender-dependencies/shared-4fd664c97f4ad2245f018250.png",
+    "bytes": 1463593,
+    "sha256": "4fd664c97f4ad2245f01825095d7e939a9d931cf0ae52d2822878831b440c034"
+  },
+  {
+    "path": "game/blender-dependencies/shared-c674d771765a7380e8f3eea6.png",
+    "bytes": 1925308,
+    "sha256": "c674d771765a7380e8f3eea615322787eea6d9a6b8f5bc266dde105f3e072dda"
+  },
+  {
+    "path": "game/blender-dependencies/shared-c75f3b06cd269997ef29c78a.png",
+    "bytes": 1496223,
+    "sha256": "c75f3b06cd269997ef29c78a2a0aa294a398bfa334e480e99c03c103e7c9b600"
+  },
+  {
+    "path": "game/blender-dependencies/shared-9cae8a975407bd4b421401e2.png",
+    "bytes": 1921775,
+    "sha256": "9cae8a975407bd4b421401e221f58cccbf028cdd57bfa1a3ed9f66043a807f1f"
+  },
+  {
+    "path": "game/blender-dependencies/shared-45fa2dd1edf4190dcb40c1ce.png",
+    "bytes": 1395573,
+    "sha256": "45fa2dd1edf4190dcb40c1cef2994a81e9da6a17741979460d96b12bef17f64b"
+  },
+  {
+    "path": "game/blender-dependencies/shared-73f7dc8b4e448dc161e5e9f5.png",
+    "bytes": 1827749,
+    "sha256": "73f7dc8b4e448dc161e5e9f5c51099c3bb7b1aeff58b3d18c90a10faf051a5cf"
+  },
+  {
+    "path": "game/blender-dependencies/shared-06afc2d7e123bd8e1712c74e.png",
+    "bytes": 549796,
+    "sha256": "06afc2d7e123bd8e1712c74ec8ca1483a5885e2e034023dce1e55a6723bac852"
+  },
+  {
+    "path": "game/blender-dependencies/shared-74a33df2a5175afb1ef4182f.png",
+    "bytes": 881217,
+    "sha256": "74a33df2a5175afb1ef4182f42c5f000aebd6632b1262da6116fd47833e7ae78"
+  },
+  {
+    "path": "game/blender-dependencies/shared-03d9fdcbbaa340c9c76efa2d.png",
+    "bytes": 849364,
+    "sha256": "03d9fdcbbaa340c9c76efa2df448c8be4c5984f560f24b281ddf9936f5d9b016"
+  },
+  {
+    "path": "game/blender-dependencies/shared-218f53d6d452c730fb34005b.png",
+    "bytes": 76941,
+    "sha256": "218f53d6d452c730fb34005b1f0d48cb43ef91b49590492102c2627565b11149"
+  },
+  {
+    "path": "game/blender-dependencies/shared-ec0c34e531361340ae550d61.png",
+    "bytes": 1411710,
+    "sha256": "ec0c34e531361340ae550d61a3dec3867710ab6b94e75ceebe812d31778b6025"
+  },
+  {
+    "path": "game/blender-dependencies/shared-0da4c01da2c95ff7ffed92d2.png",
+    "bytes": 1115664,
+    "sha256": "0da4c01da2c95ff7ffed92d25f6425a66c2c25beb21300a610506c8fc47bbe59"
+  },
+  {
+    "path": "game/blender-dependencies/shared-ca4b2abf2240db67870b65f9.png",
+    "bytes": 1567261,
+    "sha256": "ca4b2abf2240db67870b65f962cd7d8c0f2d563e5d7f8ef847bdf6893f746e1d"
+  },
+  {
+    "path": "game/blender-dependencies/shared-fdd41d079ee268e488d8498c.png",
+    "bytes": 1081451,
+    "sha256": "fdd41d079ee268e488d8498c065c870d13ba13149c6f97962bf86d4dbbfeec7b"
+  },
+  {
+    "path": "game/blender-dependencies/shared-64e405828b428857d3e44515.png",
+    "bytes": 1422929,
+    "sha256": "64e405828b428857d3e4451559210122d5519a9c3bb7e9dbc219bd63bca2afcf"
+  },
+  {
+    "path": "game/blender-dependencies/shared-21a60143d36160f3fdd7f486.png",
+    "bytes": 1527631,
+    "sha256": "21a60143d36160f3fdd7f4868ff4bb84e8361c7154be58ac65c5a060cf6007f6"
+  },
+  {
+    "path": "game/blender-dependencies/shared-970fb74e48b1fbaca16feb8b.png",
+    "bytes": 373070,
+    "sha256": "970fb74e48b1fbaca16feb8bda1bcd043af7928416ef1c788d8715f716623354"
+  },
+  {
+    "path": "game/blender-dependencies/shared-4f289bd696662b5da07969d9.png",
+    "bytes": 375216,
+    "sha256": "4f289bd696662b5da07969d9d0b7bb30713ad5fcf6022ce7ca08d082c714243c"
+  },
+  {
+    "path": "game/blender-dependencies/shared-6102c6a2a98cb3154e14769c.png",
+    "bytes": 268240,
+    "sha256": "6102c6a2a98cb3154e14769c55eb2c27f8048486a5369227e9826d8544984e3f"
+  },
+  {
+    "path": "game/blender-dependencies/shared-a4030d15d5a393420d9bb8ac.png",
+    "bytes": 192091,
+    "sha256": "a4030d15d5a393420d9bb8ac48ca38379dbbec7c3845c31dd79348d3422c7d9b"
+  },
+  {
+    "path": "game/blender-dependencies/shared-bcd995f896a0d063dda6576c.png",
+    "bytes": 375623,
+    "sha256": "bcd995f896a0d063dda6576c0f9c2df9c3c189c26139bef684dc365a533fc249"
+  },
+  {
+    "path": "game/blender-dependencies/shared-aa3559193f49f7a8753edb61.png",
+    "bytes": 259678,
+    "sha256": "aa3559193f49f7a8753edb61780577df52a507d5d1b69238eff8c45640f6ccf2"
+  },
+  {
+    "path": "game/blender-dependencies/shared-eb81b583400ed52b7cc8b598.png",
+    "bytes": 286346,
+    "sha256": "eb81b583400ed52b7cc8b5984c0f7b542e35237ecf5367fb9f5f7c0e5ace42eb"
+  },
+  {
+    "path": "game/blender-dependencies/shared-7b01c3cfb985ae9498ae7ee2.png",
+    "bytes": 375555,
+    "sha256": "7b01c3cfb985ae9498ae7ee2d2ba3087a8210fb99e6635901313e8c03d20ee98"
+  },
+  {
+    "path": "game/blender-dependencies/shared-47a88949e7aadf62e30e8e22.png",
+    "bytes": 259698,
+    "sha256": "47a88949e7aadf62e30e8e224a7966327944b48b184027cc168498e473583b62"
+  },
+  {
+    "path": "game/blender-dependencies/shared-fdb2a477df0ffde68cee92c1.png",
+    "bytes": 5805,
+    "sha256": "fdb2a477df0ffde68cee92c127812852279c41da58e43331d14f08cefa0fb9f7"
+  },
+  {
+    "path": "game/blender-dependencies/shared-6608c16d1286fd9cf746caac.png",
+    "bytes": 317177,
+    "sha256": "6608c16d1286fd9cf746caacf236a6e1a759ddd58662daebf95b9dd5100f73d9"
+  },
+  {
+    "path": "game/blender-dependencies/shared-073599e68ebfc399f3b8fdde.png",
+    "bytes": 221354,
+    "sha256": "073599e68ebfc399f3b8fddeda9a1afedcd7103de47aeb6ff82822d48afda60b"
+  }
+]

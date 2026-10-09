@@ -1,0 +1,62 @@
+[
+  {
+    "id": "a",
+    "label": "A / Mouse 3.5, H 1, MD 1.33",
+    "mouse": 3.5,
+    "horizontal": 1,
+    "vertical": 1,
+    "md": 1.33,
+    "dpi": 800,
+    "fov": 95,
+    "cm360": 30.5615,
+    "yaw": 0.010685713350831228,
+    "url": "https://www.mouse-sensitivity.com/edpi/?query=calculate&aimid1=7350&aimid2=4602&dpi1=800&dpi2=800&sens1-1=1&sens2-1=1.33&multi1-1=3.5&multi2-1=null&sens1-2=1&sens2-2=null&multi1-2=null&multi2-2=null&fov1=95&fov2=90&hres1=1920&vres1=1080&hres2=1920&vres2=1080",
+    "response": {
+      "sens": 1.7,
+      "inch": 12.0321,
+      "cm": 30.5615
+    },
+    "retrieved": "2026-09-09",
+    "source": "https://www.mouse-sensitivity.com/n/cs2-to-delta-force/"
+  },
+  {
+    "id": "b",
+    "label": "B / Mouse 3, H 3.5, MD 1.33",
+    "mouse": 3,
+    "horizontal": 3.5,
+    "vertical": 3.5,
+    "md": 1.33,
+    "dpi": 800,
+    "fov": 95,
+    "cm360": 10.2072,
+    "yaw": 0.010664740855194654,
+    "url": "https://www.mouse-sensitivity.com/edpi/?query=calculate&aimid1=7350&aimid2=4602&dpi1=800&dpi2=800&sens1-1=3.5&sens2-1=1.33&multi1-1=3&multi2-1=null&sens1-2=1&sens2-2=null&multi1-2=null&multi2-2=null&fov1=95&fov2=90&hres1=1920&vres1=1080&hres2=1920&vres2=1080",
+    "response": {
+      "sens": 5.09,
+      "inch": 4.0186,
+      "cm": 10.2072
+    },
+    "retrieved": "2026-09-09",
+    "source": "https://www.mouse-sensitivity.com/n/cs2-to-delta-force/"
+  },
+  {
+    "id": "c",
+    "label": "C / Mouse 3.5, H 1, MD 0",
+    "mouse": 3.5,
+    "horizontal": 1,
+    "vertical": 1,
+    "md": 0,
+    "dpi": 800,
+    "fov": 95,
+    "cm360": 29.859,
+    "yaw": 0.010937118743810191,
+    "url": "https://www.mouse-sensitivity.com/edpi/?query=calculate&aimid1=7350&aimid2=4602&dpi1=800&dpi2=800&sens1-1=1&sens2-1=0&multi1-1=3.5&multi2-1=null&sens1-2=1&sens2-2=null&multi1-2=null&multi2-2=null&fov1=95&fov2=90&hres1=1920&vres1=1080&hres2=1920&vres2=1080",
+    "response": {
+      "sens": 1.74,
+      "inch": 11.7555,
+      "cm": 29.859
+    },
+    "retrieved": "2026-09-09",
+    "source": "https://www.mouse-sensitivity.com/n/cs2-to-delta-force/"
+  }
+]

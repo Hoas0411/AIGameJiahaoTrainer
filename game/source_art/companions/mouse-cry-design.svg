@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440">
+  <rect width="720" height="440" fill="#f6f4f2"/>
+  <text x="28" y="38" font-family="sans-serif" font-size="22" fill="#30343b">麦小鼠受击哭脸 · 正面设计</text>
+  <text x="28" y="68" font-family="sans-serif" font-size="14" fill="#555">保留原造型与服装；使用烘焙面部材质去除笑嘴，增加泪滴和委屈嘴形。</text>
+  <ellipse cx="354" cy="246" rx="198" ry="156" fill="#f3d6c6" stroke="#9a827b" stroke-width="3"/>
+  <path d="M220 211 Q266 174 310 211 M400 211 Q444 174 490 211" fill="none" stroke="#5b302d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M260 225 C242 259 245 297 260 308 C275 296 279 259 260 225Z" fill="#62cdeb" stroke="#2289aa" stroke-width="3"/>
+  <path d="M450 225 C432 259 435 297 450 308 C465 296 469 259 450 225Z" fill="#62cdeb" stroke="#2289aa" stroke-width="3"/>
+  <ellipse cx="260" cy="324" rx="10" ry="16" fill="#62cdeb"/>
+  <ellipse cx="450" cy="324" rx="10" ry="16" fill="#62cdeb"/>
+  <path d="M321 354 Q355 323 389 354" fill="none" stroke="#703c3c" stroke-width="7" stroke-linecap="round"/>
+  <text x="28" y="412" font-family="sans-serif" font-size="14" fill="#555">Blender 可编辑完整哭脸模型；与默认模型同坐标，命中时替换显示。</text>
+</svg>

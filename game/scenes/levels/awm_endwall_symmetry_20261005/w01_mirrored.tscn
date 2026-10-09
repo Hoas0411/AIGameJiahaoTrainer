@@ -1,0 +1,23 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://assets/models/awm_endwall_symmetry_20261005/W01_mirrored.glb" id="model"]
+[sub_resource type="BoxShape3D" id="shape"]
+size = Vector3(8.303445109568521, 10.0, 5.020732995056559)
+[node name="W01" type="Node3D"]
+metadata/source_blend = "source_art/awm_endwall_symmetry_20261005/W01_mirrored.blend"
+metadata/part_id = "W01"
+metadata/support_restriction = false
+[node name="Model" parent="." instance=ExtResource("model")]
+[node name="Body" type="StaticBody3D" parent="."]
+collision_layer = 1
+collision_mask = 0
+[node name="Collision" type="CollisionShape3D" parent="Body"]
+position = Vector3(0, 5.0, 0)
+shape = SubResource("shape")
+[node name="SnapLeft" type="Marker3D" parent="."]
+position = Vector3(-4.151722554784261,0,0)
+[node name="SnapRight" type="Marker3D" parent="."]
+position = Vector3(4.151722554784261,0,0)
+[node name="SnapFront" type="Marker3D" parent="."]
+position = Vector3(0,0,2.5103664975282793)
+[node name="SnapRear" type="Marker3D" parent="."]
+position = Vector3(0,0,-2.5103664975282793)

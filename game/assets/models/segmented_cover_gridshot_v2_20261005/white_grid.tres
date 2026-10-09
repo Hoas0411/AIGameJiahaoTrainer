@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+[ext_resource type="Texture2D" path="res://assets/models/segmented_cover_gridshot_v2_20261005/Light_07.png" id="1"]
+[ext_resource type="Shader" path="res://assets/models/segmented_cover_gridshot_v2_20261005/world_grid.gdshader" id="2"]
+[resource]
+shader = ExtResource("2")
+shader_parameter/grid_texture = ExtResource("1")
+shader_parameter/tint = Color(0.77, 0.83, 0.87, 1)
+shader_parameter/tile_m = 2.0
+shader_parameter/object_grid = true

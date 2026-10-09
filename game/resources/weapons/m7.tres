@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="WeaponProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+weapon_id = "m7"
+display_name = "M7 战斗步枪"
+calibration_note = "用户截图改装配置。伤害/射速/容量/初速/时长已按截图；逐发后坐力角度、散布恢复和侧瞄过渡为训练器暂定值，第三阶段视频校准。护甲伤害42为记录值，现有靶标无护甲系统。"
+damage = 39.0
+head_multiplier = 1.8974358974358974
+limb_multiplier = 0.3333333333333333
+abdomen_multiplier = 1.0
+armor_damage = 42.0
+rpm = 649.0
+magazine_size = 45
+muzzle_velocity = 893.0
+effective_range = 65.0
+falloff_distances = PackedFloat32Array(65, 100)
+falloff_multipliers = PackedFloat32Array(0.9, 0.8)
+reload_seconds = 2.64
+empty_reload_seconds = 2.86
+ads_seconds = 0.308
+sprint_to_fire_seconds = 0.215
+stow_seconds = 0.4
+draw_seconds = 0.5
+walk_metres_per_second = 3.29
+sprint_metres_per_second = 5.9
+ads_metres_per_second = 2.07
+recoil_control = 54
+handling = 57
+stability = 58
+hip_accuracy = 31
+recoil_scale = 0.67
+recoil_degrees = 0.42
+horizontal_recoil_ratio = 0.18
+persistent_recoil = true
+firing_weapon_stability = 0.7
+firing_camera_stability = 1.0
+moving_stability = 1.33
+sway_degrees = 0.51
+breath_seconds = 20.0
+breath_recoil_scale = 0.95
+flinch_scale = 0.8
+hip_spread_degrees = 3.42
+hip_max_spread_degrees = 8.55
+spread_growth_degrees = 0.55
+spread_recovery_degrees = 3.0
+laser_spread_degrees = 0.15
+ads_spread_degrees = 0.05
+scope_zoom = 1.5
+alternate_zoom = 1.5
+scope_fov = 55.0
+sight_switch_seconds = 0.20
+gunshot_audible_distance = 600.0
+automatic = true
+supports_single_fire = true

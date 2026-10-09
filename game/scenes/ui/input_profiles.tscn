@@ -1,0 +1,118 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://scripts/input_profiles.gd" id="script"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Medium.ttf" id="font"]
+[sub_resource type="Theme" id="theme"]
+default_font = ExtResource("font")
+default_font_size = 18
+[node name="InputProfiles" type="Window"]
+title = "三套有数据来源的灵敏度对照"
+size = Vector2i(1100, 680)
+visible = false
+exclusive = true
+unresizable = true
+theme = SubResource("theme")
+script = ExtResource("script")
+[node name="Heading" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 1070.0
+offset_bottom = 78.0
+text = "灵敏度 A / B / C    ·    800 DPI    ·    FOV 95"
+theme_override_font_sizes/font_size = 27
+[node name="Explanation" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 85.0
+offset_right = 1070.0
+offset_bottom = 155.0
+text = "来源：Mouse-Sensitivity 的 Delta Force Hipfire Horizontal 转换器，2026-09-09 查询。\n3.5 所在的字段尚未确认，B 专门排查“水平灵敏度 3.5”的情况。数值相同不等于转角相同。"
+[node name="Title0" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 178.0
+offset_right = 365.0
+offset_bottom = 225.0
+text = "A · 鼠标 3.5 / 默认屏幕系数"
+[node name="Text0" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 237.0
+offset_right = 355.0
+offset_bottom = 340.0
+text = "鼠标灵敏度：3.5\n水平 / 垂直：1.0\n屏幕距离系数：1.33"
+[node name="Value0" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 350.0
+offset_right = 355.0
+offset_bottom = 430.0
+autowrap_mode = 2
+[node name="Select0" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 450.0
+offset_right = 355.0
+offset_bottom = 505.0
+text = "使用 A"
+[node name="Title1" type="Label" parent="."]
+offset_left = 385.0
+offset_top = 178.0
+offset_right = 720.0
+offset_bottom = 225.0
+text = "B · 水平 3.5 / 默认鼠标值"
+[node name="Text1" type="Label" parent="."]
+offset_left = 385.0
+offset_top = 237.0
+offset_right = 710.0
+offset_bottom = 340.0
+text = "鼠标灵敏度：3.0（网站默认）\n水平 / 垂直：3.5（垂直为假设）\n屏幕距离系数：1.33"
+[node name="Value1" type="Label" parent="."]
+offset_left = 385.0
+offset_top = 350.0
+offset_right = 710.0
+offset_bottom = 430.0
+autowrap_mode = 2
+[node name="Select1" type="Button" parent="."]
+offset_left = 385.0
+offset_top = 450.0
+offset_right = 710.0
+offset_bottom = 505.0
+text = "使用 B"
+[node name="Title2" type="Label" parent="."]
+offset_left = 740.0
+offset_top = 178.0
+offset_right = 1080.0
+offset_bottom = 225.0
+text = "C · 鼠标 3.5 / 中心距离匹配"
+[node name="Text2" type="Label" parent="."]
+offset_left = 740.0
+offset_top = 237.0
+offset_right = 1070.0
+offset_bottom = 340.0
+text = "鼠标灵敏度：3.5\n水平 / 垂直：1.0\n屏幕距离系数：0（中心匹配）"
+[node name="Value2" type="Label" parent="."]
+offset_left = 740.0
+offset_top = 350.0
+offset_right = 1070.0
+offset_bottom = 430.0
+autowrap_mode = 2
+[node name="Select2" type="Button" parent="."]
+offset_left = 740.0
+offset_top = 450.0
+offset_right = 1070.0
+offset_bottom = 505.0
+text = "使用 C"
+[node name="Status" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 525.0
+offset_right = 1070.0
+offset_bottom = 600.0
+text = "先腰射同向转一圈，再比较 3x / 7x / 镭射。选方案时瞄准附加倍率归 1，避免旧设置叠乘。\n三个版本均为有来源的候选配置，并非已经验证与你的国服客户端一致。"
+autowrap_mode = 2
+[node name="Source" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 615.0
+offset_right = 355.0
+offset_bottom = 660.0
+text = "打开数据来源"
+[node name="Close" type="Button" parent="."]
+offset_left = 740.0
+offset_top = 615.0
+offset_right = 1070.0
+offset_bottom = 660.0
+text = "返回设置"

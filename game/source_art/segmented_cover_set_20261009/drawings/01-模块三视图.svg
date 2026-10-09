@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000">
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,4 L8,0 L8,8 Z" fill="#555"/></marker></defs>
+<rect width="1800" height="1000" fill="#F4F5F6"/>
+<text x="900.0" y="42.0" font-size="22" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">掩体分段射击 · 训练掩体套件 · 模块三视图（单位 m，外包络 = 现有碰撞盒）</text>
+<text x="260.0" y="110.0" font-size="17" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">SC_COVER_TALL 玩家掩体 · 正视</text>
+<rect x="107.1" y="306.4" width="305.8" height="201.6" fill="#C4D0D8" stroke="#111" stroke-width="1.2"/>
+<rect x="103.5" y="508.0" width="313.0" height="12.0" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="103.5" y="404.8" width="313.0" height="12.0" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="103.5" y="291.3" width="313.0" height="15.1" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="103.5" y="306.4" width="12.0" height="201.6" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="404.5" y="306.4" width="12.0" height="201.6" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<line x1="103.5" y1="560.0" x2="416.5" y2="560.0" stroke="#555" marker-start="url(#a)" marker-end="url(#a)"/><text x="260.0" y="554.0" font-size="13" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">2.608</text>
+<line x1="83.5" y1="291.3" x2="83.5" y2="520.0" stroke="#555" marker-start="url(#a)" marker-end="url(#a)"/><text x="75.5" y="405.6" font-size="13" text-anchor="end" fill="#111" font-family="Noto Sans SC, sans-serif">1.906</text>
+<text x="640.0" y="110.0" font-size="17" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">侧视</text>
+<rect x="514.7" y="306.4" width="250.7" height="201.6" fill="#C4D0D8" stroke="#111" stroke-width="1.2"/>
+<rect x="511.1" y="508.0" width="257.9" height="12.0" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="511.1" y="404.8" width="257.9" height="12.0" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="511.1" y="291.3" width="257.9" height="15.1" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="511.1" y="306.4" width="12.0" height="201.6" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="756.9" y="306.4" width="12.0" height="201.6" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<line x1="511.1" y1="560.0" x2="768.9" y2="560.0" stroke="#555" marker-start="url(#a)" marker-end="url(#a)"/><text x="640.0" y="554.0" font-size="13" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">2.149</text>
+<text x="1010.0" y="110.0" font-size="17" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">SC_COVER_LOW 敌方矮墙 · 正视</text>
+<rect x="938.1" y="379.6" width="143.9" height="130.8" fill="#61798F" stroke="#111" stroke-width="1.2"/>
+<rect x="935.1" y="510.4" width="149.9" height="9.6" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="935.1" y="440.8" width="149.9" height="9.6" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="935.1" y="369.5" width="149.9" height="10.1" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="935.1" y="379.6" width="9.6" height="130.8" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="1075.3" y="379.6" width="9.6" height="130.8" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<line x1="935.1" y1="560.0" x2="1084.9" y2="560.0" stroke="#555" marker-start="url(#a)" marker-end="url(#a)"/><text x="1010.0" y="554.0" font-size="13" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">1.249</text>
+<line x1="915.1" y1="369.5" x2="915.1" y2="520.0" stroke="#555" marker-start="url(#a)" marker-end="url(#a)"/><text x="907.1" y="444.8" font-size="13" text-anchor="end" fill="#111" font-family="Noto Sans SC, sans-serif">1.254</text>
+<text x="1250.0" y="110.0" font-size="17" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">侧视</text>
+<rect x="1191.6" y="379.6" width="116.8" height="130.8" fill="#61798F" stroke="#111" stroke-width="1.2"/>
+<rect x="1188.6" y="510.4" width="122.8" height="9.6" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="1188.6" y="440.8" width="122.8" height="9.6" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="1188.6" y="369.5" width="122.8" height="10.1" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="1188.6" y="379.6" width="9.6" height="130.8" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="1301.8" y="379.6" width="9.6" height="130.8" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<line x1="1188.6" y1="560.0" x2="1311.4" y2="560.0" stroke="#555" marker-start="url(#a)" marker-end="url(#a)"/><text x="1250.0" y="554.0" font-size="13" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">1.023</text>
+<text x="1480.0" y="110.0" font-size="17" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">SC_STEP 跳射踏步 · 正视</text>
+<rect x="1437.6" y="452.8" width="84.8" height="67.2" fill="#3B4652" stroke="#111" stroke-width="1.2"/>
+<rect x="1440.0" y="447.2" width="80.0" height="5.6" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="1437.6" y="452.8" width="84.8" height="6.0" fill="#B4521E" stroke="#111" stroke-width="1.2"/>
+<line x1="1437.6" y1="560.0" x2="1522.4" y2="560.0" stroke="#555" marker-start="url(#a)" marker-end="url(#a)"/><text x="1480.0" y="554.0" font-size="13" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">0.707</text>
+<line x1="1417.6" y1="447.2" x2="1417.6" y2="520.0" stroke="#555" marker-start="url(#a)" marker-end="url(#a)"/><text x="1409.6" y="483.6" font-size="13" text-anchor="end" fill="#111" font-family="Noto Sans SC, sans-serif">0.607</text>
+<text x="1660.0" y="110.0" font-size="17" text-anchor="middle" fill="#111" font-family="Noto Sans SC, sans-serif">侧视</text>
+<rect x="1593.9" y="452.8" width="132.1" height="67.2" fill="#3B4652" stroke="#111" stroke-width="1.2"/>
+<rect x="1596.3" y="447.2" width="127.3" height="5.6" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="1593.9" y="452.8" width="132.1" height="6.0" fill="#B4521E" stroke="#111" stroke-width="1.2"/>
+<line x1="60" y1="520" x2="1760" y2="520" stroke="#333" stroke-width="2"/>
+<text x="60.0" y="610.0" font-size="15" text-anchor="start" fill="#111" font-family="Noto Sans SC, sans-serif">俯视（下排）</text>
+<rect x="103.5" y="631.1" width="313.0" height="257.9" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="103.5" y="631.1" width="12.0" height="12.0" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="103.5" y="876.9" width="12.0" height="12.0" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="404.5" y="631.1" width="12.0" height="12.0" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="404.5" y="876.9" width="12.0" height="12.0" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="935.1" y="698.6" width="149.9" height="122.8" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<rect x="1440.0" y="696.3" width="80.0" height="127.3" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<rect x="1444.0" y="706.0" width="72.0" height="4.2" fill="#2B2F33" stroke="#111" stroke-width="0.5"/>
+<rect x="1444.0" y="731.2" width="72.0" height="4.2" fill="#2B2F33" stroke="#111" stroke-width="0.5"/>
+<rect x="1444.0" y="756.4" width="72.0" height="4.2" fill="#2B2F33" stroke="#111" stroke-width="0.5"/>
+<rect x="1444.0" y="781.6" width="72.0" height="4.2" fill="#2B2F33" stroke="#111" stroke-width="0.5"/>
+<rect x="1444.0" y="806.8" width="72.0" height="4.2" fill="#2B2F33" stroke="#111" stroke-width="0.5"/>
+<rect x="1437.6" y="693.9" width="84.8" height="6.0" fill="#B4521E" stroke="#111" stroke-width="0.5"/>
+<rect x="1437.6" y="820.1" width="84.8" height="6.0" fill="#B4521E" stroke="#111" stroke-width="0.5"/>
+<rect x="1180.0" y="880.0" width="22.0" height="22.0" fill="#C4D0D8" stroke="#111" stroke-width="1.2"/>
+<text x="1210.0" y="897.0" font-size="14" text-anchor="start" fill="#111" font-family="Noto Sans SC, sans-serif">white_grid 主体</text>
+<rect x="1380.0" y="880.0" width="22.0" height="22.0" fill="#61798F" stroke="#111" stroke-width="1.2"/>
+<text x="1410.0" y="897.0" font-size="14" text-anchor="start" fill="#111" font-family="Noto Sans SC, sans-serif">blue_grid 主体</text>
+<rect x="1580.0" y="880.0" width="22.0" height="22.0" fill="#3B4652" stroke="#111" stroke-width="1.2"/>
+<text x="1610.0" y="897.0" font-size="14" text-anchor="start" fill="#111" font-family="Noto Sans SC, sans-serif">dark_grid 主体</text>
+<rect x="1180.0" y="914.0" width="22.0" height="22.0" fill="#2B2F33" stroke="#111" stroke-width="1.2"/>
+<text x="1210.0" y="931.0" font-size="14" text-anchor="start" fill="#111" font-family="Noto Sans SC, sans-serif">石墨 接缝/压顶</text>
+<rect x="1380.0" y="914.0" width="22.0" height="22.0" fill="#A9AEB2" stroke="#111" stroke-width="1.2"/>
+<text x="1410.0" y="931.0" font-size="14" text-anchor="start" fill="#111" font-family="Noto Sans SC, sans-serif">裸金属 护角/踏板</text>
+<rect x="1580.0" y="914.0" width="22.0" height="22.0" fill="#B4521E" stroke="#111" stroke-width="1.2"/>
+<text x="1610.0" y="931.0" font-size="14" text-anchor="start" fill="#111" font-family="Noto Sans SC, sans-serif">暗橙 踏边</text>
+<text x="60.0" y="975.0" font-size="14" text-anchor="start" fill="#111" font-family="Noto Sans SC, sans-serif">护角=探头边的竖向高光线；所有可见面位于碰撞包络内（板面内收 0.4 cm）。</text>
+</svg>

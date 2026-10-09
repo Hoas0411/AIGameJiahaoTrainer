@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3]
+[ext_resource type="Shader" path="res://assets/models/range_R23/floor_world_lines.gdshader" id="s"]
+[ext_resource type="Texture2D" path="res://assets/models/range_R23/floor_texture_1.png" id="b"]
+[ext_resource type="Texture2D" path="res://assets/models/range_R23/floor_texture_2.png" id="r"]
+[ext_resource type="Texture2D" path="res://assets/models/range_R23/floor_texture_0.png" id="n"]
+[resource]
+shader = ExtResource("s")
+shader_parameter/base_tex = ExtResource("b")
+shader_parameter/orm_tex = ExtResource("r")
+shader_parameter/normal_tex = ExtResource("n")
